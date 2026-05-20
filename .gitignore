@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Generated runtime files
+data/cache/
+data/alpha_airdrops.json
+data/alpha_airdrops.md
+public/*.ics
