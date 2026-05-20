@@ -10,6 +10,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 concurrency:
   group: github-pages
   cancel-in-progress: false
@@ -30,24 +33,6 @@ jobs:
             --cms-pages 1 \
             --cms-page-size 20 \
             --social-posts 12
-
-      - name: Add landing page
-        run: |
-          cat > public/index.html <<'HTML'
-          <!doctype html>
-          <html lang="zh-CN">
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Binance Wallet Alpha 空投日历</title>
-          </head>
-          <body>
-            <h1>Binance Wallet Alpha 空投日历</h1>
-            <p>Apple Calendar 订阅地址：</p>
-            <p><a href="./binance-alpha-airdrops.ics">binance-alpha-airdrops.ics</a></p>
-          </body>
-          </html>
-          HTML
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

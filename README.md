@@ -1,90 +1,116 @@
-# Binance Wallet Alpha 日历订阅
+# Binance Wallet Alpha 空投日历
 
-这个目录用于生成一个自动刷新的 Apple Calendar 订阅日历，提醒 Binance Wallet Alpha 空投领取事件。
+自动追踪 Binance Wallet Alpha 空投相关信号，并生成 Apple Calendar 可订阅的 `.ics` 日历。
 
-## 工作方式
-
-- `scripts/update_binance_alpha_calendar.py` 抓取官方 Binance Alpha 币种数据和近期官方公告候选。
-- 默认还会通过公开镜像扫描官方 X 账号 `@binancezh` 和 `@BinanceWallet`，用来捕捉更早的 Alpha 空投预告。
-- `public/binance-alpha-airdrops.ics` 是 Apple Calendar 订阅的日历文件。
-- `data/alpha_airdrops.md` 和 `data/alpha_airdrops.json` 是生成后的快照。
-- `scripts/install_launchd.sh` 会安装两个 macOS LaunchAgent：
-  - 每 30 分钟刷新一次日历文件
-  - 在本机 `http://127.0.0.1:8765/` 提供订阅地址
-- LaunchAgent 会从 `~/Library/Application Support/BnWalletAlphaCalendar` 运行，避免 macOS 后台权限限制阻止访问 `Documents` 下的文件。
-
-默认只生成具体识别到的币种空投事件，不生成每天重复的检查提醒。需要每日检查提醒时，可以手动给刷新脚本加 `--include-daily-check`。
-
-## 安装
-
-```bash
-bash scripts/install_launchd.sh
-```
-
-然后打开 Calendar.app：
+云端订阅地址：
 
 ```text
-File > New Calendar Subscription...
+https://kahnchan.github.io/bn-wallet-alpha/binance-alpha-airdrops.ics
 ```
 
-填入这个订阅地址：
+项目页面：
 
 ```text
-http://127.0.0.1:8765/binance-alpha-airdrops.ics
+https://kahnchan.github.io/bn-wallet-alpha/
 ```
 
-建议把 Apple Calendar 的自动刷新也设为每 30 分钟或每小时。
+## 它做什么
 
-## 手动刷新
+- 每 30 分钟运行一次 GitHub Actions。
+- 抓取 Binance Alpha 结构化币种接口，识别 `onlineAirdrop=true` 的项目。
+- 扫描 Binance 官方公告/CMS，补充领取门槛、领取数量、开放时间等规则。
+- 扫描官方 X 账号 `@binancezh` 和 `@BinanceWallet`，捕捉更早的 Alpha 空投预告。
+- 生成 `public/binance-alpha-airdrops.ics`，由 GitHub Pages 托管给 Apple Calendar 订阅。
+
+## 日历规则
+
+- 标题格式：`币种 - BN Alpha 空投/预告`，例如 `NEX - BN Alpha 预告`。
+- 已确认具体时间的项目会生成定时事件。
+- 只确认到日期的社媒预告会生成全天事件，避免误导成某个固定小时。
+- 默认不生成每天重复检查提醒。
+- 没有明确规则的项目会在简介里提示去 `Binance Wallet > Alpha > Events` 核验。
+
+## Apple Calendar 订阅
+
+1. 打开 Calendar.app。
+2. 选择 `File > New Calendar Subscription...`。
+3. 粘贴云端订阅地址：
+
+```text
+https://kahnchan.github.io/bn-wallet-alpha/binance-alpha-airdrops.ics
+```
+
+建议把自动刷新设置为每 30 分钟或每小时。
+
+## 手动运行
 
 ```bash
 /usr/bin/python3 scripts/update_binance_alpha_calendar.py
 ```
 
-默认窗口包含最近 3 天内官方字段 `onlineAirdrop=true` 的 Alpha 币种，以及接口中能看到的未来项目。想看更宽的窗口，可以这样跑：
+扩大回看窗口：
 
 ```bash
 /usr/bin/python3 scripts/update_binance_alpha_calendar.py --lookback-days 7
 ```
 
-想临时关闭社媒扫描：
+关闭社媒扫描：
 
 ```bash
 /usr/bin/python3 scripts/update_binance_alpha_calendar.py --no-social
 ```
 
-想增加官方 X 账号：
+增加官方 X 账号：
 
 ```bash
 /usr/bin/python3 scripts/update_binance_alpha_calendar.py --social-accounts binancezh,BinanceWallet,BinanceChinese
 ```
 
-如果想额外生成每天 20:30 的人工检查提醒：
+额外生成每天 20:30 的人工检查提醒：
 
 ```bash
 /usr/bin/python3 scripts/update_binance_alpha_calendar.py --include-daily-check
 ```
 
-## 卸载
+## 本机模式
+
+本机模式已经不是默认推荐方式。需要时可以重新启用：
+
+```bash
+bash scripts/install_launchd.sh
+```
+
+这会安装两个 macOS LaunchAgent：
+
+- 每 30 分钟刷新一次 `.ics`
+- 在本机 `http://127.0.0.1:8765/` 提供订阅地址
+
+停止本机任务：
 
 ```bash
 bash scripts/uninstall_launchd.sh
 ```
 
-这会删除后台任务，但不会从 Apple Calendar 里移除你已经添加的订阅。
+## 云端维护
 
-## 云端托管
+查看最近运行：
 
-推荐用 GitHub Pages + GitHub Actions：
-
-1. 把这个目录推到一个 GitHub 仓库。
-2. 在仓库设置里启用 Pages，Source 选择 `GitHub Actions`。
-3. `.github/workflows/update-calendar.yml` 会每 30 分钟运行一次，生成并发布 `binance-alpha-airdrops.ics`。
-
-发布后 Apple Calendar 订阅地址大概是：
-
-```text
-https://<你的 GitHub 用户名>.github.io/<仓库名>/binance-alpha-airdrops.ics
+```bash
+gh run list --repo Kahnchan/bn-wallet-alpha --workflow update-calendar.yml
 ```
 
-注意：GitHub Actions 的定时任务可能有延迟，不保证精确卡点执行。
+查看某次日志：
+
+```bash
+gh run view <run-id> --repo Kahnchan/bn-wallet-alpha --log
+```
+
+手动触发：
+
+```bash
+gh workflow run update-calendar.yml --repo Kahnchan/bn-wallet-alpha
+```
+
+## 注意
+
+GitHub Actions 的定时任务可能延迟，不保证精确卡点执行。社媒预告只代表官方账号公开提到的日期或方向，最终领取时间、资格、Alpha Points 门槛和领取数量仍以 Binance Wallet App 内 Alpha 活动页为准。
