@@ -71,6 +71,12 @@ CHINESE_DATE_RE = re.compile(
     r"(?P<month>\d{1,2})\s*月\s*(?P<day>\d{1,2})\s*日"
     r"(?:\s*(?P<hour>\d{1,2})\s*(?:点|:|：)\s*(?P<minute>\d{1,2})?)?"
 )
+RELATIVE_CHINESE_TIME_RE = re.compile(
+    r"(?P<day>今天|今日|今晚|明天|明日|明晚)"
+    r"\s*(?P<hour>\d{1,2})\s*(?:点|:|：)\s*(?P<minute>\d{1,2})?"
+    r"(?:\s*[（(]?\s*(?:UTC|GMT)\s*\+?\s*8\s*[）)]?)?",
+    re.IGNORECASE,
+)
 SOCIAL_ALPHA_RE = re.compile(
     r"(alpha|Alpha|空投|领取|积分|上线|首个上线|交易开放|airdrop|claim|points?|launch|list)",
     re.IGNORECASE,
@@ -248,6 +254,24 @@ def parse_dates(text: str) -> list[dt.datetime]:
 def parse_chinese_dates(text: str) -> list[tuple[dt.datetime, bool]]:
     current = dt.datetime.now(dt.timezone(dt.timedelta(hours=8)))
     dates: list[tuple[dt.datetime, bool]] = []
+    for match in RELATIVE_CHINESE_TIME_RE.finditer(text):
+        day_text = match.group("day")
+        day_offset = 1 if day_text in {"明天", "明日", "明晚"} else 0
+        base_date = current.date() + dt.timedelta(days=day_offset)
+        hour = int(match.group("hour"))
+        minute = int(match.group("minute") or 0)
+        try:
+            parsed = dt.datetime(
+                base_date.year,
+                base_date.month,
+                base_date.day,
+                hour,
+                minute,
+                tzinfo=dt.timezone(dt.timedelta(hours=8)),
+            )
+        except ValueError:
+            continue
+        dates.append((parsed.astimezone(dt.timezone.utc), True))
     for match in CHINESE_DATE_RE.finditer(text):
         year = int(match.group("year") or current.year)
         month = int(match.group("month"))
@@ -383,13 +407,14 @@ def build_social_items(
             parsed_dates = parse_dates(text)
             dates = [(value, True) for value in parsed_dates]
         token_match = TOKEN_IN_PARENS_RE.search(text)
-        if not token_match or not dates:
+        if not dates:
             continue
         event_time, has_time = dates[0]
         if not (start <= event_time <= end):
             continue
-        symbol = token_match.group("symbol").upper()
-        name = token_match.group("name").strip(" -")
+        has_token = token_match is not None
+        symbol = token_match.group("symbol").upper() if token_match else "待公布"
+        name = token_match.group("name").strip(" -") if token_match else "Alpha 空投币种"
         key = f"social:{symbol}:{event_time.date().isoformat()}:{post.get('id')}"
         if key in seen:
             continue
@@ -418,6 +443,7 @@ def build_social_items(
                 "announcementUrls": [post.get("url"), post.get("mirrorUrl")],
                 "announcementDates": [event_time.isoformat()],
                 "signalType": "social_alpha_notice",
+                "tokenKnown": has_token,
             }
         )
     return items
@@ -685,7 +711,10 @@ def build_calendar(
         uid_seed = f"{item.get('alphaId') or item.get('symbol')}-{item['listingTime']}"
         uid = hashlib.sha1(uid_seed.encode("utf-8")).hexdigest()[:16]
         symbol = item.get("symbol") or "UNKNOWN"
-        prefix = "预告" if item.get("signalType") == "social_alpha_notice" else "空投"
+        if item.get("signalType") == "social_alpha_notice" and item.get("tokenKnown") is False:
+            prefix = "空投"
+        else:
+            prefix = "预告" if item.get("signalType") == "social_alpha_notice" else "空投"
         summary = f"{symbol} - BN Alpha {prefix}"
         add_ics_line(lines, "BEGIN:VEVENT")
         add_ics_line(lines, f"UID:bn-wallet-alpha-{uid}@codex.local")
