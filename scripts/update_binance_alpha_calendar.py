@@ -30,6 +30,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 PUBLIC_DIR = ROOT / "public"
 CACHE_DIR = DATA_DIR / "cache"
+HISTORY_FILE = PUBLIC_DIR / "history.json"
+DEFAULT_HISTORY_URL = "https://kahnchan.github.io/bn-wallet-alpha/history.json"
 
 ALPHA_TOKEN_API = (
     "https://www.binance.com/bapi/defi/v1/public/wallet-direct/buw/wallet/cex/"
@@ -579,6 +581,92 @@ def merge_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return sorted(merged.values(), key=lambda item: item["listingTime"])
 
 
+def history_key(item: dict[str, Any]) -> tuple[str, str]:
+    if item.get("alphaId"):
+        return ("alpha", str(item["alphaId"]))
+    if item.get("sourceUrl"):
+        return ("url", str(item["sourceUrl"]))
+    symbol = str(item.get("symbol") or "UNKNOWN").upper()
+    return ("event", f"{symbol}:{item.get('listingTime')}")
+
+
+def load_history(history_url: str | None) -> list[dict[str, Any]]:
+    payload: Any | None = None
+    if history_url:
+        try:
+            payload = fetch_json(history_url, timeout=12, allow_cache=False)
+        except RuntimeError as exc:
+            print(f"warning: remote history unavailable: {exc}", file=sys.stderr)
+    if payload is None and HISTORY_FILE.exists():
+        try:
+            payload = json.loads(HISTORY_FILE.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            print(f"warning: local history unavailable: {exc}", file=sys.stderr)
+    if isinstance(payload, dict) and isinstance(payload.get("items"), list):
+        return [item for item in payload["items"] if isinstance(item, dict)]
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+    return []
+
+
+def merge_history(history: list[dict[str, Any]], current_items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged: dict[tuple[str, str], dict[str, Any]] = {}
+    stamp = now_utc().isoformat()
+
+    for item in history:
+        if item.get("listingTime"):
+            merged[history_key(item)] = item
+
+    for item in current_items:
+        key = history_key(item)
+        existing = merged.get(key)
+        if existing is None:
+            item["firstSeenAt"] = stamp
+            item["lastSeenAt"] = stamp
+            merged[key] = item
+            continue
+        first_seen = existing.get("firstSeenAt")
+        merged_item = merge_item_details(existing, item)
+        merged_item["firstSeenAt"] = first_seen or stamp
+        merged_item["lastSeenAt"] = stamp
+        merged[key] = merged_item
+
+    return sorted(merged.values(), key=lambda item: item.get("listingTime", ""))
+
+
+def merge_item_details(existing: dict[str, Any], incoming: dict[str, Any]) -> dict[str, Any]:
+    merged = dict(existing)
+    for field in (
+        "symbol",
+        "name",
+        "alphaId",
+        "chainName",
+        "contractAddress",
+        "listingTime",
+        "sourceUrl",
+        "sourceMirrorUrl",
+        "signalType",
+        "tokenKnown",
+    ):
+        if incoming.get(field) not in (None, ""):
+            merged[field] = incoming[field]
+    merged["source"] = " + ".join(
+        unique([str(source) for source in [existing.get("source"), incoming.get("source")] if source])
+    )
+    for field, limit in (
+        ("ruleSummary", 8),
+        ("announcementUrls", 8),
+        ("announcementDates", 8),
+    ):
+        merged[field] = unique((existing.get(field) or []) + (incoming.get(field) or []))[:limit]
+    if incoming.get("dateOnly") is not None:
+        merged["dateOnly"] = incoming.get("dateOnly")
+    for field in ("onlineAirdrop", "onlineTge", "mulPoint", "price"):
+        if incoming.get(field) is not None:
+            merged[field] = incoming[field]
+    return merged
+
+
 def unique(values: list[str]) -> list[str]:
     seen: set[str] = set()
     result: list[str] = []
@@ -781,6 +869,17 @@ def write_report(items: list[dict[str, Any]], articles: list[dict[str, Any]]) ->
         json.dumps(snapshot, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    HISTORY_FILE.write_text(
+        json.dumps(
+            {
+                "generatedAt": snapshot["generatedAt"],
+                "items": items,
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
 
     lines = [
         "# Binance Wallet Alpha 空投快照",
@@ -848,6 +947,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--social-posts", type=int, default=8, help="Max relevant posts per social account")
     parser.add_argument("--no-social", action="store_true", help="Disable social-source scanning")
     parser.add_argument(
+        "--history-url",
+        default=DEFAULT_HISTORY_URL,
+        help="Published history.json URL to preserve previously discovered events",
+    )
+    parser.add_argument("--no-history", action="store_true", help="Disable durable history merging")
+    parser.add_argument(
         "--include-daily-check",
         action="store_true",
         help="Also include a daily manual Alpha Events check reminder",
@@ -890,6 +995,9 @@ def main() -> int:
             )
         )
         items = merge_items(items)
+    if not args.no_history:
+        history_items = load_history(args.history_url)
+        items = merge_history(history_items, items)
     calendar = build_calendar(
         items,
         include_daily_check=args.include_daily_check,

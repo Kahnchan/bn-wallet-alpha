@@ -21,6 +21,7 @@ https://kahnchan.github.io/bn-wallet-alpha/
 - 扫描 Binance 官方公告/CMS，补充领取门槛、领取数量、开放时间等规则。
 - 扫描官方 X 账号 `@binancezh` 和 `@BinanceWallet`，捕捉更早的 Alpha 空投预告。
 - 生成 `public/binance-alpha-airdrops.ics`，由 GitHub Pages 托管给 Apple Calendar 订阅。
+- 生成并发布 `public/history.json`，把已经发现的事件持续保留下来；后续扫描不到旧推文时也不会删除历史日历项。
 
 ## 日历规则
 
@@ -29,6 +30,7 @@ https://kahnchan.github.io/bn-wallet-alpha/
 - 只确认到日期的社媒预告会生成全天事件，避免误导成某个固定小时。
 - 默认不生成每天重复检查提醒。
 - 没有明确规则的项目会在简介里提示去 `Binance Wallet > Alpha > Events` 核验。
+- 已发现的事件会长期保留，不按 7 天或 30 天自动清理。
 
 ## Apple Calendar 订阅
 
