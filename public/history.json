@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T06:42:51.037260+00:00",
+  "generatedAt": "2026-05-25T09:08:07.326059+00:00",
   "items": [
     {
       "symbol": "ZEST",
@@ -11,7 +11,7 @@
       "onlineAirdrop": true,
       "onlineTge": false,
       "mulPoint": 4,
-      "price": "0.12911321679732429489",
+      "price": "0.14561289909009982469",
       "source": "Binance Alpha 币种接口 + 官方 X 预告 @BinanceWallet",
       "sourceUrl": "https://www.binance.com/en/alpha",
       "matchedAnnouncements": [],
@@ -27,7 +27,7 @@
         "2026-05-19T13:00:00+00:00"
       ],
       "firstSeenAt": "2026-05-22T06:42:51.036150+00:00",
-      "lastSeenAt": "2026-05-22T06:42:51.036150+00:00"
+      "lastSeenAt": "2026-05-22T12:29:00.268211+00:00"
     },
     {
       "symbol": "NEX",
@@ -39,7 +39,7 @@
       "onlineAirdrop": true,
       "onlineTge": false,
       "mulPoint": 4,
-      "price": "0.0000047916349339019444242",
+      "price": "0.0000043376761226098033795",
       "source": "Binance Alpha 币种接口 + 官方 X 预告 @BinanceWallet",
       "sourceUrl": "https://www.binance.com/en/alpha",
       "matchedAnnouncements": [],
@@ -55,7 +55,7 @@
         "2026-05-20T14:00:00+00:00"
       ],
       "firstSeenAt": "2026-05-22T06:42:51.036150+00:00",
-      "lastSeenAt": "2026-05-22T06:42:51.036150+00:00"
+      "lastSeenAt": "2026-05-23T12:01:35.168888+00:00"
     },
     {
       "symbol": "待公布",
@@ -86,6 +86,87 @@
       ],
       "signalType": "social_alpha_notice",
       "tokenKnown": false
+    },
+    {
+      "symbol": "SLX",
+      "name": "Solstice",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-05-25T12:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2058805425781514588",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2058805425781514588",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature Solstice (SLX), with Alpha debut and trading starting on May 25, 2026, at 12:00 (UTC). Users with at least 215 Binance Alpha Points can claim an airdrop of 250 SLX tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature Solstice (SLX) on May 25. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 5 月 25 日成为首个上线 Solstice (SLX) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/FX39V05IZQ",
+        "币安 Alpha 将在 5 月 25 日成为首个上线 Solstice (SLX) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2058805425781514588",
+        "https://api.fxtwitter.com/2/status/2058805425781514588",
+        "https://x.com/BinanceWallet/status/2058156451240292574",
+        "https://api.fxtwitter.com/2/status/2058156451240292574",
+        "https://x.com/binancezh/status/2058179047407181849",
+        "https://api.fxtwitter.com/2/status/2058179047407181849",
+        "https://twstalker.com/binancezh/status/2058179047407181849"
+      ],
+      "announcementDates": [
+        "2026-05-25T12:00:00+00:00",
+        "2026-05-25T00:00:00+00:00",
+        "2026-05-25T01:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-05-23T14:09:41.108351+00:00",
+      "lastSeenAt": "2026-05-25T09:08:07.322784+00:00"
+    },
+    {
+      "symbol": "CTR",
+      "name": "Citrea",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-05-26T01:00:00+00:00",
+      "dateOnly": true,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh + 官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://x.com/binancezh/status/2058491696313495575",
+      "sourceMirrorUrl": "https://twstalker.com/binancezh/status/2058491696313495575",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "币安 Alpha 将在 5 月 26 日成为首个上线 Citrea（CTR）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature Citrea (CTR) on May 26. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
+        "币安 Alpha 将在 5 月 26 日成为首个上线 Citrea（CTR）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/UEvsLqp88V"
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2058491696313495575",
+        "https://twstalker.com/binancezh/status/2058491696313495575",
+        "https://x.com/BinanceWallet/status/2058488765824581805",
+        "https://api.fxtwitter.com/2/status/2058488765824581805",
+        "https://api.fxtwitter.com/2/status/2058491696313495575"
+      ],
+      "announcementDates": [
+        "2026-05-26T01:00:00+00:00",
+        "2026-05-26T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-05-24T10:57:25.203846+00:00",
+      "lastSeenAt": "2026-05-25T09:08:07.322784+00:00"
     }
   ]
 }

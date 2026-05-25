@@ -45,6 +45,10 @@ CMS_DETAIL_API = (
 )
 BINANCE_ALPHA_URL = "https://www.binance.com/en/alpha"
 TWSTALKER_URL = "https://twstalker.com/{account}"
+FXTWITTER_PROFILE_API = "https://api.fxtwitter.com/2/profile/{account}/statuses"
+FXTWITTER_THREAD_API = "https://api.fxtwitter.com/2/thread/{status_id}"
+FXTWITTER_STATUS_API = "https://api.fxtwitter.com/2/status/{status_id}"
+SHANGHAI_TZ = dt.timezone(dt.timedelta(hours=8))
 
 # Binance announcement catalogs that commonly contain campaigns and listings.
 CMS_CATALOGS = {
@@ -68,6 +72,46 @@ DATE_RE = re.compile(
     r"(?:\s*\(?(?P<tz>UTC|GMT)\)?)?",
     re.IGNORECASE,
 )
+ENGLISH_DATE_RE = re.compile(
+    r"\b(?P<month>Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+    r"Jul(?:y)?|Aug(?:ust)?|Sep(?:t|tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+    r"\.?\s+(?P<day>\d{1,2})(?:st|nd|rd|th)?"
+    r"(?:,\s*|\s+)?(?P<year>20\d{2})?",
+    re.IGNORECASE,
+)
+ENGLISH_TIME_AFTER_RE = re.compile(
+    r"^\s*(?:,\s*)?(?:(?:at|@|from|starting(?:\s+on)?)\s+)?"
+    r"(?P<hour>\d{1,2})(?::(?P<minute>\d{2}))?"
+    r"\s*(?P<ampm>a\.?m\.?|p\.?m\.?)?"
+    r"\s*(?:[（(]?\s*(?P<tz>UTC|GMT)(?:\s*\+?\s*(?P<offset>\d{1,2}))?\s*[）)]?)?",
+    re.IGNORECASE,
+)
+ENGLISH_MONTHS = {
+    "jan": 1,
+    "january": 1,
+    "feb": 2,
+    "february": 2,
+    "mar": 3,
+    "march": 3,
+    "apr": 4,
+    "april": 4,
+    "may": 5,
+    "jun": 6,
+    "june": 6,
+    "jul": 7,
+    "july": 7,
+    "aug": 8,
+    "august": 8,
+    "sep": 9,
+    "sept": 9,
+    "september": 9,
+    "oct": 10,
+    "october": 10,
+    "nov": 11,
+    "november": 11,
+    "dec": 12,
+    "december": 12,
+}
 CHINESE_DATE_RE = re.compile(
     r"(?:(?P<year>20\d{2})\s*年\s*)?"
     r"(?P<month>\d{1,2})\s*月\s*(?P<day>\d{1,2})\s*日"
@@ -91,6 +135,10 @@ STATUS_BLOCK_RE = re.compile(
     r'<span><a href="/(?P<account>[^/]+)/status/(?P<id>\d+)">(?P<age>[^<]+)</a></span>'
     r"(?P<block>.*?)(?=<span><a href=\"/[^\"]+/status/\d+\">|\Z)",
     re.DOTALL,
+)
+SOCIAL_STATUS_URL_RE = re.compile(
+    r"https?://(?:x\.com|twitter\.com|twstalker\.com)/(?P<account>[^/]+)/status/(?P<id>\d+)",
+    re.IGNORECASE,
 )
 PARAGRAPH_RE = re.compile(r"<p>(?P<text>.*?)</p>", re.DOTALL)
 TAG_RE = re.compile(r"<[^>]+>")
@@ -145,11 +193,43 @@ def fetch_json(url: str, *, timeout: int = 20, allow_cache: bool = True) -> Any:
             write_cached(url, data)
             return data
     except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, json.JSONDecodeError) as exc:
+        curl_data = fetch_json_with_curl(url, timeout=timeout)
+        if curl_data is not None:
+            write_cached(url, curl_data)
+            return curl_data
         cached = read_cached(url) if allow_cache else None
         if cached is not None:
             print(f"warning: using cached response for {url}: {exc}", file=sys.stderr)
             return cached
         raise RuntimeError(f"failed to fetch {url}: {exc}") from exc
+
+
+def fetch_json_with_curl(url: str, *, timeout: int) -> Any | None:
+    try:
+        result = subprocess.run(
+            [
+                "/usr/bin/curl",
+                "-fsSL",
+                "--max-time",
+                str(timeout),
+                "-A",
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+                "-H",
+                "Accept: application/json,text/plain,*/*",
+                url,
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+    except OSError:
+        return None
+    if result.returncode != 0 or not result.stdout:
+        return None
+    try:
+        return json.loads(result.stdout)
+    except json.JSONDecodeError:
+        return None
 
 
 def fetch_text(url: str, *, timeout: int = 20, allow_cache: bool = True) -> str:
@@ -236,8 +316,8 @@ def text_lines(text: str) -> list[str]:
     return [line.strip() for line in rough_lines if line.strip()]
 
 
-def parse_dates(text: str) -> list[dt.datetime]:
-    dates: list[dt.datetime] = []
+def parse_iso_dates(text: str) -> list[tuple[dt.datetime, bool]]:
+    dates: list[tuple[dt.datetime, bool]] = []
     for match in DATE_RE.finditer(text):
         date_part = match.group("date").replace("/", "-")
         time_part = match.group("time") or "00:00"
@@ -249,12 +329,16 @@ def parse_dates(text: str) -> list[dt.datetime]:
             parsed = parsed.replace(tzinfo=dt.timezone.utc)
         else:
             parsed = parsed.replace(tzinfo=dt.timezone.utc)
-        dates.append(parsed)
+        dates.append((parsed, match.group("time") is not None))
     return dates
 
 
+def parse_dates(text: str) -> list[dt.datetime]:
+    return [value for value, _has_time in parse_iso_dates(text)]
+
+
 def parse_chinese_dates(text: str) -> list[tuple[dt.datetime, bool]]:
-    current = dt.datetime.now(dt.timezone(dt.timedelta(hours=8)))
+    current = dt.datetime.now(SHANGHAI_TZ)
     dates: list[tuple[dt.datetime, bool]] = []
     for match in RELATIVE_CHINESE_TIME_RE.finditer(text):
         day_text = match.group("day")
@@ -269,7 +353,7 @@ def parse_chinese_dates(text: str) -> list[tuple[dt.datetime, bool]]:
                 base_date.day,
                 hour,
                 minute,
-                tzinfo=dt.timezone(dt.timedelta(hours=8)),
+                tzinfo=SHANGHAI_TZ,
             )
         except ValueError:
             continue
@@ -290,7 +374,7 @@ def parse_chinese_dates(text: str) -> list[tuple[dt.datetime, bool]]:
                 day,
                 hour,
                 minute,
-                tzinfo=dt.timezone(dt.timedelta(hours=8)),
+                tzinfo=SHANGHAI_TZ,
             )
         except ValueError:
             continue
@@ -298,6 +382,47 @@ def parse_chinese_dates(text: str) -> list[tuple[dt.datetime, bool]]:
             parsed = parsed.replace(year=parsed.year + 1)
         dates.append((parsed.astimezone(dt.timezone.utc), has_time))
     return dates
+
+
+def parse_english_dates(text: str) -> list[tuple[dt.datetime, bool]]:
+    current = now_utc()
+    dates: list[tuple[dt.datetime, bool]] = []
+    for match in ENGLISH_DATE_RE.finditer(text):
+        month_name = match.group("month").lower().rstrip(".")
+        month = ENGLISH_MONTHS.get(month_name)
+        if month is None:
+            continue
+        year = int(match.group("year") or current.year)
+        day = int(match.group("day"))
+        tail = text[match.end() : match.end() + 80]
+        time_match = ENGLISH_TIME_AFTER_RE.match(tail)
+        has_time = time_match is not None
+        hour = 0
+        minute = 0
+        tzinfo = dt.timezone.utc
+        if time_match:
+            hour = int(time_match.group("hour"))
+            minute = int(time_match.group("minute") or 0)
+            ampm = (time_match.group("ampm") or "").replace(".", "").lower()
+            if ampm == "pm" and hour < 12:
+                hour += 12
+            elif ampm == "am" and hour == 12:
+                hour = 0
+            offset = time_match.group("offset")
+            if offset:
+                tzinfo = dt.timezone(dt.timedelta(hours=int(offset)))
+        try:
+            parsed = dt.datetime(year, month, day, hour, minute, tzinfo=tzinfo)
+        except ValueError:
+            continue
+        if match.group("year") is None and parsed < current - dt.timedelta(days=180):
+            parsed = parsed.replace(year=parsed.year + 1)
+        dates.append((parsed.astimezone(dt.timezone.utc), has_time))
+    return dates
+
+
+def parse_social_dates(text: str) -> list[tuple[dt.datetime, bool]]:
+    return parse_chinese_dates(text) + parse_english_dates(text) + parse_iso_dates(text)
 
 
 def fetch_alpha_tokens() -> list[dict[str, Any]]:
@@ -351,42 +476,161 @@ def clean_html_text(raw: str) -> str:
     return html.unescape(without_tags).replace("\xa0", " ").strip()
 
 
+def social_post_from_fxtwitter(tweet: dict[str, Any], account_hint: str | None = None) -> dict[str, Any] | None:
+    status_id = str(tweet.get("id") or "")
+    if not status_id:
+        return None
+    author = tweet.get("author") if isinstance(tweet.get("author"), dict) else {}
+    account = str(author.get("screen_name") or account_hint or "").strip().lstrip("@")
+    if not account:
+        return None
+    raw_text = tweet.get("raw_text") if isinstance(tweet.get("raw_text"), dict) else {}
+    text = str(raw_text.get("text") or tweet.get("text") or "")
+    text = re.sub(r"\s+", " ", text).strip()
+    if not text or not SOCIAL_ALPHA_RE.search(text):
+        return None
+    return {
+        "account": account,
+        "id": status_id,
+        "age": str(tweet.get("created_at") or ""),
+        "text": text,
+        "url": str(tweet.get("url") or f"https://x.com/{account}/status/{status_id}"),
+        "mirrorUrl": FXTWITTER_STATUS_API.format(status_id=status_id),
+    }
+
+
+def fetch_fxtwitter_account_posts(account: str, max_posts: int) -> list[dict[str, Any]]:
+    url = FXTWITTER_PROFILE_API.format(account=urllib.parse.quote(account))
+    payload = fetch_json(url)
+    if payload.get("code") != 200 or not isinstance(payload.get("results"), list):
+        raise RuntimeError(f"unexpected FxTwitter profile response for @{account}")
+    posts: list[dict[str, Any]] = []
+    for tweet in payload["results"]:
+        if not isinstance(tweet, dict):
+            continue
+        post = social_post_from_fxtwitter(tweet, account)
+        if post is None:
+            continue
+        if post["account"].lower() != account.lower():
+            continue
+        posts.append(post)
+        if len(posts) >= max_posts:
+            break
+    return posts
+
+
+def fetch_twstalker_account_posts(account: str, max_posts: int) -> list[dict[str, Any]]:
+    url = TWSTALKER_URL.format(account=urllib.parse.quote(account))
+    page = fetch_text(url)
+    posts: list[dict[str, Any]] = []
+    for status_match in STATUS_BLOCK_RE.finditer(page):
+        if status_match.group("account").lower() != account.lower():
+            continue
+        paragraph_match = PARAGRAPH_RE.search(status_match.group("block"))
+        if not paragraph_match:
+            continue
+        text = clean_html_text(paragraph_match.group("text"))
+        if not text or not SOCIAL_ALPHA_RE.search(text):
+            continue
+        posts.append(
+            {
+                "account": account,
+                "id": status_match.group("id"),
+                "age": clean_html_text(status_match.group("age")),
+                "text": re.sub(r"\s+", " ", text),
+                "url": f"https://x.com/{account}/status/{status_match.group('id')}",
+                "mirrorUrl": f"https://twstalker.com/{account}/status/{status_match.group('id')}",
+            }
+        )
+        if len(posts) >= max_posts:
+            break
+    return posts
+
+
 def fetch_social_posts(accounts: list[str], max_posts: int) -> list[dict[str, Any]]:
     posts: list[dict[str, Any]] = []
     for account in accounts:
         account = account.strip().lstrip("@")
         if not account:
             continue
-        url = TWSTALKER_URL.format(account=urllib.parse.quote(account))
         try:
-            page = fetch_text(url)
+            posts.extend(fetch_fxtwitter_account_posts(account, max_posts))
+            continue
+        except RuntimeError as exc:
+            print(f"warning: FxTwitter profile skipped for @{account}: {exc}", file=sys.stderr)
+        try:
+            posts.extend(fetch_twstalker_account_posts(account, max_posts))
         except RuntimeError as exc:
             print(f"warning: skipping social source @{account}: {exc}", file=sys.stderr)
+    return dedupe_posts(posts)
+
+
+def fetch_social_thread_posts(
+    status_urls: list[str], allowed_accounts: set[str], max_posts_per_thread: int
+) -> list[dict[str, Any]]:
+    posts: list[dict[str, Any]] = []
+    seen_threads: set[str] = set()
+    for status_url in status_urls:
+        match = SOCIAL_STATUS_URL_RE.search(status_url)
+        if not match:
             continue
-        found_for_account = 0
-        for status_match in STATUS_BLOCK_RE.finditer(page):
-            if status_match.group("account").lower() != account.lower():
+        account = match.group("account").strip().lstrip("@")
+        status_id = match.group("id")
+        if account.lower() not in allowed_accounts or status_id in seen_threads:
+            continue
+        seen_threads.add(status_id)
+        try:
+            payload = fetch_json(FXTWITTER_THREAD_API.format(status_id=status_id))
+        except RuntimeError as exc:
+            print(f"warning: thread source skipped for {status_url}: {exc}", file=sys.stderr)
+            continue
+        thread = payload.get("thread")
+        if payload.get("code") != 200 or not isinstance(thread, list):
+            continue
+        found = 0
+        for tweet in thread:
+            if not isinstance(tweet, dict):
                 continue
-            paragraph_match = PARAGRAPH_RE.search(status_match.group("block"))
-            if not paragraph_match:
+            post = social_post_from_fxtwitter(tweet, account)
+            if post is None or post["account"].lower() not in allowed_accounts:
                 continue
-            text = clean_html_text(paragraph_match.group("text"))
-            if not text or not SOCIAL_ALPHA_RE.search(text):
-                continue
-            posts.append(
-                {
-                    "account": account,
-                    "id": status_match.group("id"),
-                    "age": clean_html_text(status_match.group("age")),
-                    "text": re.sub(r"\s+", " ", text),
-                    "url": f"https://x.com/{account}/status/{status_match.group('id')}",
-                    "mirrorUrl": f"https://twstalker.com/{account}/status/{status_match.group('id')}",
-                }
-            )
-            found_for_account += 1
-            if found_for_account >= max_posts:
+            posts.append(post)
+            found += 1
+            if found >= max_posts_per_thread:
                 break
-    return posts
+    return dedupe_posts(posts)
+
+
+def dedupe_posts(posts: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    seen: set[tuple[str, str]] = set()
+    result: list[dict[str, Any]] = []
+    for post in posts:
+        key = (str(post.get("account") or "").lower(), str(post.get("id") or ""))
+        if not key[0] or not key[1] or key in seen:
+            continue
+        seen.add(key)
+        result.append(post)
+    return result
+
+
+def extract_token(text: str) -> tuple[str, str] | None:
+    candidates = list(TOKEN_IN_PARENS_RE.finditer(text))
+    if not candidates:
+        return None
+    match = candidates[0]
+    symbol = match.group("symbol").upper()
+    prefix = text[: match.start("symbol")].rsplit("(", 1)[0].rsplit("（", 1)[0]
+    prefix = re.sub(r"https?://\S+", " ", prefix)
+    prefix = re.split(
+        r"(?:feature|featuring|list|listing|launch|launching|上线|推出|成为首个上线|首个上线)",
+        prefix,
+        flags=re.IGNORECASE,
+    )[-1]
+    prefix = re.split(r"[。.!?；;\n]", prefix)[-1]
+    name = re.sub(r"\s+", " ", prefix).strip(" -:：,，")
+    if not name:
+        name = match.group("name").strip(" -")
+    return name, symbol
 
 
 def build_social_items(
@@ -404,23 +648,24 @@ def build_social_items(
             continue
         if not re.search(r"空投|领取|积分|airdrop|claim|points?", text, re.IGNORECASE):
             continue
-        dates = parse_chinese_dates(text)
-        if not dates:
-            parsed_dates = parse_dates(text)
-            dates = [(value, True) for value in parsed_dates]
-        token_match = TOKEN_IN_PARENS_RE.search(text)
+        dates = parse_social_dates(text)
+        token = extract_token(text)
         if not dates:
             continue
         event_time, has_time = dates[0]
         if not (start <= event_time <= end):
             continue
-        has_token = token_match is not None
-        symbol = token_match.group("symbol").upper() if token_match else "待公布"
-        name = token_match.group("name").strip(" -") if token_match else "Alpha 空投币种"
+        has_token = token is not None
+        name, symbol = token if token else ("Alpha 空投币种", "待公布")
         key = f"social:{symbol}:{event_time.date().isoformat()}:{post.get('id')}"
         if key in seen:
             continue
         seen.add(key)
+        confirmation_note = (
+            "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+            if has_time
+            else "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。"
+        )
         items.append(
             {
                 "symbol": symbol,
@@ -440,7 +685,7 @@ def build_social_items(
                 "matchedAnnouncements": [],
                 "ruleSummary": [
                     text,
-                    "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+                    confirmation_note,
                 ],
                 "announcementUrls": [post.get("url"), post.get("mirrorUrl")],
                 "announcementDates": [event_time.isoformat()],
@@ -552,42 +797,37 @@ def merge_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     merged: dict[tuple[str, str], dict[str, Any]] = {}
     for item in sorted(items, key=lambda value: value["listingTime"]):
         symbol = str(item.get("symbol") or "").upper()
-        event_date = dt.datetime.fromisoformat(item["listingTime"]).date().isoformat()
+        event_date = local_event_date(item) or dt.datetime.fromisoformat(item["listingTime"]).date().isoformat()
         key = (symbol, event_date)
         existing = merged.get(key)
         if existing is None:
             merged[key] = item
             continue
-
-        existing_sources = [existing.get("source"), item.get("source")]
-        existing["source"] = " + ".join(unique([str(source) for source in existing_sources if source]))
-        existing["ruleSummary"] = unique((existing.get("ruleSummary") or []) + (item.get("ruleSummary") or []))[:8]
-        existing["announcementUrls"] = unique(
-            (existing.get("announcementUrls") or []) + (item.get("announcementUrls") or [])
-        )[:6]
-        existing["announcementDates"] = unique(
-            (existing.get("announcementDates") or []) + (item.get("announcementDates") or [])
-        )[:8]
-        if existing.get("onlineAirdrop") is None:
-            existing["onlineAirdrop"] = item.get("onlineAirdrop")
-        if existing.get("alphaId") is None:
-            existing["alphaId"] = item.get("alphaId")
-        if existing.get("chainName") is None:
-            existing["chainName"] = item.get("chainName")
-        if existing.get("contractAddress") is None:
-            existing["contractAddress"] = item.get("contractAddress")
-        if not existing.get("dateOnly") and item.get("dateOnly"):
-            existing["dateOnly"] = False
+        merged[key] = merge_item_details(existing, item)
     return sorted(merged.values(), key=lambda item: item["listingTime"])
 
 
 def history_key(item: dict[str, Any]) -> tuple[str, str]:
+    symbol = str(item.get("symbol") or "").upper()
+    event_date = local_event_date(item)
+    if symbol and symbol not in {"UNKNOWN", "待公布"} and event_date:
+        return ("symbol-date", f"{symbol}:{event_date}")
     if item.get("alphaId"):
         return ("alpha", str(item["alphaId"]))
     if item.get("sourceUrl"):
         return ("url", str(item["sourceUrl"]))
-    symbol = str(item.get("symbol") or "UNKNOWN").upper()
     return ("event", f"{symbol}:{item.get('listingTime')}")
+
+
+def local_event_date(item: dict[str, Any]) -> str | None:
+    value = item.get("listingTime")
+    if not value:
+        return None
+    try:
+        parsed = dt.datetime.fromisoformat(str(value))
+    except ValueError:
+        return None
+    return parsed.astimezone(SHANGHAI_TZ).date().isoformat()
 
 
 def load_history(history_url: str | None) -> list[dict[str, Any]]:
@@ -609,13 +849,45 @@ def load_history(history_url: str | None) -> list[dict[str, Any]]:
     return []
 
 
+def social_status_urls_from_history(
+    history: list[dict[str, Any]], *, lookback_days: int, horizon_days: int, max_urls: int
+) -> list[str]:
+    current = now_utc()
+    start = current - dt.timedelta(days=lookback_days)
+    end = current + dt.timedelta(days=horizon_days)
+    urls: list[str] = []
+    for item in sorted(history, key=lambda value: str(value.get("listingTime") or ""), reverse=True):
+        try:
+            listing_at = dt.datetime.fromisoformat(str(item.get("listingTime")))
+        except ValueError:
+            continue
+        if listing_at.tzinfo is None:
+            listing_at = listing_at.replace(tzinfo=dt.timezone.utc)
+        if not (start <= listing_at <= end):
+            continue
+        candidates: list[Any] = [
+            item.get("sourceUrl"),
+            item.get("sourceMirrorUrl"),
+            *(item.get("announcementUrls") or []),
+        ]
+        for candidate in candidates:
+            if not isinstance(candidate, str) or not SOCIAL_STATUS_URL_RE.search(candidate):
+                continue
+            urls.append(candidate)
+            if len(urls) >= max_urls:
+                return unique(urls)
+    return unique(urls)
+
+
 def merge_history(history: list[dict[str, Any]], current_items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     merged: dict[tuple[str, str], dict[str, Any]] = {}
     stamp = now_utc().isoformat()
 
     for item in history:
         if item.get("listingTime"):
-            merged[history_key(item)] = item
+            key = history_key(item)
+            existing = merged.get(key)
+            merged[key] = merge_item_details(existing, item) if existing else item
 
     for item in current_items:
         key = history_key(item)
@@ -631,40 +903,87 @@ def merge_history(history: list[dict[str, Any]], current_items: list[dict[str, A
         merged_item["lastSeenAt"] = stamp
         merged[key] = merged_item
 
-    return sorted(merged.values(), key=lambda item: item.get("listingTime", ""))
+    return sorted((normalize_merged_item(item) for item in merged.values()), key=lambda item: item.get("listingTime", ""))
 
 
 def merge_item_details(existing: dict[str, Any], incoming: dict[str, Any]) -> dict[str, Any]:
     merged = dict(existing)
+    promote_incoming = should_promote_incoming(existing, incoming)
     for field in (
         "symbol",
         "name",
         "alphaId",
         "chainName",
         "contractAddress",
-        "listingTime",
-        "sourceUrl",
-        "sourceMirrorUrl",
         "signalType",
         "tokenKnown",
     ):
         if incoming.get(field) not in (None, ""):
             merged[field] = incoming[field]
-    merged["source"] = " + ".join(
-        unique([str(source) for source in [existing.get("source"), incoming.get("source")] if source])
-    )
+    if promote_incoming:
+        for field in ("listingTime", "sourceUrl", "sourceMirrorUrl", "dateOnly"):
+            if incoming.get(field) not in (None, ""):
+                merged[field] = incoming[field]
+        ordered_sources = [incoming.get("source"), existing.get("source")]
+    else:
+        ordered_sources = [existing.get("source"), incoming.get("source")]
+        if not merged.get("sourceUrl") and incoming.get("sourceUrl"):
+            merged["sourceUrl"] = incoming["sourceUrl"]
+        if not merged.get("sourceMirrorUrl") and incoming.get("sourceMirrorUrl"):
+            merged["sourceMirrorUrl"] = incoming["sourceMirrorUrl"]
+        if merged.get("dateOnly") is None and incoming.get("dateOnly") is not None:
+            merged["dateOnly"] = incoming["dateOnly"]
+    merged["source"] = merge_source_texts(*ordered_sources)
     for field, limit in (
         ("ruleSummary", 8),
         ("announcementUrls", 8),
         ("announcementDates", 8),
     ):
-        merged[field] = unique((existing.get(field) or []) + (incoming.get(field) or []))[:limit]
-    if incoming.get("dateOnly") is not None:
-        merged["dateOnly"] = incoming.get("dateOnly")
+        if promote_incoming:
+            first = incoming.get(field) or []
+            second = existing.get(field) or []
+        else:
+            first = existing.get(field) or []
+            second = incoming.get(field) or []
+        merged[field] = unique(first + second)[:limit]
     for field in ("onlineAirdrop", "onlineTge", "mulPoint", "price"):
         if incoming.get(field) is not None:
             merged[field] = incoming[field]
     return merged
+
+
+def should_promote_incoming(existing: dict[str, Any], incoming: dict[str, Any]) -> bool:
+    existing_date_only = bool(existing.get("dateOnly"))
+    incoming_date_only = bool(incoming.get("dateOnly"))
+    if existing_date_only and not incoming_date_only:
+        return True
+    if not existing_date_only and incoming_date_only:
+        return False
+    if not incoming_date_only and incoming.get("listingTime"):
+        return True
+    return False
+
+
+def merge_source_texts(*sources: Any) -> str:
+    parts: list[str] = []
+    for source in sources:
+        if not source:
+            continue
+        parts.extend(part.strip() for part in str(source).split(" + "))
+    return " + ".join(unique(parts))
+
+
+def normalize_merged_item(item: dict[str, Any]) -> dict[str, Any]:
+    normalized = dict(item)
+    if normalized.get("source"):
+        normalized["source"] = merge_source_texts(normalized["source"])
+    for field, limit in (
+        ("ruleSummary", 8),
+        ("announcementUrls", 8),
+        ("announcementDates", 8),
+    ):
+        normalized[field] = unique(normalized.get(field) or [])[:limit]
+    return normalized
 
 
 def unique(values: list[str]) -> list[str]:
@@ -764,8 +1083,8 @@ def build_calendar(
     add_ics_line(lines, "X-WR-CALNAME:Bn Wallet Alpha 空投")
     add_ics_line(lines, "X-WR-CALDESC:自动更新的 Binance Wallet Alpha 空投领取提醒")
     add_ics_line(lines, "X-WR-TIMEZONE:Asia/Shanghai")
-    add_ics_line(lines, "REFRESH-INTERVAL;VALUE=DURATION:PT1H")
-    add_ics_line(lines, "X-PUBLISHED-TTL:PT1H")
+    add_ics_line(lines, "REFRESH-INTERVAL;VALUE=DURATION:PT30M")
+    add_ics_line(lines, "X-PUBLISHED-TTL:PT30M")
     add_timezone(lines)
 
     if include_daily_check:
@@ -945,6 +1264,12 @@ def parse_args() -> argparse.Namespace:
         help="Comma-separated official X accounts to scan through public mirrors",
     )
     parser.add_argument("--social-posts", type=int, default=8, help="Max relevant posts per social account")
+    parser.add_argument(
+        "--social-threads",
+        type=int,
+        default=20,
+        help="Max recent historical X status threads to rescan for follow-up updates",
+    )
     parser.add_argument("--no-social", action="store_true", help="Disable social-source scanning")
     parser.add_argument(
         "--history-url",
@@ -977,6 +1302,10 @@ def main() -> int:
         except RuntimeError as exc:
             print(f"warning: article detail skipped for {article.get('title')}: {exc}", file=sys.stderr)
 
+    history_items: list[dict[str, Any]] = []
+    if not args.no_history:
+        history_items = load_history(args.history_url)
+
     items = build_items(
         tokens,
         detailed_articles,
@@ -986,7 +1315,17 @@ def main() -> int:
     social_posts: list[dict[str, Any]] = []
     if not args.no_social:
         social_accounts = [account.strip() for account in args.social_accounts.split(",")]
+        allowed_accounts = {account.strip().lstrip("@").lower() for account in social_accounts if account.strip()}
         social_posts = fetch_social_posts(social_accounts, args.social_posts)
+        if history_items and args.social_threads > 0:
+            thread_urls = social_status_urls_from_history(
+                history_items,
+                lookback_days=args.lookback_days,
+                horizon_days=args.horizon_days,
+                max_urls=args.social_threads,
+            )
+            social_posts.extend(fetch_social_thread_posts(thread_urls, allowed_accounts, args.social_posts))
+            social_posts = dedupe_posts(social_posts)
         items.extend(
             build_social_items(
                 social_posts,
@@ -996,7 +1335,6 @@ def main() -> int:
         )
         items = merge_items(items)
     if not args.no_history:
-        history_items = load_history(args.history_url)
         items = merge_history(history_items, items)
     calendar = build_calendar(
         items,
