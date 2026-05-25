@@ -14,6 +14,8 @@ https://kahnchan.github.io/bn-wallet-alpha/binance-alpha-airdrops.ics
 https://kahnchan.github.io/bn-wallet-alpha/
 ```
 
+项目页面会直接展示一个月历视图，读取 `history.json` 中已经抓到的事件，并把 Alpha 空投挂到对应日期上；`.ics` 订阅地址仍然给 Apple Calendar 使用。
+
 ## 它做什么
 
 - 每 30 分钟运行一次 GitHub Actions。
@@ -22,6 +24,7 @@ https://kahnchan.github.io/bn-wallet-alpha/
 - 扫描官方 X 账号 `@binancezh` 和 `@BinanceWallet`，捕捉更早的 Alpha 空投预告。
 - 生成 `public/binance-alpha-airdrops.ics`，由 GitHub Pages 托管给 Apple Calendar 订阅。
 - 生成并发布 `public/history.json`，把已经发现的事件持续保留下来；后续扫描不到旧推文时也不会删除历史日历项。
+- 页面端读取 `history.json` 渲染网页月历，方便不用打开 Calendar.app 也能查看。
 
 ## 日历规则
 
