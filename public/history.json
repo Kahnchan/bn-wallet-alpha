@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T09:08:07.326059+00:00",
+  "generatedAt": "2026-05-27T06:34:25.526952+00:00",
   "items": [
     {
       "symbol": "ZEST",
@@ -90,16 +90,16 @@
     {
       "symbol": "SLX",
       "name": "Solstice",
-      "alphaId": null,
-      "chainName": null,
-      "contractAddress": null,
+      "alphaId": "ALPHA_978",
+      "chainName": "BSC",
+      "contractAddress": "0x02bcc4c181b83a8c0a342bc003389cbecb4bc54d",
       "listingTime": "2026-05-25T12:00:00+00:00",
       "dateOnly": false,
-      "onlineAirdrop": null,
-      "onlineTge": null,
-      "mulPoint": null,
-      "price": null,
-      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.2039929667940555766",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
       "sourceUrl": "https://x.com/BinanceWallet/status/2058805425781514588",
       "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2058805425781514588",
       "matchedAnnouncements": [],
@@ -128,45 +128,50 @@
       "signalType": "social_alpha_notice",
       "tokenKnown": true,
       "firstSeenAt": "2026-05-23T14:09:41.108351+00:00",
-      "lastSeenAt": "2026-05-25T09:08:07.322784+00:00"
+      "lastSeenAt": "2026-05-27T06:34:25.523066+00:00"
     },
     {
       "symbol": "CTR",
       "name": "Citrea",
-      "alphaId": null,
-      "chainName": null,
-      "contractAddress": null,
-      "listingTime": "2026-05-26T01:00:00+00:00",
-      "dateOnly": true,
-      "onlineAirdrop": null,
-      "onlineTge": null,
-      "mulPoint": null,
-      "price": null,
-      "source": "官方 X 预告 @binancezh + 官方 X 预告 @BinanceWallet",
-      "sourceUrl": "https://x.com/binancezh/status/2058491696313495575",
-      "sourceMirrorUrl": "https://twstalker.com/binancezh/status/2058491696313495575",
+      "alphaId": "ALPHA_979",
+      "chainName": "Base",
+      "contractAddress": "0x11030f79109269d796fd0fb956d6244e502757f7",
+      "listingTime": "2026-05-26T13:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 2,
+      "price": "0.01946375223266267635",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2059199055675462044",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2059199055675462044",
       "matchedAnnouncements": [],
       "ruleSummary": [
-        "币安 Alpha 将在 5 月 26 日成为首个上线 Citrea（CTR）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。",
-        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha is the first platform to feature Citrea (CTR), with Alpha debut and trading starting on May 26, 2026, at 13:00 (UTC). Users with at least 211 Binance Alpha Points can claim an airdrop of 1,090 CTR tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
         "Binance Alpha will be the first platform to feature Citrea (CTR) on May 26. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
-        "币安 Alpha 将在 5 月 26 日成为首个上线 Citrea（CTR）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/UEvsLqp88V"
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 5 月 26 日成为首个上线 Citrea（CTR）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/UEvsLqp88V",
+        "币安 Alpha 将在 5 月 26 日成为首个上线 Citrea（CTR）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。"
       ],
       "announcementUrls": [
-        "https://x.com/binancezh/status/2058491696313495575",
-        "https://twstalker.com/binancezh/status/2058491696313495575",
+        "https://x.com/BinanceWallet/status/2059199055675462044",
+        "https://api.fxtwitter.com/2/status/2059199055675462044",
         "https://x.com/BinanceWallet/status/2058488765824581805",
         "https://api.fxtwitter.com/2/status/2058488765824581805",
-        "https://api.fxtwitter.com/2/status/2058491696313495575"
+        "https://x.com/binancezh/status/2058491696313495575",
+        "https://api.fxtwitter.com/2/status/2058491696313495575",
+        "https://twstalker.com/binancezh/status/2058491696313495575"
       ],
       "announcementDates": [
-        "2026-05-26T01:00:00+00:00",
-        "2026-05-26T00:00:00+00:00"
+        "2026-05-26T13:00:00+00:00",
+        "2026-05-26T00:00:00+00:00",
+        "2026-05-26T01:00:00+00:00"
       ],
       "signalType": "social_alpha_notice",
       "tokenKnown": true,
       "firstSeenAt": "2026-05-24T10:57:25.203846+00:00",
-      "lastSeenAt": "2026-05-25T09:08:07.322784+00:00"
+      "lastSeenAt": "2026-05-27T06:34:25.523066+00:00"
     }
   ]
 }

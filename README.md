@@ -18,7 +18,7 @@ https://kahnchan.github.io/bn-wallet-alpha/
 
 ## 它做什么
 
-- 每 30 分钟运行一次 GitHub Actions。
+- GitHub Actions 在 `:07/:17/:27/:37/:47/:57` 错峰运行，约每 10 分钟尝试刷新一次。
 - 抓取 Binance Alpha 结构化币种接口，识别 `onlineAirdrop=true` 的项目。
 - 扫描 Binance 官方公告/CMS，补充领取门槛、领取数量、开放时间等规则。
 - 扫描官方 X 账号 `@binancezh` 和 `@BinanceWallet`，捕捉更早的 Alpha 空投预告；同时重扫历史官推的 thread，后续补充精确时间或规则时会回填旧事件。
@@ -46,7 +46,7 @@ https://kahnchan.github.io/bn-wallet-alpha/
 https://kahnchan.github.io/bn-wallet-alpha/binance-alpha-airdrops.ics
 ```
 
-建议把自动刷新设置为每 30 分钟或每小时。
+建议把自动刷新设置为每 10 分钟或每 30 分钟；Apple Calendar 可能不会严格按订阅文件里的刷新提示执行。
 
 ## 手动运行
 
@@ -94,7 +94,7 @@ bash scripts/install_launchd.sh
 
 这会安装两个 macOS LaunchAgent：
 
-- 每 30 分钟刷新一次 `.ics`
+- 每 10 分钟刷新一次 `.ics`
 - 在本机 `http://127.0.0.1:8765/` 提供订阅地址
 
 停止本机任务：
@@ -125,4 +125,4 @@ gh workflow run update-calendar.yml --repo Kahnchan/bn-wallet-alpha
 
 ## 注意
 
-GitHub Actions 的定时任务可能延迟，不保证精确卡点执行。社媒预告只代表官方账号公开提到的日期或方向，最终领取时间、资格、Alpha Points 门槛和领取数量仍以 Binance Wallet App 内 Alpha 活动页为准。
+GitHub Actions 的定时任务可能延迟或丢弃，不保证精确卡点执行。当前配置会避开整点/半点，并用更高频的错峰触发降低漏抓概率；如果需要接近 SLA 的提醒，应再接入 cron-job.org、UptimeRobot 或自有服务器作为外部触发器。社媒预告只代表官方账号公开提到的日期或方向，最终领取时间、资格、Alpha Points 门槛和领取数量仍以 Binance Wallet App 内 Alpha 活动页为准。
