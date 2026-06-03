@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T07:35:58.223789+00:00",
+  "generatedAt": "2026-06-03T07:51:20.409245+00:00",
   "items": [
     {
       "symbol": "ZEST",
@@ -247,7 +247,7 @@
       "signalType": "social_alpha_notice",
       "tokenKnown": false,
       "firstSeenAt": "2026-06-01T18:45:41.678581+00:00",
-      "lastSeenAt": "2026-06-03T07:35:58.220452+00:00"
+      "lastSeenAt": "2026-06-03T07:51:20.407041+00:00"
     },
     {
       "symbol": "待公布",
@@ -280,7 +280,36 @@
       "signalType": "social_alpha_notice",
       "tokenKnown": false,
       "firstSeenAt": "2026-06-02T06:21:44.620037+00:00",
-      "lastSeenAt": "2026-06-03T07:35:58.220452+00:00"
+      "lastSeenAt": "2026-06-03T07:51:20.407041+00:00"
+    },
+    {
+      "symbol": "测试",
+      "name": "Apple Calendar 提醒测试",
+      "listingTime": "2026-06-03T09:00:00+00:00",
+      "dateOnly": false,
+      "source": "手动测试事件",
+      "sourceUrl": "https://kahnchan.github.io/bn-wallet-alpha/",
+      "ruleSummary": [
+        "这是用于测试 Apple Calendar 订阅事件和开始前 15 分钟提醒的手动事件。"
+      ],
+      "announcementUrls": [
+        "https://kahnchan.github.io/bn-wallet-alpha/"
+      ],
+      "announcementDates": [
+        "2026-06-03T09:00:00+00:00"
+      ],
+      "signalType": "manual_test",
+      "tokenKnown": true,
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "matchedAnnouncements": [],
+      "firstSeenAt": "2026-06-03T07:51:20.407041+00:00",
+      "lastSeenAt": "2026-06-03T07:51:20.407041+00:00"
     }
   ]
 }

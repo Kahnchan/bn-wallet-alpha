@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "symbol": "测试",
+      "name": "Apple Calendar 提醒测试",
+      "listingTime": "2026-06-03T17:00:00+08:00",
+      "dateOnly": false,
+      "source": "手动测试事件",
+      "sourceUrl": "https://kahnchan.github.io/bn-wallet-alpha/",
+      "ruleSummary": [
+        "这是用于测试 Apple Calendar 订阅事件和开始前 15 分钟提醒的手动事件。"
+      ],
+      "announcementUrls": [
+        "https://kahnchan.github.io/bn-wallet-alpha/"
+      ],
+      "announcementDates": [
+        "2026-06-03T09:00:00+00:00"
+      ],
+      "signalType": "manual_test",
+      "tokenKnown": true
+    }
+  ]
+}

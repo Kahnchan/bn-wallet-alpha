@@ -31,6 +31,7 @@ DATA_DIR = ROOT / "data"
 PUBLIC_DIR = ROOT / "public"
 CACHE_DIR = DATA_DIR / "cache"
 HISTORY_FILE = PUBLIC_DIR / "history.json"
+MANUAL_EVENTS_FILE = DATA_DIR / "manual_events.json"
 DEFAULT_HISTORY_URL = "https://kahnchan.github.io/bn-wallet-alpha/history.json"
 
 ALPHA_TOKEN_API = (
@@ -793,6 +794,55 @@ def build_items(
     return items
 
 
+def load_manual_items(path: Path = MANUAL_EVENTS_FILE) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        print(f"warning: manual events unavailable: {exc}", file=sys.stderr)
+        return []
+
+    raw_items = payload.get("items") if isinstance(payload, dict) else payload
+    if not isinstance(raw_items, list):
+        return []
+
+    items: list[dict[str, Any]] = []
+    for raw in raw_items:
+        if not isinstance(raw, dict) or not raw.get("listingTime"):
+            continue
+        item = dict(raw)
+        try:
+            starts_at = dt.datetime.fromisoformat(str(item["listingTime"]))
+        except ValueError:
+            print(f"warning: manual event skipped, invalid listingTime: {item.get('listingTime')}", file=sys.stderr)
+            continue
+        if starts_at.tzinfo is None:
+            starts_at = starts_at.replace(tzinfo=SHANGHAI_TZ)
+        starts_at = starts_at.astimezone(dt.timezone.utc)
+        item["listingTime"] = starts_at.isoformat()
+        item.setdefault("symbol", "测试")
+        item.setdefault("name", "Apple Calendar 提醒测试")
+        item.setdefault("alphaId", None)
+        item.setdefault("chainName", None)
+        item.setdefault("contractAddress", None)
+        item.setdefault("dateOnly", False)
+        item.setdefault("onlineAirdrop", None)
+        item.setdefault("onlineTge", None)
+        item.setdefault("mulPoint", None)
+        item.setdefault("price", None)
+        item.setdefault("source", "手动测试事件")
+        item.setdefault("sourceUrl", "https://kahnchan.github.io/bn-wallet-alpha/")
+        item.setdefault("matchedAnnouncements", [])
+        item.setdefault("ruleSummary", ["用于测试 Apple Calendar 订阅事件和开始前 15 分钟提醒。"])
+        item.setdefault("announcementUrls", [item["sourceUrl"]])
+        item.setdefault("announcementDates", [item["listingTime"]])
+        item.setdefault("signalType", "manual_test")
+        item.setdefault("tokenKnown", True)
+        items.append(item)
+    return items
+
+
 def merge_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     merged: dict[tuple[str, str], dict[str, Any]] = {}
     for item in sorted(items, key=lambda value: value["listingTime"]):
@@ -1333,7 +1383,8 @@ def main() -> int:
                 horizon_days=args.horizon_days,
             )
         )
-        items = merge_items(items)
+    items.extend(load_manual_items())
+    items = merge_items(items)
     if not args.no_history:
         items = merge_history(history_items, items)
     calendar = build_calendar(

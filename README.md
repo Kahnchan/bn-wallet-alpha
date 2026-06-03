@@ -73,6 +73,12 @@ https://kahnchan.github.io/bn-wallet-alpha/binance-alpha-airdrops.ics
 /usr/bin/python3 scripts/update_binance_alpha_calendar.py --social-accounts binancezh,BinanceWallet,BinanceChinese
 ```
 
+手动添加测试或临时事件：
+
+```text
+data/manual_events.json
+```
+
 调整历史 thread 回扫数量：
 
 ```bash
