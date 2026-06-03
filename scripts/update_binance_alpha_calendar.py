@@ -1141,7 +1141,7 @@ def build_calendar(
         add_ics_line(lines, f"DESCRIPTION:{ics_escape(build_description(item))}")
         add_ics_line(lines, f"URL:{item.get('sourceUrl') or BINANCE_ALPHA_URL}")
         add_ics_line(lines, "BEGIN:VALARM")
-        add_ics_line(lines, "TRIGGER:-PT30M")
+        add_ics_line(lines, "TRIGGER:-PT15M")
         add_ics_line(lines, "ACTION:DISPLAY")
         add_ics_line(lines, f"DESCRIPTION:{ics_escape(summary)}")
         add_ics_line(lines, "END:VALARM")

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T06:34:25.526952+00:00",
+  "generatedAt": "2026-06-03T07:35:58.223789+00:00",
   "items": [
     {
       "symbol": "ZEST",
@@ -98,7 +98,7 @@
       "onlineAirdrop": true,
       "onlineTge": false,
       "mulPoint": 4,
-      "price": "0.2039929667940555766",
+      "price": "0.19874748660273010704",
       "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
       "sourceUrl": "https://x.com/BinanceWallet/status/2058805425781514588",
       "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2058805425781514588",
@@ -106,29 +106,29 @@
       "ruleSummary": [
         "Binance Alpha is the first platform to feature Solstice (SLX), with Alpha debut and trading starting on May 25, 2026, at 12:00 (UTC). Users with at least 215 Binance Alpha Points can claim an airdrop of 250 SLX tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
         "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
-        "Binance Alpha will be the first platform to feature Solstice (SLX) on May 25. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
-        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
         "币安 Alpha 将在 5 月 25 日成为首个上线 Solstice (SLX) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/FX39V05IZQ",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature Solstice (SLX) on May 25. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
         "币安 Alpha 将在 5 月 25 日成为首个上线 Solstice (SLX) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。"
       ],
       "announcementUrls": [
         "https://x.com/BinanceWallet/status/2058805425781514588",
         "https://api.fxtwitter.com/2/status/2058805425781514588",
-        "https://x.com/BinanceWallet/status/2058156451240292574",
-        "https://api.fxtwitter.com/2/status/2058156451240292574",
         "https://x.com/binancezh/status/2058179047407181849",
         "https://api.fxtwitter.com/2/status/2058179047407181849",
+        "https://x.com/BinanceWallet/status/2058156451240292574",
+        "https://api.fxtwitter.com/2/status/2058156451240292574",
         "https://twstalker.com/binancezh/status/2058179047407181849"
       ],
       "announcementDates": [
         "2026-05-25T12:00:00+00:00",
-        "2026-05-25T00:00:00+00:00",
-        "2026-05-25T01:00:00+00:00"
+        "2026-05-25T01:00:00+00:00",
+        "2026-05-25T00:00:00+00:00"
       ],
       "signalType": "social_alpha_notice",
       "tokenKnown": true,
       "firstSeenAt": "2026-05-23T14:09:41.108351+00:00",
-      "lastSeenAt": "2026-05-27T06:34:25.523066+00:00"
+      "lastSeenAt": "2026-05-28T08:32:43.568366+00:00"
     },
     {
       "symbol": "CTR",
@@ -141,7 +141,7 @@
       "onlineAirdrop": true,
       "onlineTge": false,
       "mulPoint": 2,
-      "price": "0.01946375223266267635",
+      "price": "0.018408566880569758938",
       "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
       "sourceUrl": "https://x.com/BinanceWallet/status/2059199055675462044",
       "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2059199055675462044",
@@ -171,7 +171,116 @@
       "signalType": "social_alpha_notice",
       "tokenKnown": true,
       "firstSeenAt": "2026-05-24T10:57:25.203846+00:00",
-      "lastSeenAt": "2026-05-27T06:34:25.523066+00:00"
+      "lastSeenAt": "2026-05-29T10:28:09.232156+00:00"
+    },
+    {
+      "symbol": "QAIT",
+      "name": "Sealcoin",
+      "alphaId": "ALPHA_980",
+      "chainName": "BSC",
+      "contractAddress": "0x4d41a5d412f4ef44a35b9f53b06db65ede249493",
+      "listingTime": "2026-05-28T15:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.021710974189409753805",
+      "source": "Binance Alpha 币种接口 + 官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://www.binance.com/en/alpha",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2059915129907765300",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature Sealcoin (QAIT), with Alpha debut and trading starting on May 28, 2026, at 13:00 (UTC). Users with at least 241 Binance Alpha Points can claim an airdrop of 31,111 QAIT tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 5 月 28 日成为首个上线 Sealcoin (QAIT) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/FF1rqoSmkf",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature Sealcoin (QAIT) on May 28. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2059915129907765300",
+        "https://api.fxtwitter.com/2/status/2059915129907765300",
+        "https://x.com/binancezh/status/2059888026994782492",
+        "https://api.fxtwitter.com/2/status/2059888026994782492",
+        "https://x.com/BinanceWallet/status/2059881406722166911",
+        "https://api.fxtwitter.com/2/status/2059881406722166911"
+      ],
+      "announcementDates": [
+        "2026-05-28T13:00:00+00:00",
+        "2026-05-28T01:00:00+00:00",
+        "2026-05-28T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-05-28T08:32:43.568366+00:00",
+      "lastSeenAt": "2026-05-31T14:56:31.784086+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-01T00:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2061451525416005653",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2061451525416005653",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha Balance Points Update： Starting 2026-06-01 00:00 (UTC), assets from Binance Wallet DeFi Earn campaigns, including current and future eligible receipt tokens, will now count towards your Binance Alpha Balance Points. For the list of eligible assets, please refer to the Binance Alpha Points FAQ ⬇️ https://t.co/rrNlu05XtL",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "币安钱包 Alpha 余额积分规则更新： 自 2026 年 6 月 1 日 08:00（UTC+8）起，币安钱包内当前及未来符合条件的DeFi理财活动的质押凭证资产，将计入用户的币安Alpha余额积分。 关于符合条件的资产列表，请参阅币安 Alpha 积分常见问题⬇️ https://t.co/SO6j7o8nQu https://t.co/tgUTptHJ9r"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2061451525416005653",
+        "https://api.fxtwitter.com/2/status/2061451525416005653",
+        "https://x.com/binancezh/status/2061471625783165312",
+        "https://api.fxtwitter.com/2/status/2061471625783165312"
+      ],
+      "announcementDates": [
+        "2026-06-01T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-01T18:45:41.678581+00:00",
+      "lastSeenAt": "2026-06-03T07:35:58.220452+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-03T07:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/binancezh/status/2061676372880437539",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2061676372880437539",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 15:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 240 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2061676372880437539",
+        "https://api.fxtwitter.com/2/status/2061676372880437539"
+      ],
+      "announcementDates": [
+        "2026-06-03T07:00:00+00:00",
+        "2026-06-02T07:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-02T06:21:44.620037+00:00",
+      "lastSeenAt": "2026-06-03T07:35:58.220452+00:00"
     }
   ]
 }
