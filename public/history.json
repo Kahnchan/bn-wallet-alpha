@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T07:51:20.409245+00:00",
+  "generatedAt": "2026-06-04T10:02:57.487553+00:00",
   "items": [
     {
       "symbol": "ZEST",
@@ -247,7 +247,7 @@
       "signalType": "social_alpha_notice",
       "tokenKnown": false,
       "firstSeenAt": "2026-06-01T18:45:41.678581+00:00",
-      "lastSeenAt": "2026-06-03T07:51:20.407041+00:00"
+      "lastSeenAt": "2026-06-03T22:39:13.716514+00:00"
     },
     {
       "symbol": "待公布",
@@ -255,7 +255,7 @@
       "alphaId": null,
       "chainName": null,
       "contractAddress": null,
-      "listingTime": "2026-06-03T07:00:00+00:00",
+      "listingTime": "2026-06-02T07:00:00+00:00",
       "dateOnly": false,
       "onlineAirdrop": null,
       "onlineTge": null,
@@ -274,13 +274,12 @@
         "https://api.fxtwitter.com/2/status/2061676372880437539"
       ],
       "announcementDates": [
-        "2026-06-03T07:00:00+00:00",
         "2026-06-02T07:00:00+00:00"
       ],
       "signalType": "social_alpha_notice",
       "tokenKnown": false,
       "firstSeenAt": "2026-06-02T06:21:44.620037+00:00",
-      "lastSeenAt": "2026-06-03T07:51:20.407041+00:00"
+      "lastSeenAt": "2026-06-04T10:02:57.483300+00:00"
     },
     {
       "symbol": "测试",
@@ -308,8 +307,8 @@
       "mulPoint": null,
       "price": null,
       "matchedAnnouncements": [],
-      "firstSeenAt": "2026-06-03T07:51:20.407041+00:00",
-      "lastSeenAt": "2026-06-03T07:51:20.407041+00:00"
+      "firstSeenAt": "2026-06-03T07:53:22.280348+00:00",
+      "lastSeenAt": "2026-06-04T10:02:57.483300+00:00"
     }
   ]
 }

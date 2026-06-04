@@ -338,27 +338,28 @@ def parse_dates(text: str) -> list[dt.datetime]:
     return [value for value, _has_time in parse_iso_dates(text)]
 
 
-def parse_chinese_dates(text: str) -> list[tuple[dt.datetime, bool]]:
-    current = dt.datetime.now(SHANGHAI_TZ)
+def parse_chinese_dates(text: str, *, base_time: dt.datetime | None = None) -> list[tuple[dt.datetime, bool]]:
+    current = (base_time or dt.datetime.now(SHANGHAI_TZ)).astimezone(SHANGHAI_TZ)
     dates: list[tuple[dt.datetime, bool]] = []
-    for match in RELATIVE_CHINESE_TIME_RE.finditer(text):
-        day_text = match.group("day")
-        day_offset = 1 if day_text in {"明天", "明日", "明晚"} else 0
-        base_date = current.date() + dt.timedelta(days=day_offset)
-        hour = int(match.group("hour"))
-        minute = int(match.group("minute") or 0)
-        try:
-            parsed = dt.datetime(
-                base_date.year,
-                base_date.month,
-                base_date.day,
-                hour,
-                minute,
-                tzinfo=SHANGHAI_TZ,
-            )
-        except ValueError:
-            continue
-        dates.append((parsed.astimezone(dt.timezone.utc), True))
+    if base_time is not None:
+        for match in RELATIVE_CHINESE_TIME_RE.finditer(text):
+            day_text = match.group("day")
+            day_offset = 1 if day_text in {"明天", "明日", "明晚"} else 0
+            base_date = current.date() + dt.timedelta(days=day_offset)
+            hour = int(match.group("hour"))
+            minute = int(match.group("minute") or 0)
+            try:
+                parsed = dt.datetime(
+                    base_date.year,
+                    base_date.month,
+                    base_date.day,
+                    hour,
+                    minute,
+                    tzinfo=SHANGHAI_TZ,
+                )
+            except ValueError:
+                continue
+            dates.append((parsed.astimezone(dt.timezone.utc), True))
     for match in CHINESE_DATE_RE.finditer(text):
         year = int(match.group("year") or current.year)
         month = int(match.group("month"))
@@ -385,8 +386,8 @@ def parse_chinese_dates(text: str) -> list[tuple[dt.datetime, bool]]:
     return dates
 
 
-def parse_english_dates(text: str) -> list[tuple[dt.datetime, bool]]:
-    current = now_utc()
+def parse_english_dates(text: str, *, base_time: dt.datetime | None = None) -> list[tuple[dt.datetime, bool]]:
+    current = base_time.astimezone(dt.timezone.utc) if base_time else now_utc()
     dates: list[tuple[dt.datetime, bool]] = []
     for match in ENGLISH_DATE_RE.finditer(text):
         month_name = match.group("month").lower().rstrip(".")
@@ -422,8 +423,12 @@ def parse_english_dates(text: str) -> list[tuple[dt.datetime, bool]]:
     return dates
 
 
-def parse_social_dates(text: str) -> list[tuple[dt.datetime, bool]]:
-    return parse_chinese_dates(text) + parse_english_dates(text) + parse_iso_dates(text)
+def parse_social_dates(text: str, *, base_time: dt.datetime | None = None) -> list[tuple[dt.datetime, bool]]:
+    return (
+        parse_chinese_dates(text, base_time=base_time)
+        + parse_english_dates(text, base_time=base_time)
+        + parse_iso_dates(text)
+    )
 
 
 def fetch_alpha_tokens() -> list[dict[str, Any]]:
@@ -477,6 +482,38 @@ def clean_html_text(raw: str) -> str:
     return html.unescape(without_tags).replace("\xa0", " ").strip()
 
 
+def parse_social_post_time(post: dict[str, Any]) -> dt.datetime | None:
+    value = post.get("createdAt")
+    if not value:
+        return None
+    try:
+        parsed = dt.datetime.fromisoformat(str(value))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=dt.timezone.utc)
+    return parsed.astimezone(dt.timezone.utc)
+
+
+def parse_fxtwitter_created_at(tweet: dict[str, Any]) -> str | None:
+    timestamp = tweet.get("created_timestamp")
+    if timestamp is not None:
+        try:
+            return dt.datetime.fromtimestamp(int(timestamp), tz=dt.timezone.utc).isoformat()
+        except (TypeError, ValueError, OSError):
+            pass
+    raw = tweet.get("created_at")
+    if not raw:
+        return None
+    try:
+        parsed = email.utils.parsedate_to_datetime(str(raw))
+    except (TypeError, ValueError):
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=dt.timezone.utc)
+    return parsed.astimezone(dt.timezone.utc).isoformat()
+
+
 def social_post_from_fxtwitter(tweet: dict[str, Any], account_hint: str | None = None) -> dict[str, Any] | None:
     status_id = str(tweet.get("id") or "")
     if not status_id:
@@ -494,6 +531,7 @@ def social_post_from_fxtwitter(tweet: dict[str, Any], account_hint: str | None =
         "account": account,
         "id": status_id,
         "age": str(tweet.get("created_at") or ""),
+        "createdAt": parse_fxtwitter_created_at(tweet),
         "text": text,
         "url": str(tweet.get("url") or f"https://x.com/{account}/status/{status_id}"),
         "mirrorUrl": FXTWITTER_STATUS_API.format(status_id=status_id),
@@ -649,7 +687,7 @@ def build_social_items(
             continue
         if not re.search(r"空投|领取|积分|airdrop|claim|points?", text, re.IGNORECASE):
             continue
-        dates = parse_social_dates(text)
+        dates = parse_social_dates(text, base_time=parse_social_post_time(post))
         token = extract_token(text)
         if not dates:
             continue
@@ -1033,7 +1071,29 @@ def normalize_merged_item(item: dict[str, Any]) -> dict[str, Any]:
         ("announcementDates", 8),
     ):
         normalized[field] = unique(normalized.get(field) or [])[:limit]
+    if normalized.get("signalType") == "social_alpha_notice":
+        normalized["announcementDates"] = same_local_day_dates(
+            normalized.get("announcementDates") or [],
+            local_event_date(normalized),
+        )
     return normalized
+
+
+def same_local_day_dates(values: list[str], date_key: str | None) -> list[str]:
+    if not date_key:
+        return unique(values)
+    result: list[str] = []
+    for value in values:
+        try:
+            parsed = dt.datetime.fromisoformat(str(value))
+        except ValueError:
+            result.append(str(value))
+            continue
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=dt.timezone.utc)
+        if parsed.astimezone(SHANGHAI_TZ).date().isoformat() == date_key:
+            result.append(str(value))
+    return unique(result)
 
 
 def unique(values: list[str]) -> list[str]:
