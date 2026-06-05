@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T10:02:57.487553+00:00",
+  "generatedAt": "2026-06-05T06:55:23.318361+00:00",
   "items": [
     {
       "symbol": "ZEST",
@@ -220,41 +220,6 @@
       "alphaId": null,
       "chainName": null,
       "contractAddress": null,
-      "listingTime": "2026-06-01T00:00:00+00:00",
-      "dateOnly": false,
-      "onlineAirdrop": null,
-      "onlineTge": null,
-      "mulPoint": null,
-      "price": null,
-      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
-      "sourceUrl": "https://x.com/BinanceWallet/status/2061451525416005653",
-      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2061451525416005653",
-      "matchedAnnouncements": [],
-      "ruleSummary": [
-        "Binance Alpha Balance Points Update： Starting 2026-06-01 00:00 (UTC), assets from Binance Wallet DeFi Earn campaigns, including current and future eligible receipt tokens, will now count towards your Binance Alpha Balance Points. For the list of eligible assets, please refer to the Binance Alpha Points FAQ ⬇️ https://t.co/rrNlu05XtL",
-        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
-        "币安钱包 Alpha 余额积分规则更新： 自 2026 年 6 月 1 日 08:00（UTC+8）起，币安钱包内当前及未来符合条件的DeFi理财活动的质押凭证资产，将计入用户的币安Alpha余额积分。 关于符合条件的资产列表，请参阅币安 Alpha 积分常见问题⬇️ https://t.co/SO6j7o8nQu https://t.co/tgUTptHJ9r"
-      ],
-      "announcementUrls": [
-        "https://x.com/BinanceWallet/status/2061451525416005653",
-        "https://api.fxtwitter.com/2/status/2061451525416005653",
-        "https://x.com/binancezh/status/2061471625783165312",
-        "https://api.fxtwitter.com/2/status/2061471625783165312"
-      ],
-      "announcementDates": [
-        "2026-06-01T00:00:00+00:00"
-      ],
-      "signalType": "social_alpha_notice",
-      "tokenKnown": false,
-      "firstSeenAt": "2026-06-01T18:45:41.678581+00:00",
-      "lastSeenAt": "2026-06-03T22:39:13.716514+00:00"
-    },
-    {
-      "symbol": "待公布",
-      "name": "Alpha 空投币种",
-      "alphaId": null,
-      "chainName": null,
-      "contractAddress": null,
       "listingTime": "2026-06-02T07:00:00+00:00",
       "dateOnly": false,
       "onlineAirdrop": null,
@@ -279,7 +244,7 @@
       "signalType": "social_alpha_notice",
       "tokenKnown": false,
       "firstSeenAt": "2026-06-02T06:21:44.620037+00:00",
-      "lastSeenAt": "2026-06-04T10:02:57.483300+00:00"
+      "lastSeenAt": "2026-06-05T06:55:23.313957+00:00"
     },
     {
       "symbol": "测试",
@@ -308,7 +273,39 @@
       "price": null,
       "matchedAnnouncements": [],
       "firstSeenAt": "2026-06-03T07:53:22.280348+00:00",
-      "lastSeenAt": "2026-06-04T10:02:57.483300+00:00"
+      "lastSeenAt": "2026-06-05T06:55:23.313957+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-05T07:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/binancezh/status/2062770368591577206",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2062770368591577206",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 15:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 241 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2062770368591577206",
+        "https://api.fxtwitter.com/2/status/2062770368591577206"
+      ],
+      "announcementDates": [
+        "2026-06-05T07:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-05T06:04:24.963698+00:00",
+      "lastSeenAt": "2026-06-05T06:55:23.313957+00:00"
     }
   ]
 }

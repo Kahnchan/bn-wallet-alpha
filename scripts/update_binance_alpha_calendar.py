@@ -128,6 +128,7 @@ SOCIAL_ALPHA_RE = re.compile(
     r"(alpha|Alpha|空投|领取|积分|上线|首个上线|交易开放|airdrop|claim|points?|launch|list)",
     re.IGNORECASE,
 )
+SOCIAL_AIRDROP_ACTION_RE = re.compile(r"(空投|申领|领取[^。.!?\n]{0,30}空投|airdrop|claim)", re.IGNORECASE)
 TOKEN_IN_PARENS_RE = re.compile(
     r"(?:上线|推出|上线\s+|list(?:ing)?\s+|launch(?:ing)?\s+)?"
     r"(?P<name>[A-Za-z][A-Za-z0-9 ._-]{1,60}?)\s*[（(](?P<symbol>[A-Z0-9]{2,15})[）)]"
@@ -482,6 +483,19 @@ def clean_html_text(raw: str) -> str:
     return html.unescape(without_tags).replace("\xa0", " ").strip()
 
 
+def social_signal_text(text: str) -> str:
+    without_urls = re.sub(r"https?://\S+", " ", text)
+    without_mentions = re.sub(r"@[A-Za-z0-9_]+", " ", without_urls)
+    return re.sub(r"\s+", " ", without_mentions).strip()
+
+
+def is_social_airdrop_text(text: str) -> bool:
+    signal_text = social_signal_text(text)
+    return bool(re.search(r"\balpha\b|币安\s*Alpha", signal_text, re.IGNORECASE)) and bool(
+        SOCIAL_AIRDROP_ACTION_RE.search(signal_text)
+    )
+
+
 def parse_social_post_time(post: dict[str, Any]) -> dt.datetime | None:
     value = post.get("createdAt")
     if not value:
@@ -683,9 +697,7 @@ def build_social_items(
 
     for post in posts:
         text = str(post.get("text") or "")
-        if "Alpha" not in text and "alpha" not in text:
-            continue
-        if not re.search(r"空投|领取|积分|airdrop|claim|points?", text, re.IGNORECASE):
+        if not is_social_airdrop_text(text):
             continue
         dates = parse_social_dates(text, base_time=parse_social_post_time(post))
         token = extract_token(text)
@@ -972,7 +984,7 @@ def merge_history(history: list[dict[str, Any]], current_items: list[dict[str, A
     stamp = now_utc().isoformat()
 
     for item in history:
-        if item.get("listingTime"):
+        if item.get("listingTime") and keep_history_item(item):
             key = history_key(item)
             existing = merged.get(key)
             merged[key] = merge_item_details(existing, item) if existing else item
@@ -992,6 +1004,13 @@ def merge_history(history: list[dict[str, Any]], current_items: list[dict[str, A
         merged[key] = merged_item
 
     return sorted((normalize_merged_item(item) for item in merged.values()), key=lambda item: item.get("listingTime", ""))
+
+
+def keep_history_item(item: dict[str, Any]) -> bool:
+    if item.get("signalType") != "social_alpha_notice":
+        return True
+    text = " ".join(str(line) for line in (item.get("ruleSummary") or [])[:2])
+    return is_social_airdrop_text(text)
 
 
 def merge_item_details(existing: dict[str, Any], incoming: dict[str, Any]) -> dict[str, Any]:
@@ -1225,8 +1244,7 @@ def build_calendar(
 
     for item in items:
         start = dt.datetime.fromisoformat(item["listingTime"])
-        uid_seed = f"{item.get('alphaId') or item.get('symbol')}-{item['listingTime']}"
-        uid = hashlib.sha1(uid_seed.encode("utf-8")).hexdigest()[:16]
+        uid = hashlib.sha1(calendar_uid_seed(item).encode("utf-8")).hexdigest()[:16]
         symbol = item.get("symbol") or "UNKNOWN"
         if item.get("signalType") == "social_alpha_notice" and item.get("tokenKnown") is False:
             prefix = "空投"
@@ -1259,6 +1277,18 @@ def build_calendar(
 
     add_ics_line(lines, "END:VCALENDAR")
     return "\r\n".join(lines) + "\r\n"
+
+
+def calendar_uid_seed(item: dict[str, Any]) -> str:
+    if item.get("alphaId"):
+        return f"alpha:{item['alphaId']}"
+    if item.get("signalType") == "social_alpha_notice" and item.get("sourceUrl"):
+        return f"social:{item['sourceUrl']}"
+    if item.get("contractAddress"):
+        return f"contract:{item.get('chainName')}:{item['contractAddress']}"
+    if item.get("sourceUrl") and item.get("signalType") == "manual_test":
+        return f"manual:{item.get('sourceUrl')}:{item.get('listingTime')}"
+    return f"event:{item.get('symbol') or 'UNKNOWN'}:{item.get('listingTime')}"
 
 
 def add_timezone(lines: list[str]) -> None:
