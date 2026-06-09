@@ -40,7 +40,7 @@ cat > "$AGENT_DIR/$REFRESH_LABEL.plist" <<PLIST
   <key>WorkingDirectory</key>
   <string>$APP_DIR</string>
   <key>StartInterval</key>
-  <integer>600</integer>
+  <integer>300</integer>
   <key>RunAtLoad</key>
   <true/>
   <key>StandardOutPath</key>
@@ -91,7 +91,7 @@ launchctl kickstart -k "gui/$(id -u)/$REFRESH_LABEL"
 launchctl kickstart -k "gui/$(id -u)/$SERVER_LABEL"
 
 echo "Installed launchd jobs:"
-echo "  $REFRESH_LABEL refreshes the ICS every 10 minutes"
+echo "  $REFRESH_LABEL refreshes the ICS every 5 minutes"
 echo "  $SERVER_LABEL serves the calendar feed locally"
 echo
 echo "Apple Calendar subscription URL:"

@@ -1256,8 +1256,8 @@ def build_calendar(
     add_ics_line(lines, "X-WR-CALNAME:Bn Wallet Alpha 空投")
     add_ics_line(lines, "X-WR-CALDESC:自动更新的 Binance Wallet Alpha 空投领取提醒")
     add_ics_line(lines, "X-WR-TIMEZONE:Asia/Shanghai")
-    add_ics_line(lines, "REFRESH-INTERVAL;VALUE=DURATION:PT10M")
-    add_ics_line(lines, "X-PUBLISHED-TTL:PT10M")
+    add_ics_line(lines, "REFRESH-INTERVAL;VALUE=DURATION:PT5M")
+    add_ics_line(lines, "X-PUBLISHED-TTL:PT5M")
     add_timezone(lines)
 
     if include_daily_check:

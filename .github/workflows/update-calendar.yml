@@ -7,7 +7,7 @@ name: Update Binance Alpha Calendar
   schedule:
     # GitHub can delay or drop scheduled runs during busy minutes.
     # Stagger away from :00/:30 and run more often so a missed tick is less costly.
-    - cron: "7,17,27,37,47,57 * * * *"
+    - cron: "3,8,13,18,23,28,33,38,43,48,53,58 * * * *"
   workflow_dispatch:
 
 permissions:
