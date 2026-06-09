@@ -87,6 +87,14 @@ ENGLISH_TIME_AFTER_RE = re.compile(
     r"\s*(?:[（(]?\s*(?P<tz>UTC|GMT)(?:\s*\+?\s*(?P<offset>\d{1,2}))?\s*[）)]?)?",
     re.IGNORECASE,
 )
+RELATIVE_ENGLISH_TIME_RE = re.compile(
+    r"\b(?P<day>today|tonight|tomorrow)\b"
+    r"\s*(?:at|@)?\s*"
+    r"(?P<hour>\d{1,2})(?::(?P<minute>\d{2}))?"
+    r"\s*(?P<ampm>a\.?m\.?|p\.?m\.?)?"
+    r"\s*(?:[（(]?\s*(?P<tz>UTC|GMT)(?:\s*\+?\s*(?P<offset>\d{1,2}))?\s*[）)]?)?",
+    re.IGNORECASE,
+)
 ENGLISH_MONTHS = {
     "jan": 1,
     "january": 1,
@@ -424,9 +432,45 @@ def parse_english_dates(text: str, *, base_time: dt.datetime | None = None) -> l
     return dates
 
 
+def parse_relative_english_dates(text: str, *, base_time: dt.datetime | None = None) -> list[tuple[dt.datetime, bool]]:
+    if base_time is None:
+        return []
+    dates: list[tuple[dt.datetime, bool]] = []
+    for match in RELATIVE_ENGLISH_TIME_RE.finditer(text):
+        tzinfo = dt.timezone.utc
+        offset = match.group("offset")
+        if offset:
+            tzinfo = dt.timezone(dt.timedelta(hours=int(offset)))
+        current = base_time.astimezone(tzinfo)
+        day_text = match.group("day").lower()
+        day_offset = 1 if day_text == "tomorrow" else 0
+        base_date = current.date() + dt.timedelta(days=day_offset)
+        hour = int(match.group("hour"))
+        minute = int(match.group("minute") or 0)
+        ampm = (match.group("ampm") or "").replace(".", "").lower()
+        if ampm == "pm" and hour < 12:
+            hour += 12
+        elif ampm == "am" and hour == 12:
+            hour = 0
+        try:
+            parsed = dt.datetime(
+                base_date.year,
+                base_date.month,
+                base_date.day,
+                hour,
+                minute,
+                tzinfo=tzinfo,
+            )
+        except ValueError:
+            continue
+        dates.append((parsed.astimezone(dt.timezone.utc), True))
+    return dates
+
+
 def parse_social_dates(text: str, *, base_time: dt.datetime | None = None) -> list[tuple[dt.datetime, bool]]:
     return (
         parse_chinese_dates(text, base_time=base_time)
+        + parse_relative_english_dates(text, base_time=base_time)
         + parse_english_dates(text, base_time=base_time)
         + parse_iso_dates(text)
     )
