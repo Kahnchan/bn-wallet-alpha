@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T07:34:21.023496+00:00",
+  "generatedAt": "2026-06-10T08:04:05.043142+00:00",
   "items": [
     {
       "symbol": "ZEST",
@@ -273,7 +273,7 @@
       "price": null,
       "matchedAnnouncements": [],
       "firstSeenAt": "2026-06-03T07:53:22.280348+00:00",
-      "lastSeenAt": "2026-06-09T07:34:21.020083+00:00"
+      "lastSeenAt": "2026-06-10T08:04:05.039075+00:00"
     },
     {
       "symbol": "待公布",
@@ -339,8 +339,43 @@
       ],
       "signalType": "social_alpha_notice",
       "tokenKnown": false,
-      "firstSeenAt": "2026-06-09T07:34:21.020083+00:00",
-      "lastSeenAt": "2026-06-09T07:34:21.020083+00:00"
+      "firstSeenAt": "2026-06-09T07:41:26.325326+00:00",
+      "lastSeenAt": "2026-06-10T08:04:05.039075+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-10T09:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2064604492449141213",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2064604492449141213",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 9:00 (UTC). This event features an updated Binance Alpha Box model, where the airdrop pool includes tokens from multiple projects. Users with at least 245 Binance Alpha Points can claim one token reward on a first-come, first-served basis. Claiming the airdrop will consume 15 Binance Alpha Points. Additionally, this airdrop features three reward tiers: Common (80% of the reward pool), Rare (15%), and Super Rare (5%), each with different alpha box values. When claiming, users will be placed into one of these tiers. Rewards are distributed according to these tier proportions. If rewards are not fully distributed, the points threshold will automatically decrease by 5 points every 5 minutes.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天下午 17:00（UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币。持有至少 245 个币安 Alpha 积分的用户，可以领取一次代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 积分。 本次空投设有三个奖励等级：普通款（占奖池的80%）、稀有款（15%）和隐藏款（5%），每个等级对应不同的Alpha盲盒价值。用户在领取时将被分配至其中一个等级，奖励将按这些等级的比例进行分发。若奖励未全部发放完毕，积分门槛将每五分钟自动降低 5 分。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2064604492449141213",
+        "https://api.fxtwitter.com/2/status/2064604492449141213",
+        "https://x.com/binancezh/status/2064605856642306284",
+        "https://api.fxtwitter.com/2/status/2064605856642306284"
+      ],
+      "announcementDates": [
+        "2026-06-10T09:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-10T08:04:05.039075+00:00",
+      "lastSeenAt": "2026-06-10T08:04:05.039075+00:00"
     }
   ]
 }

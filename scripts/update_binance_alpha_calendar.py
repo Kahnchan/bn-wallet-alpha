@@ -124,11 +124,13 @@ ENGLISH_MONTHS = {
 CHINESE_DATE_RE = re.compile(
     r"(?:(?P<year>20\d{2})\s*年\s*)?"
     r"(?P<month>\d{1,2})\s*月\s*(?P<day>\d{1,2})\s*日"
-    r"(?:\s*(?P<hour>\d{1,2})\s*(?:点|:|：)\s*(?P<minute>\d{1,2})?)?"
+    r"(?:\s*(?P<period>凌晨|早上|上午|中午|下午|晚上|晚间)?\s*"
+    r"(?P<hour>\d{1,2})\s*(?:点|:|：)\s*(?P<minute>\d{1,2})?)?"
 )
 RELATIVE_CHINESE_TIME_RE = re.compile(
     r"(?P<day>今天|今日|今晚|明天|明日|明晚)"
-    r"\s*(?P<hour>\d{1,2})\s*(?:点|:|：)\s*(?P<minute>\d{1,2})?"
+    r"\s*(?P<period>凌晨|早上|上午|中午|下午|晚上|晚间)?\s*"
+    r"(?P<hour>\d{1,2})\s*(?:点|:|：)\s*(?P<minute>\d{1,2})?"
     r"(?:\s*[（(]?\s*(?:UTC|GMT)\s*\+?\s*8\s*[）)]?)?",
     re.IGNORECASE,
 )
@@ -355,7 +357,11 @@ def parse_chinese_dates(text: str, *, base_time: dt.datetime | None = None) -> l
             day_text = match.group("day")
             day_offset = 1 if day_text in {"明天", "明日", "明晚"} else 0
             base_date = current.date() + dt.timedelta(days=day_offset)
-            hour = int(match.group("hour"))
+            hour = apply_chinese_day_period(
+                int(match.group("hour")),
+                match.group("period"),
+                day_text=day_text,
+            )
             minute = int(match.group("minute") or 0)
             try:
                 parsed = dt.datetime(
@@ -376,7 +382,11 @@ def parse_chinese_dates(text: str, *, base_time: dt.datetime | None = None) -> l
         hour_text = match.group("hour")
         minute_text = match.group("minute")
         has_time = hour_text is not None
-        hour = int(hour_text or 9)
+        hour = apply_chinese_day_period(
+            int(hour_text or 9),
+            match.group("period"),
+            day_text=None,
+        )
         minute = int(minute_text or 0)
         try:
             parsed = dt.datetime(
@@ -393,6 +403,18 @@ def parse_chinese_dates(text: str, *, base_time: dt.datetime | None = None) -> l
             parsed = parsed.replace(year=parsed.year + 1)
         dates.append((parsed.astimezone(dt.timezone.utc), has_time))
     return dates
+
+
+def apply_chinese_day_period(hour: int, period: str | None, *, day_text: str | None) -> int:
+    if day_text in {"今晚", "明晚"} and not period:
+        period = "晚上"
+    if period in {"下午", "晚上", "晚间"} and 1 <= hour < 12:
+        return hour + 12
+    if period == "中午" and 1 <= hour < 11:
+        return hour + 12
+    if period in {"凌晨", "早上", "上午"} and hour == 12:
+        return 0
+    return hour
 
 
 def parse_english_dates(text: str, *, base_time: dt.datetime | None = None) -> list[tuple[dt.datetime, bool]]:
