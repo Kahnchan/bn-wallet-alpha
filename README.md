@@ -130,6 +130,38 @@ gh run view <run-id> --repo Kahnchan/bn-wallet-alpha --log
 gh workflow run update-calendar.yml --repo Kahnchan/bn-wallet-alpha
 ```
 
+## cron-job.org 外部调度
+
+GitHub Actions 的 `schedule` 是 best-effort，可能延迟或漏跑。可以用 cron-job.org 每 10 分钟主动触发一次 `workflow_dispatch`，作为 GitHub 内置定时任务的补充。
+
+1. 在 GitHub 创建 Fine-grained personal access token：
+   - Repository access: 只选择 `Kahnchan/bn-wallet-alpha`
+   - Repository permissions: `Actions` 设为 `Read and write`
+   - Expiration: 建议 90 天或更短，到期前再轮换
+2. 在 cron-job.org 新建 cron job：
+   - URL: `https://api.github.com/repos/Kahnchan/bn-wallet-alpha/actions/workflows/update-calendar.yml/dispatches`
+   - Method: `POST`
+   - Schedule: `Every 10 minutes`
+   - Timeout: `30 seconds`
+3. 添加 headers：
+
+```text
+Accept: application/vnd.github+json
+Authorization: Bearer <GITHUB_FINE_GRAINED_PAT>
+X-GitHub-Api-Version: 2026-03-10
+Content-Type: application/json
+```
+
+4. 添加 request body：
+
+```json
+{"ref":"main"}
+```
+
+5. 保存后先点一次手动执行，确认 GitHub Actions 里出现 `workflow_dispatch` 类型的新 run。
+
+不要把 token 写进仓库、README 或 issue；只填在 cron-job.org 的 job 配置里。如果 token 泄露，马上在 GitHub 删除并重新创建。
+
 ## 注意
 
 GitHub Actions 的定时任务可能延迟或丢弃，不保证精确卡点执行。当前配置会避开整点/半点，并用 5 分钟错峰触发降低漏抓概率；如果需要接近 SLA 的提醒，应再接入 cron-job.org、UptimeRobot 或自有服务器作为外部触发器。社媒预告只代表官方账号公开提到的日期或方向，最终领取时间、资格、Alpha Points 门槛和领取数量仍以 Binance Wallet App 内 Alpha 活动页为准。
