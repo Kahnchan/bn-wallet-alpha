@@ -1,4 +1,5 @@
 name: Update Binance Alpha Calendar
+run-name: Update Binance Alpha Calendar (${{ github.event.inputs.source || github.event_name }})
 
 "on":
   push:
@@ -9,6 +10,12 @@ name: Update Binance Alpha Calendar
     # Stagger away from :00/:30 and run more often so a missed tick is less costly.
     - cron: "3,8,13,18,23,28,33,38,43,48,53,58 * * * *"
   workflow_dispatch:
+    inputs:
+      source:
+        description: "Trigger source label"
+        required: false
+        default: "manual"
+        type: string
 
 permissions:
   contents: read
@@ -34,10 +41,13 @@ jobs:
 
       - name: Refresh calendar
         run: |
+          echo "Trigger source: $TRIGGER_SOURCE"
           python3 scripts/update_binance_alpha_calendar.py \
             --cms-pages 1 \
             --cms-page-size 20 \
             --social-posts 12
+        env:
+          TRIGGER_SOURCE: ${{ github.event.inputs.source || github.event_name }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

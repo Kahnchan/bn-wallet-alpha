@@ -155,7 +155,7 @@ Content-Type: application/json
 4. 添加 request body：
 
 ```json
-{"ref":"main"}
+{"ref":"main","inputs":{"source":"cron-job.org"}}
 ```
 
 5. 保存后先点一次手动执行，确认 GitHub Actions 里出现 `workflow_dispatch` 类型的新 run。
