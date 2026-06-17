@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T08:04:05.043142+00:00",
+  "generatedAt": "2026-06-17T06:32:18.068598+00:00",
   "items": [
     {
       "symbol": "ZEST",
@@ -273,7 +273,7 @@
       "price": null,
       "matchedAnnouncements": [],
       "firstSeenAt": "2026-06-03T07:53:22.280348+00:00",
-      "lastSeenAt": "2026-06-10T08:04:05.039075+00:00"
+      "lastSeenAt": "2026-06-17T06:32:18.062882+00:00"
     },
     {
       "symbol": "待公布",
@@ -340,7 +340,42 @@
       "signalType": "social_alpha_notice",
       "tokenKnown": false,
       "firstSeenAt": "2026-06-09T07:41:26.325326+00:00",
-      "lastSeenAt": "2026-06-10T08:04:05.039075+00:00"
+      "lastSeenAt": "2026-06-12T08:00:40.364059+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-09T09:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh + 官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://x.com/binancezh/status/2064240042986627142",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2064240042986627142",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 17:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 241 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 9:00 (UTC). Users with at least 241 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance’s official channels for the specific airdrop tokens and the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2064240042986627142",
+        "https://api.fxtwitter.com/2/status/2064240042986627142",
+        "https://x.com/BinanceWallet/status/2064236397989679134",
+        "https://api.fxtwitter.com/2/status/2064236397989679134"
+      ],
+      "announcementDates": [
+        "2026-06-09T09:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-12T08:10:24.265954+00:00",
+      "lastSeenAt": "2026-06-12T08:50:24.220251+00:00"
     },
     {
       "symbol": "待公布",
@@ -374,8 +409,112 @@
       ],
       "signalType": "social_alpha_notice",
       "tokenKnown": false,
-      "firstSeenAt": "2026-06-10T08:04:05.039075+00:00",
-      "lastSeenAt": "2026-06-10T08:04:05.039075+00:00"
+      "firstSeenAt": "2026-06-10T08:06:11.548939+00:00",
+      "lastSeenAt": "2026-06-13T08:50:24.684355+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-10T09:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/binancezh/status/2064605856642306284",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2064605856642306284",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天下午 17:00（UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币。持有至少 245 个币安 Alpha 积分的用户，可以领取一次代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 积分。 本次空投设有三个奖励等级：普通款（占奖池的80%）、稀有款（15%）和隐藏款（5%），每个等级对应不同的Alpha盲盒价值。用户在领取时将被分配至其中一个等级，奖励将按这些等级的比例进行分发。若奖励未全部发放完毕，积分门槛将每五分钟自动降低 5 分。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2064605856642306284",
+        "https://api.fxtwitter.com/2/status/2064605856642306284"
+      ],
+      "announcementDates": [
+        "2026-06-10T09:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-11T03:30:42.728733+00:00",
+      "lastSeenAt": "2026-06-11T03:30:42.728733+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-17T00:00:00+00:00",
+      "dateOnly": true,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2066417005935423854",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2066417005935423854",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha will be the first platform to feature o1 exchange (O) on June 17. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 6 月 17 日成为首个上线 o1 exchange (O) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/XJE7IEzeRJ"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2066417005935423854",
+        "https://api.fxtwitter.com/2/status/2066417005935423854",
+        "https://x.com/binancezh/status/2066433017825169862",
+        "https://api.fxtwitter.com/2/status/2066433017825169862"
+      ],
+      "announcementDates": [
+        "2026-06-17T00:00:00+00:00",
+        "2026-06-17T01:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-15T07:10:20.930946+00:00",
+      "lastSeenAt": "2026-06-17T06:32:18.062882+00:00"
+    },
+    {
+      "symbol": "RE",
+      "name": "Re",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-17T12:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2067096847102210237",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2067096847102210237",
+      "endTime": "2026-06-17T14:00:00+00:00",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Join the 8th Pre-TGE Prime Sale Edition on #Binance Wallet with @re (RE) 📅 12:00 -14:00 (UTC) on June 17, 2026 📜Eligible users need Binance Alpha Points to participate Pre-TGE details and the Event Portal will be released soon — stay tuned! https://t.co/E6GfwoQSCT",
+        "已从官方 X 解析到认购时间；最终资格、积分消耗和活动细则仍以 Binance Wallet 活动页为准。",
+        "预告预告！#币安钱包 第八期 Prime Sale Pre-TGE 来了 - 上线 Re (RE)！ ⏰ 认购时间：2026 年 6 月 17 号下午 8 点到 10 点 (东八区时区) 📜 认购资格：符合资格的用户须使用币安 Alpha 积分参与 Pre-TGE 详情和活动页面将通过 @BinanceWallet 的 X 账号发布，敬请关注！ https://t.co/4oFcpTWPZ4"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2067096847102210237",
+        "https://api.fxtwitter.com/2/status/2067096847102210237",
+        "https://x.com/binancezh/status/2067097723002888245",
+        "https://api.fxtwitter.com/2/status/2067097723002888245"
+      ],
+      "announcementDates": [
+        "2026-06-17T12:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-06-17T06:32:18.062882+00:00",
+      "lastSeenAt": "2026-06-17T06:32:18.062882+00:00"
     }
   ]
 }

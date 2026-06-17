@@ -55,16 +55,31 @@ function normalizeEvent(item) {
   const startsAt = new Date(item.listingTime);
   if (Number.isNaN(startsAt.valueOf())) return null;
   const local = toShanghaiParts(startsAt);
+  const endsAt = item.endTime ? new Date(item.endTime) : null;
+  const endLocal = endsAt && !Number.isNaN(endsAt.valueOf()) ? toShanghaiParts(endsAt) : null;
   const symbol = item.symbol || "UNKNOWN";
   const isUnknown = symbol === "待公布";
+  const prefix = eventPrefix(item);
+  const timeText = item.dateOnly ? "全天" : endLocal && endLocal.dateKey === local.dateKey ? `${local.time}-${endLocal.time}` : local.time;
   return {
     ...item,
     startsAt,
+    endsAt,
     dateKey: local.dateKey,
-    timeText: item.dateOnly ? "全天" : local.time,
-    title: `${symbol} - BN Alpha ${isUnknown ? "空投" : item.signalType === "social_alpha_notice" ? "预告" : "空投"}`,
+    timeText,
+    title: `${symbol} - BN Alpha ${prefix}`,
     tone: isUnknown ? "unknown" : item.signalType === "social_alpha_notice" ? "notice" : "alpha",
   };
+}
+
+function eventPrefix(item) {
+  if (item.signalType === "social_alpha_notice") {
+    const text = Array.isArray(item.ruleSummary) ? item.ruleSummary.join(" ") : "";
+    if (/prime\s*sale|pre[- ]?tge|认购|预售/i.test(text)) return "认购";
+    if (item.tokenKnown === false || item.symbol === "待公布") return "空投";
+    return "预告";
+  }
+  return "空投";
 }
 
 function latestEventDate(events) {

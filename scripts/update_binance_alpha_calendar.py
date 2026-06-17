@@ -59,7 +59,7 @@ CMS_CATALOGS = {
 }
 
 KEYWORD_RE = re.compile(
-    r"\b(alpha|airdrop|airdrops|claim|points?|wallet|tge|launchpool|reward)\b",
+    r"\b(alpha|airdrop|airdrops|claim|points?|wallet|tge|pre[- ]?tge|prime sale|launchpool|reward)\b",
     re.IGNORECASE,
 )
 RULE_LINE_RE = re.compile(
@@ -95,6 +95,29 @@ RELATIVE_ENGLISH_TIME_RE = re.compile(
     r"\s*(?:[（(]?\s*(?P<tz>UTC|GMT)(?:\s*\+?\s*(?P<offset>\d{1,2}))?\s*[）)]?)?",
     re.IGNORECASE,
 )
+ENGLISH_TIME_RANGE_BEFORE_DATE_RE = re.compile(
+    r"(?P<start_hour>\d{1,2})(?::(?P<start_minute>\d{2}))?"
+    r"\s*(?P<start_ampm>a\.?m\.?|p\.?m\.?)?"
+    r"\s*[-–—~]\s*"
+    r"(?P<end_hour>\d{1,2})(?::(?P<end_minute>\d{2}))?"
+    r"\s*(?P<end_ampm>a\.?m\.?|p\.?m\.?)?"
+    r"\s*(?:[（(]?\s*(?P<tz>UTC|GMT)(?:\s*\+?\s*(?P<offset>\d{1,2}))?\s*[）)]?)?"
+    r"\s*(?:on\s+)?"
+    r"(?P<month>Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+    r"Jul(?:y)?|Aug(?:ust)?|Sep(?:t|tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+    r"\.?\s+(?P<day>\d{1,2})(?:st|nd|rd|th)?"
+    r"(?:,\s*|\s+)?(?P<year>20\d{2})?",
+    re.IGNORECASE,
+)
+ENGLISH_TIME_RANGE_RE = re.compile(
+    r"(?P<start_hour>\d{1,2})(?::(?P<start_minute>\d{2}))?"
+    r"\s*(?P<start_ampm>a\.?m\.?|p\.?m\.?)?"
+    r"\s*[-–—~]\s*"
+    r"(?P<end_hour>\d{1,2})(?::(?P<end_minute>\d{2}))?"
+    r"\s*(?P<end_ampm>a\.?m\.?|p\.?m\.?)?"
+    r"\s*(?:[（(]?\s*(?P<tz>UTC|GMT)(?:\s*\+?\s*(?P<offset>\d{1,2}))?\s*[）)]?)?",
+    re.IGNORECASE,
+)
 ENGLISH_MONTHS = {
     "jan": 1,
     "january": 1,
@@ -123,9 +146,15 @@ ENGLISH_MONTHS = {
 }
 CHINESE_DATE_RE = re.compile(
     r"(?:(?P<year>20\d{2})\s*年\s*)?"
-    r"(?P<month>\d{1,2})\s*月\s*(?P<day>\d{1,2})\s*日"
+    r"(?P<month>\d{1,2})\s*月\s*(?P<day>\d{1,2})\s*(?:日|号)"
     r"(?:\s*(?P<period>凌晨|早上|上午|中午|下午|晚上|晚间)?\s*"
     r"(?P<hour>\d{1,2})\s*(?:点|:|：)\s*(?P<minute>\d{1,2})?)?"
+)
+CHINESE_TIME_RANGE_END_RE = re.compile(
+    r"(?:到|至|[~～])\s*"
+    r"(?P<period>凌晨|早上|上午|中午|下午|晚上|晚间)?\s*"
+    r"(?P<hour>\d{1,2})\s*(?:点|:|：)\s*(?P<minute>\d{1,2})?",
+    re.IGNORECASE,
 )
 RELATIVE_CHINESE_TIME_RE = re.compile(
     r"(?P<day>今天|今日|今晚|明天|明日|明晚)"
@@ -135,10 +164,14 @@ RELATIVE_CHINESE_TIME_RE = re.compile(
     re.IGNORECASE,
 )
 SOCIAL_ALPHA_RE = re.compile(
-    r"(alpha|Alpha|空投|领取|积分|上线|首个上线|交易开放|airdrop|claim|points?|launch|list)",
+    r"(alpha|Alpha|空投|领取|积分|认购|预售|上线|首个上线|交易开放|airdrop|claim|"
+    r"points?|pre[- ]?tge|prime sale|launch|list)",
     re.IGNORECASE,
 )
-SOCIAL_AIRDROP_ACTION_RE = re.compile(r"(空投|申领|领取[^。.!?\n]{0,30}空投|airdrop|claim)", re.IGNORECASE)
+SOCIAL_AIRDROP_ACTION_RE = re.compile(
+    r"(空投|申领|领取[^。.!?\n]{0,30}空投|认购|预售|pre[- ]?tge|prime sale|airdrop|claim)",
+    re.IGNORECASE,
+)
 TOKEN_IN_PARENS_RE = re.compile(
     r"(?:上线|推出|上线\s+|list(?:ing)?\s+|launch(?:ing)?\s+)?"
     r"(?P<name>[A-Za-z][A-Za-z0-9 ._-]{1,60}?)\s*[（(](?P<symbol>[A-Z0-9]{2,15})[）)]"
@@ -417,6 +450,71 @@ def apply_chinese_day_period(hour: int, period: str | None, *, day_text: str | N
     return hour
 
 
+def parse_social_end_time(text: str, start: dt.datetime) -> dt.datetime | None:
+    local_start = start.astimezone(SHANGHAI_TZ)
+    for match in CHINESE_TIME_RANGE_END_RE.finditer(text):
+        raw_hour = int(match.group("hour"))
+        minute = int(match.group("minute") or 0)
+        period = match.group("period")
+        candidate_hours: list[int] = []
+        if period:
+            candidate_hours.append(apply_chinese_day_period(raw_hour, period, day_text=None))
+        else:
+            if local_start.hour >= 12 and 1 <= raw_hour < 12:
+                candidate_hours.append(raw_hour + 12)
+            candidate_hours.append(raw_hour)
+
+        for hour in candidate_hours:
+            try:
+                parsed = dt.datetime(
+                    local_start.year,
+                    local_start.month,
+                    local_start.day,
+                    hour,
+                    minute,
+                    tzinfo=SHANGHAI_TZ,
+                )
+            except ValueError:
+                continue
+            if parsed > local_start:
+                return parsed.astimezone(dt.timezone.utc)
+
+        try:
+            parsed = dt.datetime(
+                local_start.year,
+                local_start.month,
+                local_start.day,
+                raw_hour,
+                minute,
+                tzinfo=SHANGHAI_TZ,
+            )
+        except ValueError:
+            continue
+        return (parsed + dt.timedelta(days=1)).astimezone(dt.timezone.utc)
+    start_utc = start.astimezone(dt.timezone.utc)
+    for match in ENGLISH_TIME_RANGE_RE.finditer(text):
+        tzinfo = english_match_timezone(match)
+        local_range_start = start.astimezone(tzinfo)
+        end_hour = apply_english_ampm(int(match.group("end_hour")), match.group("end_ampm"))
+        end_minute = int(match.group("end_minute") or 0)
+        try:
+            parsed = dt.datetime(
+                local_range_start.year,
+                local_range_start.month,
+                local_range_start.day,
+                end_hour,
+                end_minute,
+                tzinfo=tzinfo,
+            )
+        except ValueError:
+            continue
+        parsed_utc = parsed.astimezone(dt.timezone.utc)
+        if parsed_utc <= start_utc:
+            parsed_utc = (parsed + dt.timedelta(days=1)).astimezone(dt.timezone.utc)
+        return parsed_utc
+    return None
+
+
 def parse_english_dates(text: str, *, base_time: dt.datetime | None = None) -> list[tuple[dt.datetime, bool]]:
     current = base_time.astimezone(dt.timezone.utc) if base_time else now_utc()
     dates: list[tuple[dt.datetime, bool]] = []
@@ -489,10 +587,52 @@ def parse_relative_english_dates(text: str, *, base_time: dt.datetime | None = N
     return dates
 
 
+def parse_english_time_range_before_date_dates(
+    text: str, *, base_time: dt.datetime | None = None
+) -> list[tuple[dt.datetime, bool]]:
+    current = base_time.astimezone(dt.timezone.utc) if base_time else now_utc()
+    dates: list[tuple[dt.datetime, bool]] = []
+    for match in ENGLISH_TIME_RANGE_BEFORE_DATE_RE.finditer(text):
+        month_name = match.group("month").lower().rstrip(".")
+        month = ENGLISH_MONTHS.get(month_name)
+        if month is None:
+            continue
+        year = int(match.group("year") or current.year)
+        day = int(match.group("day"))
+        hour = apply_english_ampm(int(match.group("start_hour")), match.group("start_ampm"))
+        minute = int(match.group("start_minute") or 0)
+        tzinfo = english_match_timezone(match)
+        try:
+            parsed = dt.datetime(year, month, day, hour, minute, tzinfo=tzinfo)
+        except ValueError:
+            continue
+        if match.group("year") is None and parsed < current - dt.timedelta(days=180):
+            parsed = parsed.replace(year=parsed.year + 1)
+        dates.append((parsed.astimezone(dt.timezone.utc), True))
+    return dates
+
+
+def apply_english_ampm(hour: int, ampm: str | None) -> int:
+    normalized = (ampm or "").replace(".", "").lower()
+    if normalized == "pm" and hour < 12:
+        return hour + 12
+    if normalized == "am" and hour == 12:
+        return 0
+    return hour
+
+
+def english_match_timezone(match: re.Match[str]) -> dt.tzinfo:
+    offset = match.group("offset")
+    if offset:
+        return dt.timezone(dt.timedelta(hours=int(offset)))
+    return dt.timezone.utc
+
+
 def parse_social_dates(text: str, *, base_time: dt.datetime | None = None) -> list[tuple[dt.datetime, bool]]:
     return (
         parse_chinese_dates(text, base_time=base_time)
         + parse_relative_english_dates(text, base_time=base_time)
+        + parse_english_time_range_before_date_dates(text, base_time=base_time)
         + parse_english_dates(text, base_time=base_time)
         + parse_iso_dates(text)
     )
@@ -560,6 +700,10 @@ def is_social_airdrop_text(text: str) -> bool:
     return bool(re.search(r"\balpha\b|币安\s*Alpha", signal_text, re.IGNORECASE)) and bool(
         SOCIAL_AIRDROP_ACTION_RE.search(signal_text)
     )
+
+
+def is_social_presale_text(text: str) -> bool:
+    return bool(re.search(r"prime\s*sale|pre[- ]?tge|认购|预售", text, re.IGNORECASE))
 
 
 def parse_social_post_time(post: dict[str, Any]) -> dt.datetime | None:
@@ -741,12 +885,14 @@ def extract_token(text: str) -> tuple[str, str] | None:
     prefix = text[: match.start("symbol")].rsplit("(", 1)[0].rsplit("（", 1)[0]
     prefix = re.sub(r"https?://\S+", " ", prefix)
     prefix = re.split(
-        r"(?:feature|featuring|list|listing|launch|launching|上线|推出|成为首个上线|首个上线)",
+        r"(?:feature|featuring|with|list|listing|launch|launching|上线|推出|成为首个上线|首个上线)",
         prefix,
         flags=re.IGNORECASE,
     )[-1]
     prefix = re.split(r"[。.!?；;\n]", prefix)[-1]
-    name = re.sub(r"\s+", " ", prefix).strip(" -:：,，")
+    name = re.sub(r"\s+", " ", prefix).strip(" @-:：,，")
+    if name.islower():
+        name = name[:1].upper() + name[1:]
     if not name:
         name = match.group("name").strip(" -")
     return name, symbol
@@ -772,17 +918,19 @@ def build_social_items(
         event_time, has_time = dates[0]
         if not (start <= event_time <= end):
             continue
+        event_end_time = parse_social_end_time(text, event_time) if has_time else None
         has_token = token is not None
         name, symbol = token if token else ("Alpha 空投币种", "待公布")
         key = f"social:{symbol}:{event_time.date().isoformat()}:{post.get('id')}"
         if key in seen:
             continue
         seen.add(key)
-        confirmation_note = (
-            "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
-            if has_time
-            else "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。"
-        )
+        if is_social_presale_text(text) and has_time:
+            confirmation_note = "已从官方 X 解析到认购时间；最终资格、积分消耗和活动细则仍以 Binance Wallet 活动页为准。"
+        elif has_time:
+            confirmation_note = "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+        else:
+            confirmation_note = "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。"
         items.append(
             {
                 "symbol": symbol,
@@ -799,6 +947,7 @@ def build_social_items(
                 "source": f"官方 X 预告 @{post.get('account')}",
                 "sourceUrl": post.get("url"),
                 "sourceMirrorUrl": post.get("mirrorUrl"),
+                "endTime": event_end_time.isoformat() if event_end_time else None,
                 "matchedAnnouncements": [],
                 "ruleSummary": [
                     text,
@@ -1094,7 +1243,7 @@ def merge_item_details(existing: dict[str, Any], incoming: dict[str, Any]) -> di
         if incoming.get(field) not in (None, ""):
             merged[field] = incoming[field]
     if promote_incoming:
-        for field in ("listingTime", "sourceUrl", "sourceMirrorUrl", "dateOnly"):
+        for field in ("listingTime", "endTime", "sourceUrl", "sourceMirrorUrl", "dateOnly"):
             if incoming.get(field) not in (None, ""):
                 merged[field] = incoming[field]
         ordered_sources = [incoming.get("source"), existing.get("source")]
@@ -1106,6 +1255,8 @@ def merge_item_details(existing: dict[str, Any], incoming: dict[str, Any]) -> di
             merged["sourceMirrorUrl"] = incoming["sourceMirrorUrl"]
         if merged.get("dateOnly") is None and incoming.get("dateOnly") is not None:
             merged["dateOnly"] = incoming["dateOnly"]
+        if not merged.get("endTime") and incoming.get("endTime"):
+            merged["endTime"] = incoming["endTime"]
     merged["source"] = merge_source_texts(*ordered_sources)
     for field, limit in (
         ("ruleSummary", 8),
@@ -1236,6 +1387,12 @@ def build_description(item: dict[str, Any]) -> str:
     ]
     if item.get("dateOnly"):
         parts.append("只确认到日期，具体开放时间待官方活动页确认。")
+    if item.get("endTime"):
+        try:
+            end_time = dt.datetime.fromisoformat(str(item["endTime"])).astimezone(SHANGHAI_TZ)
+            parts.append(f"结束时间: {end_time.strftime('%Y-%m-%d %H:%M')} Asia/Shanghai")
+        except ValueError:
+            pass
     if item.get("alphaId"):
         parts.append(f"Alpha ID: {item.get('alphaId')}")
     if item.get("chainName"):
@@ -1263,6 +1420,33 @@ def shorten(value: str, limit: int) -> str:
     if len(text) <= limit:
         return text
     return text[: limit - 1].rstrip() + "…"
+
+
+def event_prefix(item: dict[str, Any]) -> str:
+    if item.get("signalType") == "social_alpha_notice":
+        text = " ".join(str(line) for line in item.get("ruleSummary") or [])
+        if is_social_presale_text(text):
+            return "认购"
+        if item.get("tokenKnown") is False:
+            return "空投"
+        return "预告"
+    return "空投"
+
+
+def parse_item_end_time(item: dict[str, Any], start: dt.datetime) -> dt.datetime | None:
+    value = item.get("endTime")
+    if not value:
+        return None
+    try:
+        parsed = dt.datetime.fromisoformat(str(value))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=SHANGHAI_TZ)
+    parsed = parsed.astimezone(dt.timezone.utc)
+    if parsed <= start.astimezone(dt.timezone.utc):
+        return None
+    return parsed
 
 
 def build_calendar(
@@ -1312,11 +1496,7 @@ def build_calendar(
         start = dt.datetime.fromisoformat(item["listingTime"])
         uid = hashlib.sha1(calendar_uid_seed(item).encode("utf-8")).hexdigest()[:16]
         symbol = item.get("symbol") or "UNKNOWN"
-        if item.get("signalType") == "social_alpha_notice" and item.get("tokenKnown") is False:
-            prefix = "空投"
-        else:
-            prefix = "预告" if item.get("signalType") == "social_alpha_notice" else "空投"
-        summary = f"{symbol} - BN Alpha {prefix}"
+        summary = f"{symbol} - BN Alpha {event_prefix(item)}"
         add_ics_line(lines, "BEGIN:VEVENT")
         add_ics_line(lines, f"UID:bn-wallet-alpha-{uid}@codex.local")
         add_ics_line(lines, f"DTSTAMP:{format_utc(stamp)}")
@@ -1328,7 +1508,7 @@ def build_calendar(
                 f"DTEND;VALUE=DATE:{(event_date + dt.timedelta(days=1)).strftime('%Y%m%d')}",
             )
         else:
-            end = start + dt.timedelta(minutes=30)
+            end = parse_item_end_time(item, start) or start + dt.timedelta(minutes=30)
             add_ics_line(lines, f"DTSTART:{format_utc(start)}")
             add_ics_line(lines, f"DTEND:{format_utc(end)}")
         add_ics_line(lines, f"SUMMARY:{ics_escape(summary)}")
@@ -1427,6 +1607,13 @@ def write_report(items: list[dict[str, Any]], articles: list[dict[str, Any]]) ->
             if item.get("dateOnly")
             else local_time.strftime("%Y-%m-%d %H:%M")
         )
+        end_time = parse_item_end_time(item, dt.datetime.fromisoformat(item["listingTime"]))
+        if end_time and not item.get("dateOnly"):
+            local_end = end_time.astimezone(SHANGHAI_TZ)
+            if local_end.date() == local_time.date():
+                time_text = f"{time_text}-{local_end.strftime('%H:%M')}"
+            else:
+                time_text = f"{time_text}-{local_end.strftime('%Y-%m-%d %H:%M')}"
         lines.extend(
             [
                 f"### {item.get('symbol')} - {item.get('name')}",
