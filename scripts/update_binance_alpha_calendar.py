@@ -15,6 +15,7 @@ import email.utils
 import hashlib
 import html
 import json
+import os
 import re
 import subprocess
 import sys
@@ -31,8 +32,13 @@ DATA_DIR = ROOT / "data"
 PUBLIC_DIR = ROOT / "public"
 CACHE_DIR = DATA_DIR / "cache"
 HISTORY_FILE = PUBLIC_DIR / "history.json"
+NOTIFICATION_STATE_FILE = PUBLIC_DIR / "notification_state.json"
 MANUAL_EVENTS_FILE = DATA_DIR / "manual_events.json"
 DEFAULT_HISTORY_URL = "https://kahnchan.github.io/bn-wallet-alpha/history.json"
+DEFAULT_NOTIFICATION_STATE_URL = (
+    "https://raw.githubusercontent.com/Kahnchan/bn-wallet-alpha/gh-pages/notification_state.json"
+)
+SITE_URL = "https://kahnchan.github.io/bn-wallet-alpha/"
 
 ALPHA_TOKEN_API = (
     "https://www.binance.com/bapi/defi/v1/public/wallet-direct/buw/wallet/cex/"
@@ -1537,6 +1543,344 @@ def calendar_uid_seed(item: dict[str, Any]) -> str:
     return f"event:{item.get('symbol') or 'UNKNOWN'}:{item.get('listingTime')}"
 
 
+def notification_event_id(item: dict[str, Any]) -> str:
+    return hashlib.sha1(calendar_uid_seed(item).encode("utf-8")).hexdigest()[:16]
+
+
+def event_summary(item: dict[str, Any]) -> str:
+    symbol = item.get("symbol") or "UNKNOWN"
+    return f"{symbol} - BN Alpha {event_prefix(item)}"
+
+
+def parse_item_start(item: dict[str, Any]) -> dt.datetime | None:
+    value = item.get("listingTime")
+    if not value:
+        return None
+    try:
+        parsed = dt.datetime.fromisoformat(str(value))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=dt.timezone.utc)
+    return parsed.astimezone(dt.timezone.utc)
+
+
+def notification_fingerprint(item: dict[str, Any]) -> str:
+    payload = {
+        "summary": event_summary(item),
+        "listingTime": item.get("listingTime"),
+        "endTime": item.get("endTime"),
+        "dateOnly": bool(item.get("dateOnly")),
+        "source": item.get("source"),
+        "sourceUrl": item.get("sourceUrl"),
+        "ruleSummary": [shorten(str(line), 300) for line in (item.get("ruleSummary") or [])[:4]],
+        "announcementUrls": unique(item.get("announcementUrls") or [])[:4],
+        "onlineAirdrop": item.get("onlineAirdrop"),
+        "onlineTge": item.get("onlineTge"),
+        "mulPoint": item.get("mulPoint"),
+    }
+    encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def load_notification_state(state_url: str | None) -> dict[str, Any]:
+    payload: Any | None = None
+    if state_url:
+        try:
+            payload = fetch_json(state_url, timeout=12, allow_cache=False)
+        except RuntimeError as exc:
+            print(f"warning: remote notification state unavailable: {exc}", file=sys.stderr)
+    if payload is None and NOTIFICATION_STATE_FILE.exists():
+        try:
+            payload = json.loads(NOTIFICATION_STATE_FILE.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            print(f"warning: local notification state unavailable: {exc}", file=sys.stderr)
+    if not isinstance(payload, dict):
+        payload = {}
+    items = payload.get("items") if isinstance(payload.get("items"), dict) else {}
+    reminders = payload.get("reminders") if isinstance(payload.get("reminders"), dict) else {}
+    return {
+        "generatedAt": payload.get("generatedAt"),
+        "items": items,
+        "reminders": reminders,
+    }
+
+
+def should_notify_item_change(item: dict[str, Any], current: dt.datetime) -> bool:
+    start = parse_item_start(item)
+    if start is None:
+        return True
+    if item.get("dateOnly"):
+        return start.astimezone(SHANGHAI_TZ).date() >= current.astimezone(SHANGHAI_TZ).date()
+    end = parse_item_end_time(item, start) or start + dt.timedelta(minutes=30)
+    return end >= current - dt.timedelta(minutes=10)
+
+
+def should_send_start_reminder(
+    item: dict[str, Any], state: dict[str, Any], current: dt.datetime
+) -> tuple[bool, str | None]:
+    if item.get("dateOnly"):
+        return False, None
+    start = parse_item_start(item)
+    if start is None:
+        return False, None
+    seconds_until = (start - current).total_seconds()
+    if seconds_until < -120 or seconds_until > 15 * 60:
+        return False, None
+    reminder_key = f"{notification_event_id(item)}:{item.get('listingTime')}"
+    if reminder_key in (state.get("reminders") or {}):
+        return False, None
+    return True, reminder_key
+
+
+def build_feishu_notifications(
+    items: list[dict[str, Any]], state: dict[str, Any]
+) -> list[dict[str, Any]]:
+    notifications: list[dict[str, Any]] = []
+    current = now_utc()
+    previous_items = state.get("items") or {}
+    has_baseline = bool(previous_items)
+
+    for item in items:
+        event_id = notification_event_id(item)
+        fingerprint = notification_fingerprint(item)
+        previous = previous_items.get(event_id)
+
+        if has_baseline and should_notify_item_change(item, current):
+            if previous is None:
+                notifications.append(
+                    {
+                        "key": f"new:{event_id}:{fingerprint}",
+                        "kind": "new",
+                        "eventId": event_id,
+                        "fingerprint": fingerprint,
+                        "item": item,
+                    }
+                )
+            elif previous.get("fingerprint") != fingerprint:
+                notifications.append(
+                    {
+                        "key": f"updated:{event_id}:{fingerprint}",
+                        "kind": "updated",
+                        "eventId": event_id,
+                        "fingerprint": fingerprint,
+                        "item": item,
+                    }
+                )
+
+        should_remind, reminder_key = should_send_start_reminder(item, state, current)
+        if should_remind and reminder_key:
+            notifications.append(
+                {
+                    "key": f"reminder:{reminder_key}",
+                    "kind": "reminder",
+                    "eventId": event_id,
+                    "fingerprint": fingerprint,
+                    "reminderKey": reminder_key,
+                    "item": item,
+                }
+            )
+    return notifications
+
+
+def format_item_time_for_message(item: dict[str, Any]) -> str:
+    start = parse_item_start(item)
+    if start is None:
+        return "待确认"
+    local_start = start.astimezone(SHANGHAI_TZ)
+    if item.get("dateOnly"):
+        return f"{local_start.strftime('%Y-%m-%d')}（具体时间待确认）"
+    time_text = local_start.strftime("%Y-%m-%d %H:%M")
+    end = parse_item_end_time(item, start)
+    if end:
+        local_end = end.astimezone(SHANGHAI_TZ)
+        if local_end.date() == local_start.date():
+            time_text = f"{time_text}-{local_end.strftime('%H:%M')}"
+        else:
+            time_text = f"{time_text}-{local_end.strftime('%Y-%m-%d %H:%M')}"
+    return f"{time_text}（UTC+8）"
+
+
+def primary_item_url(item: dict[str, Any]) -> str:
+    for candidate in [
+        item.get("sourceUrl"),
+        *((item.get("announcementUrls") or [])),
+        SITE_URL,
+    ]:
+        if isinstance(candidate, str) and candidate.startswith("http"):
+            return candidate
+    return SITE_URL
+
+
+def first_rule_line(item: dict[str, Any]) -> str:
+    rules = item.get("ruleSummary") or []
+    if rules:
+        return shorten(str(rules[0]), 180)
+    return "暂未解析到完整规则，请以 Binance Wallet > Alpha > Events 为准。"
+
+
+def build_feishu_message(notification: dict[str, Any]) -> str:
+    item = notification["item"]
+    kind = notification["kind"]
+    title = {
+        "new": "【BN Alpha 新活动】",
+        "updated": "【BN Alpha 活动更新】",
+        "reminder": "【BN Alpha 15 分钟提醒】",
+    }.get(kind, "【BN Alpha 提醒】")
+    lines = [
+        title,
+        event_summary(item),
+        f"时间：{format_item_time_for_message(item)}",
+        f"规则：{first_rule_line(item)}",
+    ]
+    if item.get("source"):
+        lines.append(f"来源：{item.get('source')}")
+    lines.extend(
+        [
+            f"链接：{primary_item_url(item)}",
+            f"日历页：{SITE_URL}",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def post_feishu_message(webhook_url: str, text: str) -> None:
+    payload = {
+        "msg_type": "text",
+        "content": {
+            "text": text,
+        },
+    }
+    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    request = urllib.request.Request(
+        webhook_url,
+        data=data,
+        headers={"Content-Type": "application/json; charset=utf-8"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=12) as response:
+            charset = response.headers.get_content_charset() or "utf-8"
+            raw = response.read().decode(charset, errors="replace")
+    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as exc:
+        raw = post_feishu_message_with_curl(webhook_url, data, timeout=12)
+        if raw is None:
+            raise RuntimeError(f"Feishu webhook request failed: {exc}") from exc
+    try:
+        result = json.loads(raw)
+    except json.JSONDecodeError:
+        result = {}
+    status_code = result.get("code", result.get("StatusCode", 0))
+    if status_code not in (0, "0", None):
+        message = result.get("msg") or result.get("StatusMessage") or raw[:300]
+        raise RuntimeError(f"Feishu webhook returned {status_code}: {message}")
+
+
+def post_feishu_message_with_curl(webhook_url: str, data: bytes, *, timeout: int) -> str | None:
+    try:
+        result = subprocess.run(
+            [
+                "/usr/bin/curl",
+                "-fsSL",
+                "--max-time",
+                str(timeout),
+                "-H",
+                "Content-Type: application/json; charset=utf-8",
+                "--data-binary",
+                "@-",
+                webhook_url,
+            ],
+            input=data,
+            check=False,
+            capture_output=True,
+        )
+    except OSError:
+        return None
+    if result.returncode != 0:
+        return None
+    return result.stdout.decode("utf-8", errors="replace")
+
+
+def send_feishu_notifications(webhook_url: str | None, notifications: list[dict[str, Any]]) -> set[str]:
+    if not notifications:
+        return set()
+    if not webhook_url:
+        print("warning: FEISHU_WEBHOOK_URL is not configured; Feishu notifications skipped", file=sys.stderr)
+        return set()
+    sent: set[str] = set()
+    for notification in notifications:
+        try:
+            post_feishu_message(webhook_url, build_feishu_message(notification))
+        except RuntimeError as exc:
+            print(f"warning: Feishu notification skipped: {exc}", file=sys.stderr)
+            continue
+        sent.add(str(notification["key"]))
+    return sent
+
+
+def write_notification_state(
+    items: list[dict[str, Any]],
+    previous_state: dict[str, Any],
+    notifications: list[dict[str, Any]],
+    sent_keys: set[str],
+    *,
+    webhook_configured: bool,
+) -> None:
+    previous_items = previous_state.get("items") or {}
+    failed_change_event_ids: set[str] = set()
+    if webhook_configured:
+        failed_change_event_ids = {
+            str(notification["eventId"])
+            for notification in notifications
+            if notification.get("kind") in {"new", "updated"} and str(notification.get("key")) not in sent_keys
+        }
+
+    state_items: dict[str, Any] = {}
+    for item in items:
+        event_id = notification_event_id(item)
+        if event_id in failed_change_event_ids:
+            if event_id in previous_items:
+                state_items[event_id] = previous_items[event_id]
+            continue
+        state_items[event_id] = {
+            "fingerprint": notification_fingerprint(item),
+            "summary": event_summary(item),
+            "listingTime": item.get("listingTime"),
+            "sourceUrl": item.get("sourceUrl"),
+        }
+
+    reminders = dict(previous_state.get("reminders") or {})
+    for notification in notifications:
+        if notification.get("kind") != "reminder" or str(notification.get("key")) not in sent_keys:
+            continue
+        reminder_key = notification.get("reminderKey")
+        if reminder_key:
+            reminders[str(reminder_key)] = now_utc().isoformat()
+
+    payload = {
+        "generatedAt": now_utc().isoformat(),
+        "items": state_items,
+        "reminders": reminders,
+    }
+    NOTIFICATION_STATE_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def send_feishu_test_message(webhook_url: str | None) -> None:
+    if not webhook_url:
+        raise RuntimeError("FEISHU_WEBHOOK_URL is not configured")
+    post_feishu_message(
+        webhook_url,
+        "\n".join(
+            [
+                "【BN Alpha 推送测试】",
+                "飞书机器人已接入成功。",
+                f"时间：{dt.datetime.now(SHANGHAI_TZ).strftime('%Y-%m-%d %H:%M:%S')}（UTC+8）",
+                f"日历页：{SITE_URL}",
+            ]
+        ),
+    )
+
+
 def add_timezone(lines: list[str]) -> None:
     add_ics_line(lines, "BEGIN:VTIMEZONE")
     add_ics_line(lines, "TZID:Asia/Shanghai")
@@ -1671,6 +2015,26 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--no-history", action="store_true", help="Disable durable history merging")
     parser.add_argument(
+        "--notify-feishu",
+        action="store_true",
+        help="Send Feishu bot notifications for new, updated, and soon-starting events",
+    )
+    parser.add_argument(
+        "--feishu-webhook-url",
+        default=os.environ.get("FEISHU_WEBHOOK_URL"),
+        help="Feishu custom bot webhook URL; defaults to FEISHU_WEBHOOK_URL",
+    )
+    parser.add_argument(
+        "--notification-state-url",
+        default=DEFAULT_NOTIFICATION_STATE_URL,
+        help="Published notification_state.json URL used to avoid duplicate Feishu pushes",
+    )
+    parser.add_argument(
+        "--send-test-feishu",
+        action="store_true",
+        help="Send one Feishu test message and exit",
+    )
+    parser.add_argument(
         "--include-daily-check",
         action="store_true",
         help="Also include a daily manual Alpha Events check reminder",
@@ -1685,6 +2049,10 @@ def main() -> int:
 
     if not re.fullmatch(r"\d{1,2}:\d{2}", args.check_time):
         raise SystemExit("--check-time must be HH:MM")
+    if args.send_test_feishu:
+        send_feishu_test_message(args.feishu_webhook_url)
+        print("Feishu test notification sent")
+        return 0
 
     tokens = fetch_alpha_tokens()
     raw_articles = fetch_candidate_articles(args.cms_pages, args.cms_page_size)
@@ -1730,6 +2098,21 @@ def main() -> int:
     items = merge_items(items)
     if not args.no_history:
         items = merge_history(history_items, items)
+
+    notification_count = 0
+    if args.notify_feishu:
+        notification_state = load_notification_state(args.notification_state_url)
+        notifications = build_feishu_notifications(items, notification_state)
+        sent_notification_keys = send_feishu_notifications(args.feishu_webhook_url, notifications)
+        write_notification_state(
+            items,
+            notification_state,
+            notifications,
+            sent_notification_keys,
+            webhook_configured=bool(args.feishu_webhook_url),
+        )
+        notification_count = len(sent_notification_keys)
+
     calendar = build_calendar(
         items,
         include_daily_check=args.include_daily_check,
@@ -1745,6 +2128,7 @@ def main() -> int:
             已更新 {generated}
             日历项目: {len(items)} 个 Alpha 空投提醒
             每日检查提醒: {'已启用' if args.include_daily_check else '未启用'}
+            飞书推送: {'已启用' if args.notify_feishu else '未启用'}，本次发送 {notification_count} 条
             Last-Modified: {email.utils.format_datetime(now_utc(), usegmt=True)}
             """
         ).strip()

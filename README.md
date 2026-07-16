@@ -25,6 +25,7 @@ https://kahnchan.github.io/bn-wallet-alpha/
 - 生成 `public/binance-alpha-airdrops.ics`，由 GitHub Pages 托管给 Apple Calendar 订阅。
 - 每次云端刷新会把 `public/` 强推到 `gh-pages` 分支，避免 GitHub Pages 对同一 commit 的重复 artifact 部署返回旧缓存。
 - 生成并发布 `public/history.json`，把已经发现的事件持续保留下来；后续扫描不到旧推文时也不会删除历史日历项。
+- 可选接入飞书自定义机器人：发现新活动、活动时间/规则变化、以及活动开始前 15 分钟会主动推送，绕过 iPhone 订阅日历刷新慢的问题。
 - 页面端读取 `history.json` 渲染网页月历，方便不用打开 Calendar.app 也能查看。
 
 ## 日历规则
@@ -162,6 +163,31 @@ Content-Type: application/json
 5. 保存后先点一次手动执行，确认 GitHub Actions 里出现 `workflow_dispatch` 类型的新 run。
 
 不要把 token 写进仓库、README 或 issue；只填在 cron-job.org 的 job 配置里。如果 token 泄露，马上在 GitHub 删除并重新创建。
+
+## 飞书机器人推送
+
+飞书推送通过 GitHub Secret 注入，仓库里不会保存 webhook 地址。
+
+```bash
+gh secret set FEISHU_WEBHOOK_URL --repo Kahnchan/bn-wallet-alpha
+```
+
+粘贴飞书自定义机器人的 webhook 后保存。之后每次云端刷新都会：
+
+- 首次启用时只建立基线，避免把历史 20 多条活动一次性刷屏。
+- 发现新活动时推送。
+- 已有活动的时间、规则、链接等关键信息变化时推送。
+- 活动开始前 15 分钟内推送一次飞书提醒。
+- 把去重状态写入 `public/notification_state.json` 并随 `gh-pages` 发布，避免每 10 分钟重复提醒。
+
+测试机器人：
+
+```bash
+FEISHU_WEBHOOK_URL="https://open.feishu.cn/open-apis/bot/v2/hook/..." \
+  /usr/bin/python3 scripts/update_binance_alpha_calendar.py --send-test-feishu
+```
+
+关闭飞书推送：删除 GitHub Secret `FEISHU_WEBHOOK_URL`，或从 workflow 里移除 `--notify-feishu`。
 
 ## 注意
 

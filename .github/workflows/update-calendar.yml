@@ -40,9 +40,11 @@ jobs:
           python3 scripts/update_binance_alpha_calendar.py \
             --cms-pages 1 \
             --cms-page-size 20 \
-            --social-posts 12
+            --social-posts 12 \
+            --notify-feishu
         env:
           TRIGGER_SOURCE: ${{ github.event.inputs.source || github.event_name }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
 
       - name: Publish to gh-pages
         run: |
