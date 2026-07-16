@@ -18,26 +18,21 @@ run-name: Update Binance Alpha Calendar (${{ github.event.inputs.source || githu
         type: string
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 concurrency:
-  group: github-pages
+  group: publish-calendar
   cancel-in-progress: false
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
 
       - name: Refresh calendar
         run: |
@@ -49,18 +44,18 @@ jobs:
         env:
           TRIGGER_SOURCE: ${{ github.event.inputs.source || github.event_name }}
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Publish to gh-pages
+        run: |
+          set -euo pipefail
+          cd public
+          touch .nojekyll
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update calendar feed ${GITHUB_RUN_ID}"
+          git branch -M gh-pages
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
