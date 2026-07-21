@@ -336,6 +336,11 @@ def fetch_text_with_curl(url: str, *, timeout: int) -> str | None:
     return result.stdout
 
 
+def with_cache_buster(url: str) -> str:
+    separator = "&" if "?" in url else "?"
+    return f"{url}{separator}_={int(now_utc().timestamp())}"
+
+
 def flatten_cms_body(node: Any) -> str:
     if isinstance(node, str):
         stripped = node.strip()
@@ -1155,7 +1160,7 @@ def load_history(history_url: str | None) -> list[dict[str, Any]]:
     payload: Any | None = None
     if history_url:
         try:
-            payload = fetch_json(history_url, timeout=12, allow_cache=False)
+            payload = fetch_json(with_cache_buster(history_url), timeout=12, allow_cache=False)
         except RuntimeError as exc:
             print(f"warning: remote history unavailable: {exc}", file=sys.stderr)
     if payload is None and HISTORY_FILE.exists():
@@ -1587,7 +1592,7 @@ def load_notification_state(state_url: str | None) -> dict[str, Any]:
     payload: Any | None = None
     if state_url:
         try:
-            payload = fetch_json(state_url, timeout=12, allow_cache=False)
+            payload = fetch_json(with_cache_buster(state_url), timeout=12, allow_cache=False)
         except RuntimeError as exc:
             print(f"warning: remote notification state unavailable: {exc}", file=sys.stderr)
     if payload is None and NOTIFICATION_STATE_FILE.exists():
