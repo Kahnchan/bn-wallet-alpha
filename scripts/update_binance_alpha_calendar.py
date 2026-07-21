@@ -1745,6 +1745,8 @@ def build_feishu_message(notification: dict[str, Any]) -> str:
 
 
 def post_feishu_message(webhook_url: str, text: str) -> None:
+    if not webhook_url.startswith(("https://", "http://")):
+        raise RuntimeError("Feishu webhook URL must start with https:// or http://")
     payload = {
         "msg_type": "text",
         "content": {
@@ -1752,17 +1754,17 @@ def post_feishu_message(webhook_url: str, text: str) -> None:
         },
     }
     data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    request = urllib.request.Request(
-        webhook_url,
-        data=data,
-        headers={"Content-Type": "application/json; charset=utf-8"},
-        method="POST",
-    )
     try:
+        request = urllib.request.Request(
+            webhook_url,
+            data=data,
+            headers={"Content-Type": "application/json; charset=utf-8"},
+            method="POST",
+        )
         with urllib.request.urlopen(request, timeout=12) as response:
             charset = response.headers.get_content_charset() or "utf-8"
             raw = response.read().decode(charset, errors="replace")
-    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as exc:
+    except (ValueError, urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as exc:
         raw = post_feishu_message_with_curl(webhook_url, data, timeout=12)
         if raw is None:
             raise RuntimeError(f"Feishu webhook request failed: {exc}") from exc
