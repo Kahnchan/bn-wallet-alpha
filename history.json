@@ -1,0 +1,1474 @@
+{
+  "generatedAt": "2026-09-06T23:30:30.731023+00:00",
+  "items": [
+    {
+      "symbol": "ZEST",
+      "name": "Zest Protocol",
+      "alphaId": "ALPHA_970",
+      "chainName": "BSC",
+      "contractAddress": "0x5506599c722389a60580b5213ea1da60d64754a1",
+      "listingTime": "2026-05-19T13:00:00+00:00",
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.14561289909009982469",
+      "source": "Binance Alpha 币种接口 + 官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://www.binance.com/en/alpha",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "币安 Alpha 是首个上线 Zest Protocol (ZEST) 的平台，Alpha 上线及交易将于 2026 年 5 月 19 日 21:00（UTC+8）开始。 持有至少 240 个币安 Alpha 积分的用户可申领代币空投。在 Alpha 活动页面申领 800 ZEST 代币空投，先到先得。若活动未结束，则分数门槛将每五分钟自动降低 5 分。 请注意，申领空投将消耗 15 个币安 Alpha 积分。用户需在 Alpha 活动页面 24 小时内确认申领，否则视为放弃领取空投。",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2056638959393095970",
+        "https://twstalker.com/BinanceWallet/status/2056638959393095970"
+      ],
+      "announcementDates": [
+        "2026-05-19T13:00:00+00:00"
+      ],
+      "firstSeenAt": "2026-05-22T06:42:51.036150+00:00",
+      "lastSeenAt": "2026-05-22T12:29:00.268211+00:00"
+    },
+    {
+      "symbol": "NEX",
+      "name": "Nexus",
+      "alphaId": "ALPHA_971",
+      "chainName": "BSC",
+      "contractAddress": "0x365de036a1f7dccb621530d517133521debb2013",
+      "listingTime": "2026-05-20T14:00:00+00:00",
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.0000043376761226098033795",
+      "source": "Binance Alpha 币种接口 + 官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://www.binance.com/en/alpha",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "币安 Alpha 是首个上线 Nexus (NEX) 的平台，Alpha 上线及交易将于 2026 年 5 月 20 日 22:00（UTC+8）开始。 持有至少 210 个币安 Alpha 积分的用户可申领代币空投。在 Alpha 活动页面申领 20,000,250 个 NEX 代币空投，先到先得。若活动未结束，则分数门槛将每五分钟自动降低 5 分。 请注意，申领空投将消耗 15 个币安 Alpha 积分。用户需在 Alpha 活动页面 24 小时内确认申领，否则视为放弃领取空投。",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2057038819552325644",
+        "https://twstalker.com/BinanceWallet/status/2057038819552325644"
+      ],
+      "announcementDates": [
+        "2026-05-20T14:00:00+00:00"
+      ],
+      "firstSeenAt": "2026-05-22T06:42:51.036150+00:00",
+      "lastSeenAt": "2026-05-23T12:01:35.168888+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-05-21T12:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/binancezh/status/2057333894203294138",
+      "sourceMirrorUrl": "https://twstalker.com/binancezh/status/2057333894203294138",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 20:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 230 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2057333894203294138",
+        "https://twstalker.com/binancezh/status/2057333894203294138"
+      ],
+      "announcementDates": [
+        "2026-05-21T12:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false
+    },
+    {
+      "symbol": "SLX",
+      "name": "Solstice",
+      "alphaId": "ALPHA_978",
+      "chainName": "BSC",
+      "contractAddress": "0x02bcc4c181b83a8c0a342bc003389cbecb4bc54d",
+      "listingTime": "2026-05-25T12:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.19874748660273010704",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2058805425781514588",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2058805425781514588",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature Solstice (SLX), with Alpha debut and trading starting on May 25, 2026, at 12:00 (UTC). Users with at least 215 Binance Alpha Points can claim an airdrop of 250 SLX tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 5 月 25 日成为首个上线 Solstice (SLX) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/FX39V05IZQ",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature Solstice (SLX) on May 25. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
+        "币安 Alpha 将在 5 月 25 日成为首个上线 Solstice (SLX) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2058805425781514588",
+        "https://api.fxtwitter.com/2/status/2058805425781514588",
+        "https://x.com/binancezh/status/2058179047407181849",
+        "https://api.fxtwitter.com/2/status/2058179047407181849",
+        "https://x.com/BinanceWallet/status/2058156451240292574",
+        "https://api.fxtwitter.com/2/status/2058156451240292574",
+        "https://twstalker.com/binancezh/status/2058179047407181849"
+      ],
+      "announcementDates": [
+        "2026-05-25T12:00:00+00:00",
+        "2026-05-25T01:00:00+00:00",
+        "2026-05-25T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-05-23T14:09:41.108351+00:00",
+      "lastSeenAt": "2026-05-28T08:32:43.568366+00:00"
+    },
+    {
+      "symbol": "CTR",
+      "name": "Citrea",
+      "alphaId": "ALPHA_979",
+      "chainName": "Base",
+      "contractAddress": "0x11030f79109269d796fd0fb956d6244e502757f7",
+      "listingTime": "2026-05-26T13:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 2,
+      "price": "0.018408566880569758938",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2059199055675462044",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2059199055675462044",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature Citrea (CTR), with Alpha debut and trading starting on May 26, 2026, at 13:00 (UTC). Users with at least 211 Binance Alpha Points can claim an airdrop of 1,090 CTR tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature Citrea (CTR) on May 26. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 5 月 26 日成为首个上线 Citrea（CTR）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/UEvsLqp88V",
+        "币安 Alpha 将在 5 月 26 日成为首个上线 Citrea（CTR）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2059199055675462044",
+        "https://api.fxtwitter.com/2/status/2059199055675462044",
+        "https://x.com/BinanceWallet/status/2058488765824581805",
+        "https://api.fxtwitter.com/2/status/2058488765824581805",
+        "https://x.com/binancezh/status/2058491696313495575",
+        "https://api.fxtwitter.com/2/status/2058491696313495575",
+        "https://twstalker.com/binancezh/status/2058491696313495575"
+      ],
+      "announcementDates": [
+        "2026-05-26T13:00:00+00:00",
+        "2026-05-26T00:00:00+00:00",
+        "2026-05-26T01:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-05-24T10:57:25.203846+00:00",
+      "lastSeenAt": "2026-05-29T10:28:09.232156+00:00"
+    },
+    {
+      "symbol": "QAIT",
+      "name": "Sealcoin",
+      "alphaId": "ALPHA_980",
+      "chainName": "BSC",
+      "contractAddress": "0x4d41a5d412f4ef44a35b9f53b06db65ede249493",
+      "listingTime": "2026-05-28T15:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.021710974189409753805",
+      "source": "Binance Alpha 币种接口 + 官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://www.binance.com/en/alpha",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2059915129907765300",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature Sealcoin (QAIT), with Alpha debut and trading starting on May 28, 2026, at 13:00 (UTC). Users with at least 241 Binance Alpha Points can claim an airdrop of 31,111 QAIT tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 5 月 28 日成为首个上线 Sealcoin (QAIT) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/FF1rqoSmkf",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature Sealcoin (QAIT) on May 28. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2059915129907765300",
+        "https://api.fxtwitter.com/2/status/2059915129907765300",
+        "https://x.com/binancezh/status/2059888026994782492",
+        "https://api.fxtwitter.com/2/status/2059888026994782492",
+        "https://x.com/BinanceWallet/status/2059881406722166911",
+        "https://api.fxtwitter.com/2/status/2059881406722166911"
+      ],
+      "announcementDates": [
+        "2026-05-28T13:00:00+00:00",
+        "2026-05-28T01:00:00+00:00",
+        "2026-05-28T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-05-28T08:32:43.568366+00:00",
+      "lastSeenAt": "2026-05-31T14:56:31.784086+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-02T07:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/binancezh/status/2061676372880437539",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2061676372880437539",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 15:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 240 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2061676372880437539",
+        "https://api.fxtwitter.com/2/status/2061676372880437539"
+      ],
+      "announcementDates": [
+        "2026-06-02T07:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-02T06:21:44.620037+00:00",
+      "lastSeenAt": "2026-06-05T06:57:36.456564+00:00"
+    },
+    {
+      "symbol": "测试",
+      "name": "Apple Calendar 提醒测试",
+      "listingTime": "2026-06-03T09:00:00+00:00",
+      "dateOnly": false,
+      "source": "手动测试事件",
+      "sourceUrl": "https://kahnchan.github.io/bn-wallet-alpha/",
+      "ruleSummary": [
+        "这是用于测试 Apple Calendar 订阅事件和开始前 15 分钟提醒的手动事件。"
+      ],
+      "announcementUrls": [
+        "https://kahnchan.github.io/bn-wallet-alpha/"
+      ],
+      "announcementDates": [
+        "2026-06-03T09:00:00+00:00"
+      ],
+      "signalType": "manual_test",
+      "tokenKnown": true,
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "matchedAnnouncements": [],
+      "firstSeenAt": "2026-06-03T07:53:22.280348+00:00",
+      "lastSeenAt": "2026-09-06T23:30:30.552334+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-05T07:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/binancezh/status/2062770368591577206",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2062770368591577206",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 15:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 241 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2062770368591577206",
+        "https://api.fxtwitter.com/2/status/2062770368591577206"
+      ],
+      "announcementDates": [
+        "2026-06-05T07:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-05T06:04:24.963698+00:00",
+      "lastSeenAt": "2026-06-08T06:55:50.775965+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-09T09:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2064236397989679134",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2064236397989679134",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 9:00 (UTC). Users with at least 241 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance’s official channels for the specific airdrop tokens and the latest updates.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天 17:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 241 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2064236397989679134",
+        "https://api.fxtwitter.com/2/status/2064236397989679134",
+        "https://x.com/binancezh/status/2064240042986627142",
+        "https://api.fxtwitter.com/2/status/2064240042986627142"
+      ],
+      "announcementDates": [
+        "2026-06-09T09:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-09T07:41:26.325326+00:00",
+      "lastSeenAt": "2026-06-12T08:00:40.364059+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-09T09:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh + 官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://x.com/binancezh/status/2064240042986627142",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2064240042986627142",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 17:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 241 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 9:00 (UTC). Users with at least 241 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance’s official channels for the specific airdrop tokens and the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2064240042986627142",
+        "https://api.fxtwitter.com/2/status/2064240042986627142",
+        "https://x.com/BinanceWallet/status/2064236397989679134",
+        "https://api.fxtwitter.com/2/status/2064236397989679134"
+      ],
+      "announcementDates": [
+        "2026-06-09T09:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-12T08:10:24.265954+00:00",
+      "lastSeenAt": "2026-06-12T08:50:24.220251+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-10T09:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2064604492449141213",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2064604492449141213",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 9:00 (UTC). This event features an updated Binance Alpha Box model, where the airdrop pool includes tokens from multiple projects. Users with at least 245 Binance Alpha Points can claim one token reward on a first-come, first-served basis. Claiming the airdrop will consume 15 Binance Alpha Points. Additionally, this airdrop features three reward tiers: Common (80% of the reward pool), Rare (15%), and Super Rare (5%), each with different alpha box values. When claiming, users will be placed into one of these tiers. Rewards are distributed according to these tier proportions. If rewards are not fully distributed, the points threshold will automatically decrease by 5 points every 5 minutes.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天下午 17:00（UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币。持有至少 245 个币安 Alpha 积分的用户，可以领取一次代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 积分。 本次空投设有三个奖励等级：普通款（占奖池的80%）、稀有款（15%）和隐藏款（5%），每个等级对应不同的Alpha盲盒价值。用户在领取时将被分配至其中一个等级，奖励将按这些等级的比例进行分发。若奖励未全部发放完毕，积分门槛将每五分钟自动降低 5 分。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2064604492449141213",
+        "https://api.fxtwitter.com/2/status/2064604492449141213",
+        "https://x.com/binancezh/status/2064605856642306284",
+        "https://api.fxtwitter.com/2/status/2064605856642306284"
+      ],
+      "announcementDates": [
+        "2026-06-10T09:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-10T08:06:11.548939+00:00",
+      "lastSeenAt": "2026-06-13T08:50:24.684355+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-10T09:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/binancezh/status/2064605856642306284",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2064605856642306284",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天下午 17:00（UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币。持有至少 245 个币安 Alpha 积分的用户，可以领取一次代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 积分。 本次空投设有三个奖励等级：普通款（占奖池的80%）、稀有款（15%）和隐藏款（5%），每个等级对应不同的Alpha盲盒价值。用户在领取时将被分配至其中一个等级，奖励将按这些等级的比例进行分发。若奖励未全部发放完毕，积分门槛将每五分钟自动降低 5 分。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2064605856642306284",
+        "https://api.fxtwitter.com/2/status/2064605856642306284"
+      ],
+      "announcementDates": [
+        "2026-06-10T09:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-11T03:30:42.728733+00:00",
+      "lastSeenAt": "2026-06-11T03:30:42.728733+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-17T00:00:00+00:00",
+      "dateOnly": true,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2066417005935423854",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2066417005935423854",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha will be the first platform to feature o1 exchange (O) on June 17. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 6 月 17 日成为首个上线 o1 exchange (O) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/XJE7IEzeRJ"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2066417005935423854",
+        "https://api.fxtwitter.com/2/status/2066417005935423854",
+        "https://x.com/binancezh/status/2066433017825169862",
+        "https://api.fxtwitter.com/2/status/2066433017825169862"
+      ],
+      "announcementDates": [
+        "2026-06-17T00:00:00+00:00",
+        "2026-06-17T01:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-06-15T07:10:20.930946+00:00",
+      "lastSeenAt": "2026-06-17T06:32:18.062882+00:00"
+    },
+    {
+      "symbol": "RE",
+      "name": "Re",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-06-17T12:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2067096847102210237",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2067096847102210237",
+      "endTime": "2026-06-17T14:00:00+00:00",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Join the 8th Pre-TGE Prime Sale Edition on #Binance Wallet with @re (RE) 📅 12:00 -14:00 (UTC) on June 17, 2026 📜Eligible users need Binance Alpha Points to participate Pre-TGE details and the Event Portal will be released soon — stay tuned! https://t.co/E6GfwoQSCT",
+        "已从官方 X 解析到认购时间；最终资格、积分消耗和活动细则仍以 Binance Wallet 活动页为准。",
+        "预告预告！#币安钱包 第八期 Prime Sale Pre-TGE 来了 - 上线 Re (RE)！ ⏰ 认购时间：2026 年 6 月 17 号下午 8 点到 10 点 (东八区时区) 📜 认购资格：符合资格的用户须使用币安 Alpha 积分参与 Pre-TGE 详情和活动页面将通过 @BinanceWallet 的 X 账号发布，敬请关注！ https://t.co/4oFcpTWPZ4"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2067096847102210237",
+        "https://api.fxtwitter.com/2/status/2067096847102210237",
+        "https://x.com/binancezh/status/2067097723002888245",
+        "https://api.fxtwitter.com/2/status/2067097723002888245"
+      ],
+      "announcementDates": [
+        "2026-06-17T12:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-06-17T06:32:18.062882+00:00",
+      "lastSeenAt": "2026-06-17T06:32:18.062882+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-07-16T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/binancezh/status/2077674899485929896",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2077674899485929896",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 19:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 250 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2077674899485929896",
+        "https://api.fxtwitter.com/2/status/2077674899485929896"
+      ],
+      "announcementDates": [
+        "2026-07-16T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-07-18T16:00:54.548034+00:00",
+      "lastSeenAt": "2026-07-19T10:54:40.486343+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-07-21T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2079484283622940999",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2079484283622940999",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC). This event features an updated Binance Alpha Box model, where the airdrop pool includes tokens from multiple projects. Users with at least 256 Binance Alpha Points can claim one token reward on a first-come, first-served basis. Claiming the airdrop will consume 15 Binance Alpha Points. Additionally, this airdrop features three reward tiers: Common (80% of the reward pool), Rare (15%), and Super Rare (5%), each with different alpha box values. When claiming, users will be placed into one of these tiers. Rewards are distributed according to these tier proportions. If rewards are not fully distributed, the points threshold will automatically decrease by 5 points every 5 minutes.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天下午 19:00（UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币。持有至少 256 个币安 Alpha 积分的用户，可以领取一次代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 积分。 本次空投设有三个奖励等级：普通款（占奖池的80%）、稀有款（15%）和隐藏款（5%），每个等级对应不同的Alpha盲盒价值。用户在领取时将被分配至其中一个等级，奖励将按这些等级的比例进行分发。若奖励未全部发放完毕，积分门槛将每五分钟自动降低 5 分。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2079484283622940999",
+        "https://api.fxtwitter.com/2/status/2079484283622940999",
+        "https://x.com/binancezh/status/2079484450921173128",
+        "https://api.fxtwitter.com/2/status/2079484450921173128"
+      ],
+      "announcementDates": [
+        "2026-07-21T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-07-21T09:06:35.856959+00:00",
+      "lastSeenAt": "2026-07-22T13:50:21.748886+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-07-21T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh + 官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://x.com/binancezh/status/2079484450921173128",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2079484450921173128",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天下午 19:00（UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币。持有至少 256 个币安 Alpha 积分的用户，可以领取一次代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 积分。 本次空投设有三个奖励等级：普通款（占奖池的80%）、稀有款（15%）和隐藏款（5%），每个等级对应不同的Alpha盲盒价值。用户在领取时将被分配至其中一个等级，奖励将按这些等级的比例进行分发。若奖励未全部发放完毕，积分门槛将每五分钟自动降低 5 分。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC). This event features an updated Binance Alpha Box model, where the airdrop pool includes tokens from multiple projects. Users with at least 256 Binance Alpha Points can claim one token reward on a first-come, first-served basis. Claiming the airdrop will consume 15 Binance Alpha Points. Additionally, this airdrop features three reward tiers: Common (80% of the reward pool), Rare (15%), and Super Rare (5%), each with different alpha box values. When claiming, users will be placed into one of these tiers. Rewards are distributed according to these tier proportions. If rewards are not fully distributed, the points threshold will automatically decrease by 5 points every 5 minutes."
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2079484450921173128",
+        "https://api.fxtwitter.com/2/status/2079484450921173128",
+        "https://x.com/BinanceWallet/status/2079484283622940999",
+        "https://api.fxtwitter.com/2/status/2079484283622940999"
+      ],
+      "announcementDates": [
+        "2026-07-21T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-07-22T14:00:40.445572+00:00",
+      "lastSeenAt": "2026-07-24T10:50:23.907817+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-07-23T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2080196362063454597",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2080196362063454597",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 256 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance’s official channels for the specific airdrop tokens and the latest updates.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天 19:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 256 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2080196362063454597",
+        "https://api.fxtwitter.com/2/status/2080196362063454597",
+        "https://x.com/binancezh/status/2080204672602939718",
+        "https://api.fxtwitter.com/2/status/2080204672602939718"
+      ],
+      "announcementDates": [
+        "2026-07-23T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-07-23T08:00:37.152276+00:00",
+      "lastSeenAt": "2026-07-26T10:50:18.961198+00:00"
+    },
+    {
+      "symbol": "AEON",
+      "name": "AEON",
+      "alphaId": "ALPHA_1053",
+      "chainName": "BSC",
+      "contractAddress": "0x277add739c6e0477616948357af9e79fe1ec9b80",
+      "listingTime": "2026-07-27T10:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.104039731872014831809941744723760102",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2081650905926250852",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2081650905926250852",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature AEON (AEON), with Alpha debut and trading starting on July 27, 2026, at 10:00 (UTC). Users with at least 245 Binance Alpha Points can claim an airdrop of 250 AEON tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 7 月 27 日成为首个上线 AEON（AEON）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/iIYZS693W1",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature AEON (AEON) on July 27. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2081650905926250852",
+        "https://api.fxtwitter.com/2/status/2081650905926250852",
+        "https://x.com/binancezh/status/2081577867880919551",
+        "https://api.fxtwitter.com/2/status/2081577867880919551",
+        "https://x.com/BinanceWallet/status/2081575966812647844",
+        "https://api.fxtwitter.com/2/status/2081575966812647844"
+      ],
+      "announcementDates": [
+        "2026-07-27T10:00:00+00:00",
+        "2026-07-27T01:00:00+00:00",
+        "2026-07-27T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-07-27T03:10:18.727847+00:00",
+      "lastSeenAt": "2026-07-30T09:50:30.986910+00:00"
+    },
+    {
+      "symbol": "GRVT",
+      "name": "Grvt",
+      "alphaId": "ALPHA_1067",
+      "chainName": "BSC",
+      "contractAddress": "0x46f2564e0fa8248d15125e7e54173cfbdef91be7",
+      "listingTime": "2026-07-30T12:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.249498764480827930608723864549205233",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2082727395153359215",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2082727395153359215",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature Grvt (GRVT), with Alpha debut and trading starting on July 30, 2026, at 12:00 (UTC). Users with at least 245 Binance Alpha Points can claim an airdrop of 100 GRVT tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop. We also have a GRVT Deposit Campaign coming up! Starting July 30, 2026, at 13:00 (UTC), GRVT community airdrop users (BSC) can deposit & transfer GRVT to share a 66,640 GRVT reward pool — first-come, first-served. Don't miss it! Details in the announcement 👇 https://t.co/DTbuDPqOlV",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "During the Promotion Period, deposit GRVT tokens by following the campaign rules to share exclusive token rewards.",
+        "This campaign is only eligible for GRVT community airdrop users who received the official GRVT airdrop on BNB Smart Chain (BSC).",
+        "The first 1,666 eligible users who deposit and transfer at least 300 GRVT in a single transaction will share a total reward pool of 66,640 GRVT equally ( 40 GRVT per user) on a first-come, first-served basis.",
+        "This campaign is only eligible for GRVT community airdrop users.",
+        "How to Participate: Deposit eligible tokens from external on-chain address to Binance Wallet (Keyless) Select [Binance Wallet (Keyless)] in [My Wallets] .",
+        "Select [Receive] and deposit the specified amount of funds from the GRVT community airdrop receiving wallet address* to your Binance Wallet (Keyless)."
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2082727395153359215",
+        "https://api.fxtwitter.com/2/status/2082727395153359215",
+        "https://www.binance.com/en/support/announcement/binance-wallet-alpha-deposit-campaign-deposit-grvt-grvt-and-share-20k-worth-of-rewards-7de7d813aeb5427f9b28265dc1a671bf",
+        "https://x.com/binancezh/status/2082483058591293718",
+        "https://api.fxtwitter.com/2/status/2082483058591293718",
+        "https://x.com/BinanceWallet/status/2082474918516781078",
+        "https://api.fxtwitter.com/2/status/2082474918516781078"
+      ],
+      "announcementDates": [
+        "2026-07-30T12:00:00+00:00",
+        "2026-07-30T13:00:00+00:00",
+        "2026-07-30T00:00:00+00:00",
+        "2026-07-30T01:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-07-29T14:40:24.220950+00:00",
+      "lastSeenAt": "2026-08-02T11:50:27.444196+00:00"
+    },
+    {
+      "symbol": "BSC",
+      "name": "⏰ 2026-07-30 13:00 → 2026-08-01 13:00 (UTC) 1️⃣ Deposit GRVT",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-07-30T13:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2082724696332906856",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2082724696332906856",
+      "endTime": "2026-07-31T07:00:00+00:00",
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "⚠️ Eligibility: only GRVT community airdrop users who received their airdrop on BSC. ⏰ 2026-07-30 13:00 → 2026-08-01 13:00 (UTC) 1️⃣ Deposit GRVT (BSC) to Binance Wallet (Keyless) → [My Wallets] > [Binance Wallet (Keyless)] > [Receive], and send at least 300 GRVT from your airdrop-receiving address. (Already received your GRVT airdrop directly in Binance Wallet(MPC)? Skip to Step 2.) 2️⃣ Transfer GRVT to your Alpha Account → [Exchange] > [Assets] > [Alpha] > [Transfer In], and transfer at least 300 GRVT in a single transaction. 3️⃣ Rewards given on a first-come, first-served basis! More detail please check announcement!",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2082724696332906856",
+        "https://api.fxtwitter.com/2/status/2082724696332906856"
+      ],
+      "announcementDates": [
+        "2026-07-30T13:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-07-30T07:10:32.871326+00:00",
+      "lastSeenAt": "2026-08-02T12:50:24.887993+00:00"
+    },
+    {
+      "symbol": "QUID",
+      "name": "Squid",
+      "alphaId": "ALPHA_1075",
+      "chainName": "Base",
+      "contractAddress": "0x1a44233fae8d50f1aeb3a5d58dd426ff4814cb53",
+      "listingTime": "2026-08-04T13:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 2,
+      "price": "0.089600056008488304297806774013343566",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2084550061598331040",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2084550061598331040",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature Squid (QUID), with Alpha debut and trading starting on August 4, 2026, at 13:00 (UTC). Users with at least 243 Binance Alpha Points can claim an airdrop of 550 QUID tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "During the Promotion Periods, trade Squid (QUID) in your Binance Wallet (Keyless) or via Binance Alpha to receive exclusive token rewards.",
+        "Any user who is eligible to trade Binance Alpha tokens is eligible to participate in this trading competition.",
+        "Rewards will now place greater emphasis on early trading and consistent participation during the Promotion Period, making reward distribution fairer, returns clearer, and participation more accessible.",
+        "In the Promotion Period, earlier trades will receive a higher multiplier, which boosts a user’s base trading volume.",
+        "Users’ base trading volume generated during the following days in the Promotion Period will receive the corresponding multiplier when calculating their rankings: Trading Day Eligible Date and Time (UTC) Multiplier Day 1 1st QUID Trading Competition Promotion Period: 2026-08-05 13:00 to 2026-08-06 13:00 and 2nd QUID Trading Competition Promotion Period: 2026-08-12 13:00 to 2026-08-13 13:00 3.5x Day 2 1st QUID Trading Competition Promotion Period: 2026-08-06 13:00 to 2026-08-07 13:00 and 2nd QUID Trading Competition Promotion Period: 2026-08-13 13:00 to 2026-08-14 13:00 3.0x Day 3 1st QUID Trading Competition Promotion Period: 2026-08-07 13:00 to 2026-08-08 13:00 and 2nd QUID Trading Competition Promotion Period: 2026-08-14 13:00 to 2026-08-15 13:00 2.5x Day 4 1st QUID Trading Competition Promotion Period: 2026-08-08 13:00 to 2026-08-09 13:00 and 2nd QUID Trading Competition Promotion Period: 2026-08-15 13:00 to 2026-08-16 13:00 2.0x Day 5 1st QUID Trading Competition Promotion Period: 2026-08-09 13:00 to 2026-08-10 13:00 and 2nd QUID Trading Competition Promotion Period: 2026-08-16 13:00 to 2026-08-17 13:00 1.8x Day 6 1st QUID Trading Competition Promotion Period: 2026-08-10 13:00 to 2026-08-11 13:00 and 2nd QUID Trading Competition Promotion Period: 2026-08-17 13:00 to 2026-08-18 13:00 1.3x Day 7 1st QUID Trading Competition Promotion Period: 2026-08-11 13:00 to 2026-08-12 13:00 and 2nd QUID Trading Competition Promotion Period: 2026-08-18 13:00 to 2026-08-19 13:00 1.0x Rising Trader Boost Multiplier: For the purpose of this Promotion, “Rising Traders” refers to users who, as of three days before the start of the Promotion Period , have won any rewards in fewer than 3 previous Binance Wallet’s Alpha trading competitions.",
+        "Eligible Rising Traders will receive a 1.2x Rising Trader Boost on their actual trading volume during the Promotion Period, subject to a Rising Trader Boost Cap."
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2084550061598331040",
+        "https://api.fxtwitter.com/2/status/2084550061598331040",
+        "https://www.binance.com/en/support/announcement/binance-alpha-trading-competition-trade-squid-quid-and-share-200k-worth-of-rewards-2026-08-05-18d7255a59f74b3d90139c755cc806dd",
+        "https://x.com/binancezh/status/2084187639515848916",
+        "https://api.fxtwitter.com/2/status/2084187639515848916",
+        "https://x.com/BinanceWallet/status/2084188084057546971",
+        "https://api.fxtwitter.com/2/status/2084188084057546971"
+      ],
+      "announcementDates": [
+        "2026-08-04T13:00:00+00:00",
+        "2026-08-04T01:00:00+00:00",
+        "2026-08-04T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-08-03T08:10:53.603200+00:00",
+      "lastSeenAt": "2026-08-07T12:40:29.105725+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-08-06T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2085290227644702907",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2085290227644702907",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC). This event features an updated Binance Alpha Box model, where the airdrop pool includes tokens from multiple projects. Users with at least 245 Binance Alpha Points can claim one token reward on a first-come, first-served basis. Claiming the airdrop will consume 15 Binance Alpha Points. Additionally, this airdrop features three reward tiers: Common (80% of the reward pool), Rare (15%), and Super Rare (5%), each with different alpha box values. When claiming, users will be placed into one of these tiers. Rewards are distributed according to these tier proportions. If rewards are not fully distributed, the points threshold will automatically decrease by 5 points every 5 minutes.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天下午 19:00（UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币。持有至少 245 个币安 Alpha 积分的用户，可以领取一次代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 积分。 本次空投设有三个奖励等级：普通款（占奖池的80%）、稀有款（15%）和隐藏款（5%），每个等级对应不同的Alpha盲盒价值。用户在领取时将被分配至其中一个等级，奖励将按这些等级的比例进行分发。若奖励未全部发放完毕，积分门槛将每五分钟自动降低 5 分。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2085290227644702907",
+        "https://api.fxtwitter.com/2/status/2085290227644702907",
+        "https://x.com/binancezh/status/2085290059075576144",
+        "https://api.fxtwitter.com/2/status/2085290059075576144"
+      ],
+      "announcementDates": [
+        "2026-08-06T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-08-06T09:12:27.943289+00:00",
+      "lastSeenAt": "2026-08-09T10:54:34.518846+00:00"
+    },
+    {
+      "symbol": "DOS",
+      "name": "DAPPOS",
+      "alphaId": "ALPHA_1086",
+      "chainName": "BSC",
+      "contractAddress": "0xb0f09ea9ae0515c3551080d4a745c8115aa30e37",
+      "listingTime": "2026-08-10T09:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.28412931938667412649686793682398038",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2086694371483963450",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2086694371483963450",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature DAPPOS (DOS), with Alpha debut and trading starting on August 10, 2026, at 09:00 (UTC). Users with at least 200 Binance Alpha Points can claim an airdrop of 200 DOS tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "During the Promotion Periods, trade DAPPOS (DOS) in your Binance Wallet (Keyless) or via Binance Alpha to receive exclusive token rewards.",
+        "Any user who is eligible to trade Binance Alpha tokens is eligible to participate in this trading competition.",
+        "Rewards will now place greater emphasis on early trading and consistent participation during the Promotion Period, making reward distribution fairer, returns clearer, and participation more accessible.",
+        "In the Promotion Period, earlier trades will receive a higher multiplier, which boosts a user’s base trading volume.",
+        "Users’ base trading volume generated during the following days in the Promotion Period will receive the corresponding multiplier when calculating their rankings: Trading Day Eligible Date and Time (UTC) Multiplier Day 1 1st DAPPOS Trading Competition Promotion Period: 2026-08-12 13:00 to 2026-08-13 13:00 and 2nd DAPPOS Trading Competition Promotion Period: 2026-08-19 13:00 to 2026-08-20 13:00 3.0x Day 2 1st DAPPOS Trading Competition Promotion Period: 2026-08-13 13:00 to 2026-08-14 13:00 and 2nd DAPPOS Trading Competition Promotion Period: 2026-08-20 13:00 to 2026-08-21 13:00 3.0x Day 3 1st DAPPOS Trading Competition Promotion Period: 2026-08-14 13:00 to 2026-08-15 13:00 and 2nd DAPPOS Trading Competition Promotion Period: 2026-08-21 13:00 to 2026-08-22 13:00 2.5x Day 4 1st DAPPOS Trading Competition Promotion Period: 2026-08-15 13:00 to 2026-08-16 13:00 and 2nd DAPPOS Trading Competition Promotion Period: 2026-08-22 13:00 to 2026-08-23 13:00 2.0x Day 5 1st DAPPOS Trading Competition Promotion Period: 2026-08-16 13:00 to 2026-08-17 13:00 and 2nd DAPPOS Trading Competition Promotion Period: 2026-08-23 13:00 to 2026-08-24 13:00 1.8x Day 6 1st DAPPOS Trading Competition Promotion Period: 2026-08-17 13:00 to 2026-08-18 13:00 and 2nd DAPPOS Trading Competition Promotion Period: 2026-08-24 13:00 to 2026-08-25 13:00 1.3x Day 7 1st DAPPOS Trading Competition Promotion Period: 2026-08-18 13:00 to 2026-08-19 13:00 and 2nd DAPPOS Trading Competition Promotion Period: 2026-08-25 13:00 to 2026-08-26 13:00 1.0x Rising Trader Boost Multiplier: For the purpose of this Promotion, “Rising Traders” refers to users who, as of three days before the start of the Promotion Period , have won any rewards in fewer than 3 previous Binance Wallet’s Alpha trading competitions.",
+        "Eligible Rising Traders will receive a 1.2x Rising Trader Boost on their actual trading volume during the Promotion Period, subject to a Rising Trader Boost Cap."
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2086694371483963450",
+        "https://api.fxtwitter.com/2/status/2086694371483963450",
+        "https://www.binance.com/en/support/announcement/binance-alpha-trading-competition-trade-dappos-dos-and-share-200k-worth-of-rewards-2026-08-12-2e19d56645a2472fa3dbf1b8bf2c7efe",
+        "https://x.com/binancezh/status/2086365644149477752",
+        "https://api.fxtwitter.com/2/status/2086365644149477752",
+        "https://x.com/BinanceWallet/status/2086355840311926814",
+        "https://api.fxtwitter.com/2/status/2086355840311926814"
+      ],
+      "announcementDates": [
+        "2026-08-10T09:00:00+00:00",
+        "2026-08-10T01:00:00+00:00",
+        "2026-08-10T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-08-09T07:40:20.105476+00:00",
+      "lastSeenAt": "2026-08-13T08:50:32.580858+00:00"
+    },
+    {
+      "symbol": "KII",
+      "name": "KiiChain",
+      "alphaId": "ALPHA_1088",
+      "chainName": "BSC",
+      "contractAddress": "0xeec6574eabba52bac3f0277f2cd5ac7e67197886",
+      "listingTime": "2026-08-14T13:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.06657978115953493232365911960377609",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2088204374933934356",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2088204374933934356",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature KiiChain (KII), with Alpha debut and trading starting on August 14, 2026, at 13:00 (UTC). Users with at least 230 Binance Alpha Points can claim an airdrop of 360 KII tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 8 月 14 日成为首个上线 KiiChain（KII）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/cmF0CCoolb",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature KiiChain (KII) on August 14. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2088204374933934356",
+        "https://api.fxtwitter.com/2/status/2088204374933934356",
+        "https://x.com/binancezh/status/2088144649743737282",
+        "https://api.fxtwitter.com/2/status/2088144649743737282",
+        "https://x.com/BinanceWallet/status/2088144184356327544",
+        "https://api.fxtwitter.com/2/status/2088144184356327544"
+      ],
+      "announcementDates": [
+        "2026-08-14T13:00:00+00:00",
+        "2026-08-14T01:00:00+00:00",
+        "2026-08-14T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-08-14T06:10:24.350553+00:00",
+      "lastSeenAt": "2026-08-17T12:50:22.050998+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-08-19T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh + 官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://x.com/binancezh/status/2090000914967154805",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2090000914967154805",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 19:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 243 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 243 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance's official channels for the specific airdrop tokens and the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2090000914967154805",
+        "https://api.fxtwitter.com/2/status/2090000914967154805",
+        "https://x.com/BinanceWallet/status/2090001111122092181",
+        "https://api.fxtwitter.com/2/status/2090001111122092181"
+      ],
+      "announcementDates": [
+        "2026-08-19T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-08-19T09:00:35.353928+00:00",
+      "lastSeenAt": "2026-08-22T09:52:17.650606+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-08-19T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2090001111122092181",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2090001111122092181",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 243 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance's official channels for the specific airdrop tokens and the latest updates.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天 19:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 243 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2090001111122092181",
+        "https://api.fxtwitter.com/2/status/2090001111122092181",
+        "https://x.com/binancezh/status/2090000914967154805",
+        "https://api.fxtwitter.com/2/status/2090000914967154805"
+      ],
+      "announcementDates": [
+        "2026-08-19T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-08-19T09:10:22.493336+00:00",
+      "lastSeenAt": "2026-08-22T10:54:08.102831+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-08-21T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2090696305727398033",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2090696305727398033",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 242 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance's official channels for the specific airdrop tokens and the latest updates.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天 19:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 242 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2090696305727398033",
+        "https://api.fxtwitter.com/2/status/2090696305727398033",
+        "https://x.com/binancezh/status/2090699988678619512",
+        "https://api.fxtwitter.com/2/status/2090699988678619512"
+      ],
+      "announcementDates": [
+        "2026-08-21T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-08-21T07:10:42.323210+00:00",
+      "lastSeenAt": "2026-08-24T10:50:27.909941+00:00"
+    },
+    {
+      "symbol": "TMX",
+      "name": "TermMax",
+      "alphaId": "ALPHA_1107",
+      "chainName": "BSC",
+      "contractAddress": "0x3c2f61f2e27c865981d2e7aaf6b2cdf823030039",
+      "listingTime": "2026-08-25T10:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.133467771033553149434802202892265951",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2092130453331525798",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2092130453331525798",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature TermMax (TMX), with Alpha debut and trading starting on August 25, 2026, at 10:00 (UTC). Users with at least 225 Binance Alpha Points can claim an airdrop of 200 TMX tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 8 月 25 日成为首个上线 TermMax（TMX）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/d4UL1YJw9n",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature TermMax (TMX) on August 25. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2092130453331525798",
+        "https://api.fxtwitter.com/2/status/2092130453331525798",
+        "https://x.com/binancezh/status/2091722746749440207",
+        "https://api.fxtwitter.com/2/status/2091722746749440207",
+        "https://x.com/BinanceWallet/status/2091722478066483355",
+        "https://api.fxtwitter.com/2/status/2091722478066483355"
+      ],
+      "announcementDates": [
+        "2026-08-25T10:00:00+00:00",
+        "2026-08-25T01:00:00+00:00",
+        "2026-08-25T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-08-24T03:10:18.915946+00:00",
+      "lastSeenAt": "2026-08-28T09:50:30.238466+00:00"
+    },
+    {
+      "symbol": "DEBIT",
+      "name": "Teller",
+      "alphaId": "ALPHA_1108",
+      "chainName": "BSC",
+      "contractAddress": "0x66661c7229901f568f16bd1551b3ba826f83ce49",
+      "listingTime": "2026-08-26T10:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "1.653085146655381078529449109761231324",
+      "source": "官方 X 预告 @BinanceWallet + Binance Alpha 币种接口 + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2092508309731336498",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2092508309731336498",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha is the first platform to feature Teller (DEBIT), with Alpha debut and trading starting on August 26, 2026, at 10:00 (UTC). Users with at least 240 Binance Alpha Points can claim an airdrop of 50 DEBIT tokens on a first-come, first-served basis. If the reward pool is not fully distributed, the score threshold will automatically decrease by 5 points every 5 minutes. Please note that claiming the airdrop will consume 15 Binance Alpha Points. Users must confirm their claim on the Alpha Events page within 24 hours; otherwise, it will be deemed that users have given up claiming the airdrop.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 8 月 26 日成为首个上线 Teller（DEBIT）的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/zHSMCq1svk",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "Binance Alpha will be the first platform to feature Teller (DEBIT) on August 26. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2092508309731336498",
+        "https://api.fxtwitter.com/2/status/2092508309731336498",
+        "https://x.com/binancezh/status/2092084599140823153",
+        "https://api.fxtwitter.com/2/status/2092084599140823153",
+        "https://x.com/BinanceWallet/status/2092084709425885322",
+        "https://api.fxtwitter.com/2/status/2092084709425885322"
+      ],
+      "announcementDates": [
+        "2026-08-26T10:00:00+00:00",
+        "2026-08-26T01:00:00+00:00",
+        "2026-08-26T00:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-08-25T03:00:37.851027+00:00",
+      "lastSeenAt": "2026-08-29T09:50:22.635056+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-09-01T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2094704647479107860",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2094704647479107860",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 250 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance's official channels for the specific airdrop tokens and the latest updates.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天 19:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 250 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2094704647479107860",
+        "https://api.fxtwitter.com/2/status/2094704647479107860",
+        "https://x.com/binancezh/status/2094724265459560542",
+        "https://api.fxtwitter.com/2/status/2094724265459560542"
+      ],
+      "announcementDates": [
+        "2026-09-01T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-09-01T08:40:19.227774+00:00",
+      "lastSeenAt": "2026-09-02T10:40:24.216823+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-09-01T11:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh + 官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://x.com/binancezh/status/2094724265459560542",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2094724265459560542",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 19:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 250 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 250 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance's official channels for the specific airdrop tokens and the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2094724265459560542",
+        "https://api.fxtwitter.com/2/status/2094724265459560542",
+        "https://x.com/BinanceWallet/status/2094704647479107860",
+        "https://api.fxtwitter.com/2/status/2094704647479107860"
+      ],
+      "announcementDates": [
+        "2026-09-01T11:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-09-02T10:50:23.329061+00:00",
+      "lastSeenAt": "2026-09-04T10:50:22.230583+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-09-04T07:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2095738732314042720",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2095738732314042720",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 7:00 (UTC). Users with at least 235 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance’s official channels for the specific airdrop tokens and the latest updates.",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "请大家准备今天 15:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 235 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2095738732314042720",
+        "https://api.fxtwitter.com/2/status/2095738732314042720",
+        "https://x.com/binancezh/status/2095738963860537741",
+        "https://api.fxtwitter.com/2/status/2095738963860537741"
+      ],
+      "announcementDates": [
+        "2026-09-04T07:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-09-04T05:00:36.856805+00:00",
+      "lastSeenAt": "2026-09-06T21:30:32.717206+00:00"
+    },
+    {
+      "symbol": "CP",
+      "name": "Cluster Protocol",
+      "alphaId": "ALPHA_1128",
+      "chainName": "Base",
+      "contractAddress": "0x001aad84c21a5cd4d696c56d44866e9703c43f77",
+      "listingTime": "2026-09-04T07:00:00+00:00",
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 2,
+      "price": "0.023232096044828240915636058445459758",
+      "source": "Binance Alpha 币种接口",
+      "sourceUrl": "https://www.binance.com/en/alpha",
+      "matchedAnnouncements": [],
+      "ruleSummary": [],
+      "announcementUrls": [],
+      "announcementDates": [],
+      "firstSeenAt": "2026-09-04T07:10:25.010853+00:00",
+      "lastSeenAt": "2026-09-06T23:30:30.552334+00:00"
+    },
+    {
+      "symbol": "待公布",
+      "name": "Alpha 空投币种",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-09-04T07:00:00+00:00",
+      "dateOnly": false,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @binancezh + 官方 X 预告 @BinanceWallet",
+      "sourceUrl": "https://x.com/binancezh/status/2095738963860537741",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2095738963860537741",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "请大家准备今天 15:00（UTC+8）领取币安 Alpha 空投并交易！ 持有至少 235 个币安 Alpha 积分的用户可申领代币空投。先到先得。直至空投池领取完毕或活动结束。 具体空投币种敬请关注币安官方渠道，及时获取活动最新动态。",
+        "已从官方 X 解析到开放时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。",
+        "Please get ready to claim the Binance Alpha airdrop and trade today at 7:00 (UTC). Users with at least 235 Binance Alpha Points can claim the token on a first-come, first-served basis until the airdrop pool is fully distributed or the airdrop event expires. Further details will be announced soon. Please stay tuned to Binance’s official channels for the specific airdrop tokens and the latest updates."
+      ],
+      "announcementUrls": [
+        "https://x.com/binancezh/status/2095738963860537741",
+        "https://api.fxtwitter.com/2/status/2095738963860537741",
+        "https://x.com/BinanceWallet/status/2095738732314042720",
+        "https://api.fxtwitter.com/2/status/2095738732314042720"
+      ],
+      "announcementDates": [
+        "2026-09-04T07:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": false,
+      "firstSeenAt": "2026-09-04T10:01:14.998090+00:00",
+      "lastSeenAt": "2026-09-06T23:30:30.552334+00:00"
+    },
+    {
+      "symbol": "TAC",
+      "name": "TAC",
+      "alphaId": "ALPHA_1129",
+      "chainName": "BSC",
+      "contractAddress": "0xb305e6954e4e0cd021c06ec355681abc8a00dbd7",
+      "listingTime": "2026-09-04T08:00:00+00:00",
+      "onlineAirdrop": true,
+      "onlineTge": false,
+      "mulPoint": 4,
+      "price": "0.002421160483884434415103080568121897",
+      "source": "Binance Alpha 币种接口",
+      "sourceUrl": "https://www.binance.com/en/alpha",
+      "matchedAnnouncements": [
+        {
+          "code": "c449cd2c8c164ebdb99299a00bba575c",
+          "title": "South Asia Exclusive: US Stocks MegaFest - Trade and Share a $500,000 Reward Pool",
+          "releaseDate": 1788440406785,
+          "catalogName": "Latest Activities",
+          "url": "https://www.binance.com/en/support/announcement/south-asia-exclusive-us-stocks-megafest-trade-and-share-a-500-000-reward-pool-c449cd2c8c164ebdb99299a00bba575c",
+          "body": "This is a general announcement and marketing communication. Products and services referred to here may not be available in your region. Fellow Binancians, Binance is excited to introduce the US Stocks MegaFest! Users can trade the world's biggest US stocks - Nvidia, Tesla, SpaceX, Meta, Google and more and win up to $1,000 in bStocks token vouchers from a $500,000 reward pool . Rewards are limited and will be distributed on a first-come, first-served basis while the reward pool lasts. Activity Period: 2026-09-03 12:00 (UTC) to 2026-10-08 23:59 (UTC) Join Now How to Participate: Step 1: Log in to your Binance account. If you don't have a Binance account yet, register for an account now and complete identity verification (KYC) . Step 2: Visit the landing page during the Activity Period. Step 3: Complete the tasks below to earn spins: Task 1: Trade at least 10 USDT equivalent in bStocks in Spot or Convert in total trading volume to unlock 1 spin . Task 2: Trade at least 200 USDT equivalent in TradFi USDⓈ-M Futures in total trading volume to unlock 2 spins . Task 3: Trade a cumulative 1,000 USDT equivalent in total trading volume across bStocks or/and TradFi USDⓈ-M Futures to unlock 3 spins . Task 4: Invite a new user to register and complete their first bStocks trade of at least 10 USDT equivalent in Spot or Convert in total trading volume to unlock 1 spin each for you and your referral, up to a maximum of 5 successful referrals . Step 4: Click the [GO] button to use your spins and reveal your reward instantly. Reward Structure: Each eligible winner will receive a reward in the form of a specific bStocks token, credited as a fixed quantity of that token. Rewards are denominated by their USD value, and the corresponding token quantity is calculated using the token's reference price as of 2026-08-31 . Reward per Eligible User (in USD Value) bStocks Token Reference Price (as of 2026-08-31) bStocks Token Quantity Credited $1,000 NVDAB $216.99 4.60850730 $500 AMZNB $265.35 1.88430375 $100 CRCLB $87.44 1.14364135 $10 GOOGLB $344.23 0.02905034 $5 AAPLB $318.86 0.01568086 $3 AMDB $464.01 0.00646538 $1 SPCXB $140.10 0.00713776 $0.5 TSLAB $347.73 0.00143790 Please note: Token voucher will be credited to eligible users’ Rewards Hub within 72 hours of task completion, following successful verification and risk check. The total reward pool for this activity is $500,000 , distributed on a first-come, first-served basis, until the pool is exhausted. Guides & Related Materials: Why Tokenized Securities? A Look at bStocks vs. Traditional Stocks Introducing bStocks – Trade and Hold Tokenized 1:1 U.S. Stocks on Binance Cryptocurrency Futures | Crypto Futures Trading | Binance Futures The Ultimate Guide to Trading on Binance Futures Responsible Trading Terms & Conditions: Rewards are subject to risk and eligibility checks. All task completions, spins, and rewards are subject to Binance's risk-control, anti-fraud, and eligibility verification processes. Completing a task and unlocking a spin only makes a user provisionally eligible to spin. Using a spin and revealing an on-screen reward does not constitute a confirmed, earned, or claimable reward. All revealed rewards are provisional and unconfirmed until they have passed Binance's verification and risk checks. All qualifying activity, unlocked spins, and revealed rewards are subject to a risk and eligibility review of up to 72 hours (and potentially longer where further review is required) after the qualifying activity. A reward will only be credited after the associated trading activity and account have successfully passed this review. This activity is open to all verified users in South Asia. Users may only participate under one user category during the Activity Period. Account manipulation, duplicate registrations, or other abusive behavior may result in disqualification and forfeiture of rewards. Each task has a unique minimum trading volume criteria and product specification required to qualify for its completion. Each task completion unlocks a corresponding number of spins. Users can achieve minimum trading volume requirements by trading in one or multiple eligible bStocks trading pairs; total equivalent volume across pairs is calculated for completion. Reward Structure: Rewards are provided as bStocks token vouchers and are non-transferable, non-exchangeable, and cannot be redeemed for cash . The price of each bStocks token is fixed as of 2026-08-31 for the purpose of this activity. This reference price is used solely to determine the quantity of tokens each winner receives and does not represent the live or future market price of the token. Each reward tier represents a USD-equivalent value. Winners will receive the quantity of the specified bStocks token shown in the reward structure table, calculated as (Reward USD Value / Reference Price as of 2026-08-31). Rewards are credited in the specified bStocks token at the fixed quantity shown, not as cash or USD. The actual value of the tokens at the time of crediting or thereafter may be higher or lower than the stated USD value, as token prices fluctuate with the market. Each reward tier is tied to a specific bStocks token as listed in the table above. Winners will receive the token corresponding to the tier they win and may not substitute, exchange, or request a different token or cash equivalent. bStocks token values are subject to market volatility. The USD values shown are for reward-tier definition only (based on the 2026-08-31 reference price) and carry no guarantee of value at redemption, crediting, or any later date. Reward Distribution: Rewards are available on a first-come, first-served basis, until the reward pool of $500,000 is exhausted. Eligible users can log in and redeem their bStocks token voucher rewards via Profile > Rewards Hub . The validity period for the token voucher is 60 days from the day of distribution. Eligible users should claim their vouchers before the expiration date. If not claimed before expiry, the voucher will be void and no replacement voucher or other reward will be provided. Learn how to redeem a voucher. Users must complete all KYC requirements applicable to their account tier to be eligible for rewards. Only tasks completed through the Activity page are considered valid. Tasks completed via any other path may be deemed invalid at Binance's sole discretion. Any unused spins will expire at the end of the Activity Period and cannot be carried forward. Users are solely responsible for any taxes, levies, or duties arising from the receipt or redemption of rewards. Corporate accounts, institutional accounts, and sub-accounts are not eligible to participate in this promotion. Users found operating multiple accounts, using VPNs or proxies to misrepresent their location, engaging in wash trading, self-trading, or any other fraudulent or manipulative behavior will be disqualified and forfeit all rewards. Binance shall not be liable for any failure to deliver rewards due to circumstances beyond its reasonable control, including but not limited to technical failures, network outages, or regulatory actions. By opting in, users agree to receive promotional communications related to this Activity. Users may unsubscribe at any time. Participation data will be processed per the Binance Privacy Policy . For any questions or disputes related to this promotion, users may contact Binance Customer Support within 30 days of the promotion end date. Claims raised after this period may not be entertained. These terms and conditions (“Activity Terms”) govern users’ participation in this activity (“Activity”). By participating in this Activity, users agree to these Activity Terms, and the following additional terms: (a) Binance Terms and Conditions for Prize Promotions ; (b) Binance Terms of Use ; and (c) Binance Privacy Policy ; all of which are incorporated by reference into these terms and conditions. In the case of any inconsistency between these Activity Terms and any incorporated terms, these Activity Terms prevail, followed by (a) Prize Promotions Terms , (b) Terms of Use , (c) Privacy Policy . Binance reserves the right at any time in its sole and absolute discretion to amend, cancel, extend, terminate, or suspend this Activity or its eligibility criteria without prior notice. Binance reserves the right of final interpretation of this activity. Binance reserves the right to disqualify any participants who tamper with or interfere with Binance program code. Thank you for your support! Binance Team 2026-09-03 Disclaimer: In this campaign, ‘US Stocks’ refers to tokenised stocks (bStocks). bStocks tokenized securities are classified as Certificates representing certain Financial Instruments (paragraph 92, Schedule 1 to FSMR). bStocks are not stocks or shares and bStocks do not allow holders to directly own a share or stock in the underlying listed company. bStocks do not represent any affiliation with the underlying asset's issuer. bStocks are offered through an Approved Prospectus in the ADGM and are not offered in any other jurisdiction. No public offer is made outside of the ADGM. Tokenized securities are available only to eligible users in permitted jurisdictions on a secondary market basis only. It is your sole responsibility to ensure that accessing and trading tokenized securities is lawful in your jurisdiction before proceeding. Accessing this product from a jurisdiction in which it is prohibited or restricted does not create any liability or obligation on the part of Binance. We may restrict, suspend, reject, cancel, or unwind access or transactions if we determine, in our sole discretion, that your access or transaction may breach applicable law, product restrictions, eligibility criteria, sanctions requirements, or the relevant offering documents. Tokenized securities may be held and transferred on-chain outside the CSD environment. The transfer of tokenized securities back into the CSD environment is subject to conditions and you may be unable to trade, redeem or otherwise deal with the tokenized securities within the CSD environment if such conditions are not fulfilled. No information displayed in connection with tokenized securities is intended as an offer, solicitation, promotion, recommendation, or invitation to buy or sell securities in any jurisdiction. Tokenized securities are not offered, sold, distributed, made available, or accessible in the United States or to, or for the account or benefit of, U.S. persons. The tokenized securities have not been and will not be registered under the U.S. Securities Act of 1933 or any U.S. state securities laws and a public offering of bStocks will not be conducted in the United States or any other jurisdiction (other than the ADGM). By accessing this product, you represent and warrant that you are not a U.S. person, are not located in the United States, are not acting for the account or benefit of any U.S. person, and will not access, purchase, sell, transfer, redeem, or otherwise transact in tokenized securities from within the United States. For more information, see the Terms of Use , Exchange Rules , Exchange Procedures , relevant Prospectus (if applicable to you and understanding that the offer is only made in ADGM, no public offer is being made elsewhere and viewing the prospectus does not constitute an invitation or solicitation outside ADGM) , bStocks Minting and Redemption Product Terms , Admission to Trading Notice and Risk Warning .",
+          "ruleLines": [
+            "Users can trade the world's biggest US stocks - Nvidia, Tesla, SpaceX, Meta, Google and more and win up to $1,000 in bStocks token vouchers from a $500,000 reward pool .",
+            "Rewards are limited and will be distributed on a first-come, first-served basis while the reward pool lasts.",
+            "Step 4: Click the [GO] button to use your spins and reveal your reward instantly.",
+            "Reward Structure: Each eligible winner will receive a reward in the form of a specific bStocks token, credited as a fixed quantity of that token.",
+            "Rewards are denominated by their USD value, and the corresponding token quantity is calculated using the token's reference price as of 2026-08-31 .",
+            "Reward per Eligible User (in USD Value) bStocks Token Reference Price (as of 2026-08-31) bStocks Token Quantity Credited $1,000 NVDAB $216.99 4.60850730 $500 AMZNB $265.35 1.88430375 $100 CRCLB $87.44 1.14364135 $10 GOOGLB $344.23 0.02905034 $5 AAPLB $318.86 0.01568086 $3 AMDB $464.01 0.00646538 $1 SPCXB $140.10 0.00713776 $0.5 TSLAB $347.73 0.00143790 Please note: Token voucher will be credited to eligible users’ Rewards Hub within 72 hours of task completion, following successful verification and risk check.",
+            "The total reward pool for this activity is $500,000 , distributed on a first-come, first-served basis, until the pool is exhausted.",
+            "Stocks on Binance Cryptocurrency Futures | Crypto Futures Trading | Binance Futures The Ultimate Guide to Trading on Binance Futures Responsible Trading Terms & Conditions: Rewards are subject to risk and eligibility checks."
+          ],
+          "dates": [
+            "2026-09-03T12:00:00+00:00",
+            "2026-10-08T23:59:00+00:00",
+            "2026-08-31T00:00:00+00:00",
+            "2026-08-31T00:00:00+00:00",
+            "2026-08-31T00:00:00+00:00",
+            "2026-08-31T00:00:00+00:00",
+            "2026-08-31T00:00:00+00:00",
+            "2026-09-03T00:00:00+00:00"
+          ]
+        },
+        {
+          "code": "cf1d21d15830400d84862768bb168ef4",
+          "title": "Binance Alpha Trading Competition: Trade Collect on Fanable (COLLECT) and Share $200K Worth of Rewards (2026-09-02)",
+          "releaseDate": 1788346803378,
+          "catalogName": "Latest Activities",
+          "url": "https://www.binance.com/en/support/announcement/binance-alpha-trading-competition-trade-collect-on-fanable-collect-and-share-200k-worth-of-rewards-2026-09-02-cf1d21d15830400d84862768bb168ef4",
+          "body": "This is a general announcement. Products and services referred to here may not be available in your region. Terms and conditions apply. Fellow Binancians, Binance Wallet is excited to launch the Collect on Fanable Trading Competition on Binance Alpha! During the Promotion Periods, trade Collect on Fanable (COLLECT) in your Binance Wallet (Keyless) or via Binance Alpha to receive exclusive token rewards. Any user who is eligible to trade Binance Alpha tokens is eligible to participate in this trading competition. 1st COLLECT Trading Competition Promotion Period: 2026-09-02 13:00 (UTC) to 2026-09-09 13:00 (UTC) 2nd COLLECT Trading Competition Promotion Period: 2026-09-09 13:00 (UTC) to 2026-09-16 13:00 (UTC) General Rules​​: Participants will be ranked according to their total purchase volume on COLLECT during the Promotion Period. The top 2,000 users by purchase volume of COLLECT tokens during the Promotion Period will share 1,340,000 COLLECT tokens equally (= 670 COLLECT per user). Rewards will now place greater emphasis on early trading and consistent participation during the Promotion Period, making reward distribution fairer, returns clearer, and participation more accessible. To support this, we are introducing the Early Bird Boost Multiplier . To further encourage broader participation, we are also introducing the Rising Trader Boost Multiplier . Early Bird Boost Multiplier: Users can now trade earlier to earn more. In the Promotion Period, earlier trades will receive a higher multiplier, which boosts a user’s base trading volume. Daily Effective Trading Volume is calculated as follows: Daily Effective Trading Volume = Actual Trading Volume * Early Bird Boost Multiplier Note : Total trading volume for the competition is the sum of daily effective trading volume during the Promotion Period. Users’ base trading volume generated during the following days in the Promotion Period will receive the corresponding multiplier when calculating their rankings: Trading Day Eligible Date and Time (UTC) Multiplier Day 1 1st COLLECT Trading Competition Promotion Period: 2026-09-02 13:00 to 2026-09-03 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-09 13:00 to 2026-09-10 13:00 2.0x Day 2 1st COLLECT Trading Competition Promotion Period: 2026-09-03 13:00 to 2026-09-04 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-10 13:00 to 2026-09-11 13:00 2.0x Day 3 1st COLLECT Trading Competition Promotion Period: 2026-09-04 13:00 to 2026-09-05 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-11 13:00 to 2026-09-12 13:00 1.8x Day 4 1st COLLECT Trading Competition Promotion Period: 2026-09-05 13:00 to 2026-09-06 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-12 13:00 to 2026-09-13 13:00 1.8x Day 5 1st COLLECT Trading Competition Promotion Period: 2026-09-06 13:00 to 2026-09-07 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-13 13:00 to 2026-09-14 13:00 1.5x Day 6 1st COLLECT Trading Competition Promotion Period: 2026-09-07 13:00 to 2026-09-08 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-14 13:00 to 2026-09-15 13:00 1.3x Day 7 1st COLLECT Trading Competition Promotion Period: 2026-09-08 13:00 to 2026-09-09 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-15 13:00 to 2026-09-16 13:00 1.0x Rising Trader Boost Multiplier: For the purpose of this Promotion, “Rising Traders” refers to users who, as of three days before the start of the Promotion Period , have won any rewards in fewer than 3 previous Binance Wallet’s Alpha trading competitions. Eligible Rising Traders will receive a 1.2x Rising Trader Boost on their actual trading volume during the Promotion Period, subject to a Rising Trader Boost Cap. Notes : The \"Rising Trader\" qualification is determined as of three days before the activity period begins . For example, if a user wins a trading competition ending on Day T, and their cumulative historical win count reaches exactly 3 at that point, they will still qualify as a Rising Trader for new competitions starting on T+1 and T+2 (since the qualification snapshot was taken before their 3rd win). However, for competitions starting on T+3 and beyond, their historical win count will already be 3 or more at the qualification snapshot, and they will no longer be eligible for the Rising Trader bonus. The Rising Trader Boost Cap refers to the maximum actual trading volume that can receive the Rising Trader Boost during the Promotion Period. Once a user’s Rising Trader Boost Cap has been reached, the user will no longer receive Rising Trader Boosts for any subsequent trading volume. If both the Early Bird Boost Multiplier and Rising Trader Boost apply, Effective Trading Volume will be calculated as follows: Effective Trading Volume = Actual Trading Volume * Early Bird Boost Multiplier + min(Actual Trading Volume, Remaining Rising Trader Boost Cap) * Rising Trader Boost The final ranking will be calculated based on users’ total Effective Trading Volume during the Promotion Period. A user’s total Effective Trading Volume is the sum of their daily Effective Trading Volume during the Promotion Period. Example: User A generates 10,000 USDT in actual trading volume on Day 1. The Day 1 Early Bird Boost Multiplier is 2.0x, and User A is also eligible for the 1.2x Rising Trader Boost. The Rising Trader Boost Cap is 5,000 USDT. User A's Day 1 Effective Trading Volume is calculated as follows: Early Bird Boost: 10,000 * 2.0 = 20,000 USDT Rising Trader Boost: User A's actual trading volume (10,000 USDT) exceeds the Rising Trader Boost Cap (5,000 USDT), so only 5,000 USDT is eligible for the Rising Trader Boost = 5,000 * 1.2 = 6,000 USDT Day 1 Effective Trading Volume = 20,000 + 6,000 = 26,000 USDT After Day 1, User A's 5,000 USDT Rising Trader Boost Cap has been fully used. Therefore, User A will no longer receive the Rising Trader Boost for any subsequent trading volume during the Promotion Period. Please Note:​​ Only trades executed via ​​ Binance Wallet (Keyless)​​ or ​​ Binance Alpha ​​ on Binance Wallet will qualify in this Promotion. Third-party dApp transactions are excluded. Only cumulative purchases count as trading volume for the purposes of the Promotion. Selling is excluded. ​​No Volume Caps ​​: There is no cap on the trading volume for each participant in this Promotion. Token bridging transactions are not eligible for this Promotion. Effective from 2025-06-17 00:00 (UTC), trading volume generated from Alpha-to-Alpha token pairs will no longer be counted toward Alpha Points. Such trading volume will also be excluded from the Trading Competition and will not impact competition rankings. Reward Distribution: All rewards will be calculated in accordance with the reward distribution rules above and will be claimable in COLLECT tokens by eligible users. Token rewards will be made available to eligible users before 2026-09-30 13:00:00 (UTC) . Eligible users must complete the claim within 14 days after rewards become claimable. Any rewards not claimed within this period will be deemed forfeited and will not be reissued. Eligible winners can view and claim their token rewards directly via their Binance Alpha accounts or Binance Wallet (Keyless) . How to Participate: Click [Join] on the Binance App event page to participate in the promotion. Only trading volume generated after successfully clicking [Join] will be counted as valid trading volume for the competition. Update your Binance App to the latest version, ensure you have created a Binance Wallet (Keyless) and backed it up . During the Promotion Period, trade COLLECT on Binance Wallet (Keyless) or Binance Alpha. After the Promotion Period ends, rankings will be automatically calculated. Eligible winners can claim their rewards on the event page. Terms & Conditions: These terms and conditions (“Promotion Terms”) govern users’ participation in the promotion above (“Promotion”). By participating in this Promotion, users agree to these Promotion Terms, and the following additional terms: (a) Binance Terms and Conditions for Prize Promotions ; (b) Binance Wallet Terms of Use ; and (c) Binance Wallet Privacy Notice ; all of which are incorporated by reference into these terms and conditions. In the case of any inconsistency or conflict between these Promotion Terms, and any other incorporated terms, the provisions of these Promotion Terms shall prevail, followed by the  following in this order of precedence, and to the extent of such conflict: (a) Binance Terms and Conditions for Prize Promotions ; (b) Binance Wallet Terms of Use ; and (c) Binance Wallet Privacy Notice . Only users who maintain an active Binance Account on the Binance Platform are eligible to participate in this Activity. Tokens will not be distributed to users who delete or deactivate their Binance Wallets and/or their Binance Accounts on the Binance Platform. You may interact with Third-Party Services and DApps and through this Promotion. Third-Party Service Providers operate independently and may have different security standards, operational practices, and regulatory compliance. Binance Wallet does not control or guarantee the performance, security, or reliability of these Third-Parties. Users are responsible to conduct their own independent research to ensure the Third-Party Service is suitable for them. Binance Wallet reserves the right to disqualify a user’s reward eligibility if Binance Wallet determines that the user has breached the Binance Wallet Terms of Use, tampered with Binance Wallet program code, or interfered with the operation of Binance Wallet program code with other software. Binance reserves the right at any time in its sole and absolute discretion to determine and/or amend or vary these Activity Terms without prior notice, including but not limited to canceling, extending, terminating or suspending this Activity, its eligibility terms and criteria, the selection and number of winners, and the timing of any act to be done, and all users shall be bound by these amendments. There may be discrepancies between this original content in English and any translated versions. Please refer to the original English version for the most accurate information, in case any discrepancies arise. Thank you for your support! Binance Team 2026-09-02 USDC is an e-money token issued by Circle Internet Financial Europe SAS ( https://www.circle.com/ ). USDC’s whitepaper is available here . You may contact Circle using the following contact information: +33(1)59000130 and EEA-Customer-Support@circle.com . Holders of USDC have a legal claim against Circle SAS as the EU issuer of USDC. These holders are entitled to request redemption of their USDC from Circle SAS. Such redemption will be made at any time and at par value. Disclaimer: The Binance Wallet Services are offered by Binance Barbados Limited, and involve the provision of unregulated, third-party services, which are not supervised by the Financial Services Regulatory Authority of the Abu Dhabi Global Market, or any other regulatory authority. Binance Wallet is not responsible for your access or use of third-party applications (including functionality embedded within the Binance Wallet) and shall have no liability whatsoever in connection with your use of such third-party applications, including, without limitation, any transactions you dispute. You should only invest in products you are familiar with and where you understand the risks. You should carefully consider your investment experience, financial situation, investment objectives and risk tolerance and consult an independent financial adviser prior to making any investment. This material should not be construed as financial advice. Please carefully review the Terms of Use and Risk Warning and always do your own research. Binance Alpha features emerging digital assets which are generally expected to have a low market capitalisation and unique or novel characteristics. As digital asset prices can be volatile, the value of any investment that you make in Alpha Assets may go down or up and you may lose all or part of the value of the amount that you invest. Please note that in relation to Binance Alpha (i) the risk of loss of all or part of your investment is magnified with Binance Alpha assets as they are subject to increased price volatility (ii) by purchasing Alpha Assets, you are exposed to price slippage and blockchain fees, which can have a negative impact of the price of Alpha Assets (iii) for the avoidance of doubt, once Alpha Assets are transferred to the Binance Platform, the relevant services there are not offered by Binance Barbados and are instead subject to the Binance Platform terms. You are solely responsible for your investment decisions. Binance will not in any circumstances be responsible or liable for any losses that you may incur arising directly or indirectly from an investment in Binance Alpha Assets. Please carefully review the Terms of Use and Risk Warning and always do your own research.",
+          "ruleLines": [
+            "During the Promotion Periods, trade Collect on Fanable (COLLECT) in your Binance Wallet (Keyless) or via Binance Alpha to receive exclusive token rewards.",
+            "Any user who is eligible to trade Binance Alpha tokens is eligible to participate in this trading competition.",
+            "Rewards will now place greater emphasis on early trading and consistent participation during the Promotion Period, making reward distribution fairer, returns clearer, and participation more accessible.",
+            "In the Promotion Period, earlier trades will receive a higher multiplier, which boosts a user’s base trading volume.",
+            "Users’ base trading volume generated during the following days in the Promotion Period will receive the corresponding multiplier when calculating their rankings: Trading Day Eligible Date and Time (UTC) Multiplier Day 1 1st COLLECT Trading Competition Promotion Period: 2026-09-02 13:00 to 2026-09-03 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-09 13:00 to 2026-09-10 13:00 2.0x Day 2 1st COLLECT Trading Competition Promotion Period: 2026-09-03 13:00 to 2026-09-04 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-10 13:00 to 2026-09-11 13:00 2.0x Day 3 1st COLLECT Trading Competition Promotion Period: 2026-09-04 13:00 to 2026-09-05 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-11 13:00 to 2026-09-12 13:00 1.8x Day 4 1st COLLECT Trading Competition Promotion Period: 2026-09-05 13:00 to 2026-09-06 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-12 13:00 to 2026-09-13 13:00 1.8x Day 5 1st COLLECT Trading Competition Promotion Period: 2026-09-06 13:00 to 2026-09-07 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-13 13:00 to 2026-09-14 13:00 1.5x Day 6 1st COLLECT Trading Competition Promotion Period: 2026-09-07 13:00 to 2026-09-08 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-14 13:00 to 2026-09-15 13:00 1.3x Day 7 1st COLLECT Trading Competition Promotion Period: 2026-09-08 13:00 to 2026-09-09 13:00 and 2nd COLLECT Trading Competition Promotion Period: 2026-09-15 13:00 to 2026-09-16 13:00 1.0x Rising Trader Boost Multiplier: For the purpose of this Promotion, “Rising Traders” refers to users who, as of three days before the start of the Promotion Period , have won any rewards in fewer than 3 previous Binance Wallet’s Alpha trading competitions.",
+            "Eligible Rising Traders will receive a 1.2x Rising Trader Boost on their actual trading volume during the Promotion Period, subject to a Rising Trader Boost Cap.",
+            "For example, if a user wins a trading competition ending on Day T, and their cumulative historical win count reaches exactly 3 at that point, they will still qualify as a Rising Trader for new competitions starting on T+1 and T+2 (since the qualification snapshot was taken before their 3rd win).",
+            "However, for competitions starting on T+3 and beyond, their historical win count will already be 3 or more at the qualification snapshot, and they will no longer be eligible for the Rising Trader bonus."
+          ],
+          "dates": [
+            "2026-09-02T00:00:00+00:00",
+            "2026-09-02T13:00:00+00:00",
+            "2026-09-09T13:00:00+00:00",
+            "2026-09-09T13:00:00+00:00",
+            "2026-09-16T13:00:00+00:00",
+            "2026-09-02T13:00:00+00:00",
+            "2026-09-03T13:00:00+00:00",
+            "2026-09-09T13:00:00+00:00"
+          ]
+        },
+        {
+          "code": "5fd181b6990b48ffa9c08d6a48b88246",
+          "title": "Binance Alpha Trading Competition: Trade TermMax (TMX) and Share $200K Worth of Rewards (2026-09-01)",
+          "releaseDate": 1788260407543,
+          "catalogName": "Latest Activities",
+          "url": "https://www.binance.com/en/support/announcement/binance-alpha-trading-competition-trade-termmax-tmx-and-share-200k-worth-of-rewards-2026-09-01-5fd181b6990b48ffa9c08d6a48b88246",
+          "body": "This is a general announcement. Products and services referred to here may not be available in your region. Terms and conditions apply. Fellow Binancians, Binance Wallet is excited to launch the TermMax Trading Competition on Binance Alpha! During the Promotion Periods, trade TermMax (TMX) in your Binance Wallet (Keyless) or via Binance Alpha to receive exclusive token rewards. Any user who is eligible to trade Binance Alpha tokens is eligible to participate in this trading competition. 1st TMX Trading Competition Promotion Period: 2026-09-01 13:00 (UTC) to 2026-09-08 13:00 (UTC) 2nd TMX Trading Competition Promotion Period: 2026-09-08 13:00 (UTC) to 2026-09-15 13:00 (UTC) General Rules​​: Participants will be ranked according to their total purchase volume on TMX during the Promotion Period. The top 2,030 users by purchase volume of TMX tokens during the Promotion Period will share 913,500 TMX tokens equally (= 450 TMX per user). Rewards will now place greater emphasis on early trading and consistent participation during the Promotion Period, making reward distribution fairer, returns clearer, and participation more accessible. To support this, we are introducing the Early Bird Boost Multiplier . To further encourage broader participation, we are also introducing the Rising Trader Boost Multiplier . Early Bird Boost Multiplier: Users can now trade earlier to earn more. In the Promotion Period, earlier trades will receive a higher multiplier, which boosts a user’s base trading volume. Daily Effective Trading Volume is calculated as follows: Daily Effective Trading Volume = Actual Trading Volume * Early Bird Boost Multiplier Note : Total trading volume for the competition is the sum of daily effective trading volume during the Promotion Period. Users’ base trading volume generated during the following days in the Promotion Period will receive the corresponding multiplier when calculating their rankings: Trading Day Eligible Date and Time (UTC) Multiplier Day 1 1st TMX Trading Competition Promotion Period: 2026-09-01 13:00 to 2026-09-02 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-08 13:00 to 2026-09-09 13:00 3.0x Day 2 1st TMX Trading Competition Promotion Period: 2026-09-02 13:00 to 2026-09-03 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-09 13:00 to 2026-09-10 13:00 3.0x Day 3 1st TMX Trading Competition Promotion Period: 2026-09-03 13:00 to 2026-09-04 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-10 13:00 to 2026-09-11 13:00 2.5x Day 4 1st TMX Trading Competition Promotion Period: 2026-09-04 13:00 to 2026-09-05 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-11 13:00 to 2026-09-12 13:00 2.0x Day 5 1st TMX Trading Competition Promotion Period: 2026-09-05 13:00 to 2026-09-06 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-12 13:00 to 2026-09-13 13:00 1.8x Day 6 1st TMX Trading Competition Promotion Period: 2026-09-06 13:00 to 2026-09-07 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-13 13:00 to 2026-09-14 13:00 1.3x Day 7 1st TMX Trading Competition Promotion Period: 2026-09-07 13:00 to 2026-09-08 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-14 13:00 to 2026-09-15 13:00 1.0x Rising Trader Boost Multiplier: For the purpose of this Promotion, “Rising Traders” refers to users who, as of three days before the start of the Promotion Period , have won any rewards in fewer than 3 previous Binance Wallet’s Alpha trading competitions. Eligible Rising Traders will receive a 1.2x Rising Trader Boost on their actual trading volume during the Promotion Period, subject to a Rising Trader Boost Cap. Notes : The \"Rising Trader\" qualification is determined as of three days before the activity period begins . For example, if a user wins a trading competition ending on Day T, and their cumulative historical win count reaches exactly 3 at that point, they will still qualify as a Rising Trader for new competitions starting on T+1 and T+2 (since the qualification snapshot was taken before their 3rd win). However, for competitions starting on T+3 and beyond, their historical win count will already be 3 or more at the qualification snapshot, and they will no longer be eligible for the Rising Trader bonus. The Rising Trader Boost Cap refers to the maximum actual trading volume that can receive the Rising Trader Boost during the Promotion Period. Once a user’s Rising Trader Boost Cap has been reached, the user will no longer receive Rising Trader Boosts for any subsequent trading volume. If both the Early Bird Boost Multiplier and Rising Trader Boost apply, Effective Trading Volume will be calculated as follows: Effective Trading Volume = Actual Trading Volume * Early Bird Boost Multiplier + min(Actual Trading Volume, Remaining Rising Trader Boost Cap) * Rising Trader Boost The final ranking will be calculated based on users’ total Effective Trading Volume during the Promotion Period. A user’s total Effective Trading Volume is the sum of their daily Effective Trading Volume during the Promotion Period. Example: User A generates 10,000 USDT in actual trading volume on Day 1. The Day 1 Early Bird Boost Multiplier is 3.0x, and User A is also eligible for the 1.2x Rising Trader Boost. The Rising Trader Boost Cap is 5,000 USDT. User A's Day 1 Effective Trading Volume is calculated as follows: Early Bird Boost: 10,000 * 3.0 = 30,000 USDT Rising Trader Boost: User A's actual trading volume (10,000 USDT) exceeds the Rising Trader Boost Cap (5,000 USDT), so only 5,000 USDT is eligible for the Rising Trader Boost = 5,000 * 1.2 = 6,000 USDT Day 1 Effective Trading Volume = 30,000 + 6,000 = 36,000 USDT After Day 1, User A's 5,000 USDT Rising Trader Boost Cap has been fully used. Therefore, User A will no longer receive the Rising Trader Boost for any subsequent trading volume during the Promotion Period. Please Note:​​ Only trades executed via ​​ Binance Wallet (Keyless)​​ or ​​ Binance Alpha ​​ on Binance Wallet will qualify in this Promotion. Third-party dApp transactions are excluded. Only cumulative purchases count as trading volume for the purposes of the Promotion. Selling is excluded. ​​No Volume Caps ​​: There is no cap on the trading volume for each participant in this Promotion. Token bridging transactions are not eligible for this Promotion. Effective from 2025-06-17 00:00 (UTC), trading volume generated from Alpha-to-Alpha token pairs will no longer be counted toward Alpha Points. Such trading volume will also be excluded from the Trading Competition and will not impact competition rankings. Reward Distribution: All rewards will be calculated in accordance with the reward distribution rules above and will be claimable in TMX tokens by eligible users. Token rewards will be made available to eligible users before 2026-09-29 13:00:00 (UTC) . Eligible users must complete the claim within 14 days after rewards become claimable. Any rewards not claimed within this period will be deemed forfeited and will not be reissued. Eligible winners can view and claim their token rewards directly via their Binance Alpha accounts or Binance Wallet (Keyless) . How to Participate: Click [Join] on the Binance App event page to participate in the promotion. Only trading volume generated after successfully clicking [Join] will be counted as valid trading volume for the competition. Update your Binance App to the latest version, ensure you have created a Binance Wallet (Keyless) and backed it up . During the Promotion Period, trade TMX on Binance Wallet (Keyless) or Binance Alpha. After the Promotion Period ends, rankings will be automatically calculated. Eligible winners can claim their rewards on the event page. Terms & Conditions: These terms and conditions (“Promotion Terms”) govern users’ participation in the promotion above (“Promotion”). By participating in this Promotion, users agree to these Promotion Terms, and the following additional terms: (a) Binance Terms and Conditions for Prize Promotions ; (b) Binance Wallet Terms of Use ; and (c) Binance Wallet Privacy Notice ; all of which are incorporated by reference into these terms and conditions. In the case of any inconsistency or conflict between these Promotion Terms, and any other incorporated terms, the provisions of these Promotion Terms shall prevail, followed by the  following in this order of precedence, and to the extent of such conflict: (a) Binance Terms and Conditions for Prize Promotions ; (b) Binance Wallet Terms of Use ; and (c) Binance Wallet Privacy Notice . Only users who maintain an active Binance Account on the Binance Platform are eligible to participate in this Activity. Tokens will not be distributed to users who delete or deactivate their Binance Wallets and/or their Binance Accounts on the Binance Platform. You may interact with Third-Party Services and DApps and through this Promotion. Third-Party Service Providers operate independently and may have different security standards, operational practices, and regulatory compliance. Binance Wallet does not control or guarantee the performance, security, or reliability of these Third-Parties. Users are responsible to conduct their own independent research to ensure the Third-Party Service is suitable for them. Binance Wallet reserves the right to disqualify a user’s reward eligibility if Binance Wallet determines that the user has breached the Binance Wallet Terms of Use, tampered with Binance Wallet program code, or interfered with the operation of Binance Wallet program code with other software. Binance reserves the right at any time in its sole and absolute discretion to determine and/or amend or vary these Activity Terms without prior notice, including but not limited to canceling, extending, terminating or suspending this Activity, its eligibility terms and criteria, the selection and number of winners, and the timing of any act to be done, and all users shall be bound by these amendments. There may be discrepancies between this original content in English and any translated versions. Please refer to the original English version for the most accurate information, in case any discrepancies arise. Thank you for your support! Binance Team 2026-09-01 USDC is an e-money token issued by Circle Internet Financial Europe SAS ( https://www.circle.com/ ). USDC’s whitepaper is available here . You may contact Circle using the following contact information: +33(1)59000130 and EEA-Customer-Support@circle.com . Holders of USDC have a legal claim against Circle SAS as the EU issuer of USDC. These holders are entitled to request redemption of their USDC from Circle SAS. Such redemption will be made at any time and at par value. Disclaimer: The Binance Wallet Services are offered by Binance Barbados Limited, and involve the provision of unregulated, third-party services, which are not supervised by the Financial Services Regulatory Authority of the Abu Dhabi Global Market, or any other regulatory authority. Binance Wallet is not responsible for your access or use of third-party applications (including functionality embedded within the Binance Wallet) and shall have no liability whatsoever in connection with your use of such third-party applications, including, without limitation, any transactions you dispute. You should only invest in products you are familiar with and where you understand the risks. You should carefully consider your investment experience, financial situation, investment objectives and risk tolerance and consult an independent financial adviser prior to making any investment. This material should not be construed as financial advice. Please carefully review the Terms of Use and Risk Warning and always do your own research. Binance Alpha features emerging digital assets which are generally expected to have a low market capitalisation and unique or novel characteristics. As digital asset prices can be volatile, the value of any investment that you make in Alpha Assets may go down or up and you may lose all or part of the value of the amount that you invest. Please note that in relation to Binance Alpha (i) the risk of loss of all or part of your investment is magnified with Binance Alpha assets as they are subject to increased price volatility (ii) by purchasing Alpha Assets, you are exposed to price slippage and blockchain fees, which can have a negative impact of the price of Alpha Assets (iii) for the avoidance of doubt, once Alpha Assets are transferred to the Binance Platform, the relevant services there are not offered by Binance Barbados and are instead subject to the Binance Platform terms. You are solely responsible for your investment decisions. Binance will not in any circumstances be responsible or liable for any losses that you may incur arising directly or indirectly from an investment in Binance Alpha Assets. Please carefully review the Terms of Use and Risk Warning and always do your own research.",
+          "ruleLines": [
+            "During the Promotion Periods, trade TermMax (TMX) in your Binance Wallet (Keyless) or via Binance Alpha to receive exclusive token rewards.",
+            "Any user who is eligible to trade Binance Alpha tokens is eligible to participate in this trading competition.",
+            "Rewards will now place greater emphasis on early trading and consistent participation during the Promotion Period, making reward distribution fairer, returns clearer, and participation more accessible.",
+            "In the Promotion Period, earlier trades will receive a higher multiplier, which boosts a user’s base trading volume.",
+            "Users’ base trading volume generated during the following days in the Promotion Period will receive the corresponding multiplier when calculating their rankings: Trading Day Eligible Date and Time (UTC) Multiplier Day 1 1st TMX Trading Competition Promotion Period: 2026-09-01 13:00 to 2026-09-02 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-08 13:00 to 2026-09-09 13:00 3.0x Day 2 1st TMX Trading Competition Promotion Period: 2026-09-02 13:00 to 2026-09-03 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-09 13:00 to 2026-09-10 13:00 3.0x Day 3 1st TMX Trading Competition Promotion Period: 2026-09-03 13:00 to 2026-09-04 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-10 13:00 to 2026-09-11 13:00 2.5x Day 4 1st TMX Trading Competition Promotion Period: 2026-09-04 13:00 to 2026-09-05 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-11 13:00 to 2026-09-12 13:00 2.0x Day 5 1st TMX Trading Competition Promotion Period: 2026-09-05 13:00 to 2026-09-06 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-12 13:00 to 2026-09-13 13:00 1.8x Day 6 1st TMX Trading Competition Promotion Period: 2026-09-06 13:00 to 2026-09-07 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-13 13:00 to 2026-09-14 13:00 1.3x Day 7 1st TMX Trading Competition Promotion Period: 2026-09-07 13:00 to 2026-09-08 13:00 and 2nd TMX Trading Competition Promotion Period: 2026-09-14 13:00 to 2026-09-15 13:00 1.0x Rising Trader Boost Multiplier: For the purpose of this Promotion, “Rising Traders” refers to users who, as of three days before the start of the Promotion Period , have won any rewards in fewer than 3 previous Binance Wallet’s Alpha trading competitions.",
+            "Eligible Rising Traders will receive a 1.2x Rising Trader Boost on their actual trading volume during the Promotion Period, subject to a Rising Trader Boost Cap.",
+            "For example, if a user wins a trading competition ending on Day T, and their cumulative historical win count reaches exactly 3 at that point, they will still qualify as a Rising Trader for new competitions starting on T+1 and T+2 (since the qualification snapshot was taken before their 3rd win).",
+            "However, for competitions starting on T+3 and beyond, their historical win count will already be 3 or more at the qualification snapshot, and they will no longer be eligible for the Rising Trader bonus."
+          ],
+          "dates": [
+            "2026-09-01T00:00:00+00:00",
+            "2026-09-01T13:00:00+00:00",
+            "2026-09-08T13:00:00+00:00",
+            "2026-09-08T13:00:00+00:00",
+            "2026-09-15T13:00:00+00:00",
+            "2026-09-01T13:00:00+00:00",
+            "2026-09-02T13:00:00+00:00",
+            "2026-09-08T13:00:00+00:00"
+          ]
+        }
+      ],
+      "ruleSummary": [
+        "During the Promotion Periods, trade XPIN Network (XPIN) in your Binance Wallet (Keyless) or via Binance Alpha to receive exclusive token rewards.",
+        "Any user who is eligible to trade Binance Alpha tokens is eligible to participate in this trading competition.",
+        "Rewards will now place greater emphasis on early trading and consistent participation during the Promotion Period, making reward distribution fairer, returns clearer, and participation more accessible.",
+        "In the Promotion Period, earlier trades will receive a higher multiplier, which boosts a user’s base trading volume.",
+        "Users’ base trading volume generated during the following days in the Promotion Period will receive the corresponding multiplier when calculating their rankings: Trading Day Eligible Date and Time (UTC) Multiplier Day 1 1st XPIN Trading Competition Promotion Period: 2026-09-04 13:00 to 2026-09-05 13:00 and 2nd XPIN Trading Competition Promotion Period: 2026-09-11 13:00 to 2026-09-12 13:00 2.0x Day 2 1st XPIN Trading Competition Promotion Period: 2026-09-05 13:00 to 2026-09-06 13:00 and 2nd XPIN Trading Competition Promotion Period: 2026-09-12 13:00 to 2026-09-13 13:00 2.0x Day 3 1st XPIN Trading Competition Promotion Period: 2026-09-06 13:00 to 2026-09-07 13:00 and 2nd XPIN Trading Competition Promotion Period: 2026-09-13 13:00 to 2026-09-14 13:00 1.8x Day 4 1st XPIN Trading Competition Promotion Period: 2026-09-07 13:00 to 2026-09-08 13:00 and 2nd XPIN Trading Competition Promotion Period: 2026-09-14 13:00 to 2026-09-15 13:00 1.8x Day 5 1st XPIN Trading Competition Promotion Period: 2026-09-08 13:00 to 2026-09-09 13:00 and 2nd XPIN Trading Competition Promotion Period: 2026-09-15 13:00 to 2026-09-16 13:00 1.5x Day 6 1st XPIN Trading Competition Promotion Period: 2026-09-09 13:00 to 2026-09-10 13:00 and 2nd XPIN Trading Competition Promotion Period: 2026-09-16 13:00 to 2026-09-17 13:00 1.3x Day 7 1st XPIN Trading Competition Promotion Period: 2026-09-10 13:00 to 2026-09-11 13:00 and 2nd XPIN Trading Competition Promotion Period: 2026-09-17 13:00 to 2026-09-18 13:00 1.0x Rising Trader Boost Multiplier: For the purpose of this Promotion, “Rising Traders” refers to users who, as of three days before the start of the Promotion Period , have won any rewards in fewer than 3 previous Binance Wallet’s Alpha trading competitions.",
+        "Eligible Rising Traders will receive a 1.2x Rising Trader Boost on their actual trading volume during the Promotion Period, subject to a Rising Trader Boost Cap.",
+        "For example, if a user wins a trading competition ending on Day T, and their cumulative historical win count reaches exactly 3 at that point, they will still qualify as a Rising Trader for new competitions starting on T+1 and T+2 (since the qualification snapshot was taken before their 3rd win).",
+        "However, for competitions starting on T+3 and beyond, their historical win count will already be 3 or more at the qualification snapshot, and they will no longer be eligible for the Rising Trader bonus."
+      ],
+      "announcementUrls": [
+        "https://www.binance.com/en/support/announcement/binance-alpha-trading-competition-trade-xpin-network-xpin-and-share-200k-worth-of-rewards-2026-09-04-e8c1bdbae411464f9a33122691e65aa5",
+        "https://www.binance.com/en/support/announcement/south-asia-exclusive-us-stocks-megafest-trade-and-share-a-500-000-reward-pool-c449cd2c8c164ebdb99299a00bba575c",
+        "https://www.binance.com/en/support/announcement/binance-alpha-trading-competition-trade-collect-on-fanable-collect-and-share-200k-worth-of-rewards-2026-09-02-cf1d21d15830400d84862768bb168ef4",
+        "https://www.binance.com/en/support/announcement/binance-alpha-trading-competition-trade-termmax-tmx-and-share-200k-worth-of-rewards-2026-09-01-5fd181b6990b48ffa9c08d6a48b88246"
+      ],
+      "announcementDates": [
+        "2026-09-04T00:00:00+00:00",
+        "2026-09-04T13:00:00+00:00",
+        "2026-09-11T13:00:00+00:00",
+        "2026-09-18T13:00:00+00:00",
+        "2026-09-05T13:00:00+00:00",
+        "2026-09-03T12:00:00+00:00",
+        "2026-10-08T23:59:00+00:00",
+        "2026-08-31T00:00:00+00:00"
+      ],
+      "firstSeenAt": "2026-09-04T08:10:26.319083+00:00",
+      "lastSeenAt": "2026-09-06T23:30:30.552334+00:00"
+    },
+    {
+      "symbol": "CNPY",
+      "name": "Canopy",
+      "alphaId": null,
+      "chainName": null,
+      "contractAddress": null,
+      "listingTime": "2026-09-07T00:00:00+00:00",
+      "dateOnly": true,
+      "onlineAirdrop": null,
+      "onlineTge": null,
+      "mulPoint": null,
+      "price": null,
+      "source": "官方 X 预告 @BinanceWallet + 官方 X 预告 @binancezh",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2096486606060548208",
+      "sourceMirrorUrl": "https://api.fxtwitter.com/2/status/2096486606060548208",
+      "endTime": null,
+      "matchedAnnouncements": [],
+      "ruleSummary": [
+        "Binance Alpha will be the first platform to feature Canopy (CNPY) on September 7. Eligible users can claim their airdrop using Binance Alpha Points on the Alpha Events page once trading opens. Further details will be announced soon. Please stay tuned to Binance’s official channels for the latest updates.",
+        "已确认日期；具体开放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。",
+        "币安 Alpha 将在 9 月 7 日成为首个上线 Canopy (CNPY) 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详情将另行公布。 敬请关注币安官方渠道，及时获取活动最新动态。 https://t.co/HvrMuETbiS"
+      ],
+      "announcementUrls": [
+        "https://x.com/BinanceWallet/status/2096486606060548208",
+        "https://api.fxtwitter.com/2/status/2096486606060548208",
+        "https://x.com/binancezh/status/2096515652756599147",
+        "https://api.fxtwitter.com/2/status/2096515652756599147"
+      ],
+      "announcementDates": [
+        "2026-09-07T00:00:00+00:00",
+        "2026-09-07T01:00:00+00:00"
+      ],
+      "signalType": "social_alpha_notice",
+      "tokenKnown": true,
+      "firstSeenAt": "2026-09-06T06:40:18.031902+00:00",
+      "lastSeenAt": "2026-09-06T23:30:30.552334+00:00"
+    }
+  ]
+}

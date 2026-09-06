@@ -1,0 +1,1008 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Codex//Binance Wallet Alpha Airdrop Watch//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bn Wallet Alpha 空投
+X-WR-CALDESC:自动更新的 Binance Wallet Alpha 空投领取提醒
+X-WR-TIMEZONE:Asia/Shanghai
+REFRESH-INTERVAL;VALUE=DURATION:PT5M
+X-PUBLISHED-TTL:PT5M
+BEGIN:VTIMEZONE
+TZID:Asia/Shanghai
+X-LIC-LOCATION:Asia/Shanghai
+BEGIN:STANDARD
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:CST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bn-wallet-alpha-6834941641733e44@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260519T130000Z
+DTEND:20260519T133000Z
+SUMMARY:ZEST - BN Alpha 空投
+DESCRIPTION:ZEST - Zest Protocol\n来源: Binance Alpha 币种接口 + 
+ 官方 X 预告 @BinanceWallet - https://www.binance.com/en/alpha\nAlpha 
+ ID: ALPHA_970\n链: BSC\n官方字段: onlineAirdrop=True\, onlineTge=Fal
+ se\, mulPoint=4\n规则/说明:\n- 币安 Alpha 是首个上线 Zest Prot
+ ocol (ZEST) 的平台，Alpha 上线及交易将于 2026 年 5 月 19 日
+  21:00（UTC+8）开始。 持有至少 240 个币安 Alpha 积分的用
+ 户可申领代币空投。在 Alpha 活动页面申领 800 ZEST 代币
+ 空投，先到先得。若活动未结束，则分数门槛将每五分
+ 钟自动降低 5 分。 请注意，申领空投将消耗 15 个币安 A
+ lpha 积分。用户需在 Alpha 活…\n- 已确认日期；具体开放
+ 时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 
+ 为准。\n链接: https://x.com/BinanceWallet/status/2056638959393095970
+ \n合约地址: 0x5506599c722389a60580b5213ea1da60d64754a1
+URL:https://www.binance.com/en/alpha
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:ZEST - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-ea3227ee155061bf@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260520T140000Z
+DTEND:20260520T143000Z
+SUMMARY:NEX - BN Alpha 空投
+DESCRIPTION:NEX - Nexus\n来源: Binance Alpha 币种接口 + 官方 X 
+ 预告 @BinanceWallet - https://www.binance.com/en/alpha\nAlpha ID: ALPHA
+ _971\n链: BSC\n官方字段: onlineAirdrop=True\, onlineTge=False\, mulP
+ oint=4\n规则/说明:\n- 币安 Alpha 是首个上线 Nexus (NEX) 的平
+ 台，Alpha 上线及交易将于 2026 年 5 月 20 日 22:00（UTC+8）
+ 开始。 持有至少 210 个币安 Alpha 积分的用户可申领代币
+ 空投。在 Alpha 活动页面申领 20\,000\,250 个 NEX 代币空投
+ ，先到先得。若活动未结束，则分数门槛将每五分钟自
+ 动降低 5 分。 请注意，申领空投将消耗 15 个币安 Alpha 
+ 积分。用户需在 Alpha 活动…\n- 已确认日期；具体开放
+ 时间、领取门槛和领取数量以 Binance Wallet > Alpha > Events 
+ 为准。\n链接: https://x.com/BinanceWallet/status/2057038819552325644
+ \n合约地址: 0x365de036a1f7dccb621530d517133521debb2013
+URL:https://www.binance.com/en/alpha
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:NEX - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-5ece97ac62075319@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260521T120000Z
+DTEND:20260521T123000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh - https://x.com/binancezh/status/2057333894203294138\n规则/说明
+ :\n- 请大家准备今天 20:00（UTC+8）领取币安 Alpha 空投并
+ 交易！ 持有至少 230 个币安 Alpha 积分的用户可申领代币
+ 空投。先到先得。直至空投池领取完毕或活动结束。 具
+ 体空投币种敬请关注币安官方渠道，及时获取活动最新
+ 动态。\n- 已确认日期；具体开放时间、领取门槛和领取
+ 数量以 Binance Wallet > Alpha > Events 为准。\n链接: https://x.co
+ m/binancezh/status/2057333894203294138
+URL:https://x.com/binancezh/status/2057333894203294138
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-75405330de8d930a@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260525T120000Z
+DTEND:20260525T123000Z
+SUMMARY:SLX - BN Alpha 预告
+DESCRIPTION:SLX - Solstice\n来源: 官方 X 预告 @BinanceWallet + Bina
+ nce Alpha 币种接口 + 官方 X 预告 @binancezh - https://x.com/Binan
+ ceWallet/status/2058805425781514588\nAlpha ID: ALPHA_978\n链: BSC\n官
+ 方字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=4\n规则/说
+ 明:\n- Binance Alpha is the first platform to feature Solstice (SLX)\, w
+ ith Alpha debut and trading starting on May 25\, 2026\, at 12:00 (UTC). U
+ sers with at least 215 Binance Alpha Points can claim an airdrop of 250 S
+ LX tokens o…\n- 已从官方 X 解析到开放时间；最终领取窗
+ 口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准
+ 。\n- 币安 Alpha 将在 5 月 25 日成为首个上线 Solstice (SLX) 
+ 的平台！ 符合条件的用户可于 Alpha 交易开放后，前往 A
+ lpha 活动页面使用币安 Alpha 积分领取空投。具体详情将
+ 另行公布。 敬请关注币安官方渠道，及时获取活动最新
+ 动态。 https://t.co/FX39V05IZQ\n链接: https://x.com/BinanceWallet/st
+ atus/2058805425781514588\n合约地址: 0x02bcc4c181b83a8c0a342bc003389cb
+ ecb4bc54d
+URL:https://x.com/BinanceWallet/status/2058805425781514588
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:SLX - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-dbb7f29c98842ebd@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260526T130000Z
+DTEND:20260526T133000Z
+SUMMARY:CTR - BN Alpha 预告
+DESCRIPTION:CTR - Citrea\n来源: 官方 X 预告 @BinanceWallet + Binanc
+ e Alpha 币种接口 + 官方 X 预告 @binancezh - https://x.com/Binance
+ Wallet/status/2059199055675462044\nAlpha ID: ALPHA_979\n链: Base\n官方
+ 字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=2\n规则/说明:
+ \n- Binance Alpha is the first platform to feature Citrea (CTR)\, with Al
+ pha debut and trading starting on May 26\, 2026\, at 13:00 (UTC). Users w
+ ith at least 211 Binance Alpha Points can claim an airdrop of 1\,090 CTR 
+ tokens o…\n- 已从官方 X 解析到开放时间；最终领取窗口
+ 、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。\
+ n- Binance Alpha will be the first platform to feature Citrea (CTR) on Ma
+ y 26. Eligible users can claim their airdrop using Binance Alpha Points o
+ n the Alpha Events page once trading opens. Further details will be annou
+ nce…\n链接: https://x.com/BinanceWallet/status/2059199055675462044\n
+ 合约地址: 0x11030f79109269d796fd0fb956d6244e502757f7
+URL:https://x.com/BinanceWallet/status/2059199055675462044
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:CTR - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-05cb90cb150f01ba@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260528T150000Z
+DTEND:20260528T153000Z
+SUMMARY:QAIT - BN Alpha 预告
+DESCRIPTION:QAIT - Sealcoin\n来源: Binance Alpha 币种接口 + 官方 
+ X 预告 @BinanceWallet + 官方 X 预告 @binancezh - https://www.binanc
+ e.com/en/alpha\nAlpha ID: ALPHA_980\n链: BSC\n官方字段: onlineAirdro
+ p=True\, onlineTge=False\, mulPoint=4\n规则/说明:\n- Binance Alpha is
+  the first platform to feature Sealcoin (QAIT)\, with Alpha debut and tra
+ ding starting on May 28\, 2026\, at 13:00 (UTC). Users with at least 241 
+ Binance Alpha Points can claim an airdrop of 31\,111 QAIT tok…\n- 已
+ 从官方 X 解析到开放时间；最终领取窗口、积分门槛和
+ 数量仍以 Binance Wallet > Alpha > Events 为准。\n- 币安 Alpha 
+ 将在 5 月 28 日成为首个上线 Sealcoin (QAIT) 的平台！ 符合
+ 条件的用户可于 Alpha 交易开放后，前往 Alpha 活动页面
+ 使用币安 Alpha 积分领取空投。具体详情将另行公布。 
+ 敬请关注币安官方渠道，及时获取活动最新动态。 https:
+ //t.co/FF1rqoSmkf\n链接: https://x.com/BinanceWallet/status/20599151299
+ 07765300\n合约地址: 0x4d41a5d412f4ef44a35b9f53b06db65ede249493
+URL:https://www.binance.com/en/alpha
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:QAIT - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-54f762791d41beda@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260602T070000Z
+DTEND:20260602T073000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh - https://x.com/binancezh/status/2061676372880437539\n规则/说明
+ :\n- 请大家准备今天 15:00（UTC+8）领取币安 Alpha 空投并
+ 交易！ 持有至少 240 个币安 Alpha 积分的用户可申领代币
+ 空投。先到先得。直至空投池领取完毕或活动结束。 具
+ 体空投币种敬请关注币安官方渠道，及时获取活动最新
+ 动态。\n- 已从官方 X 解析到开放时间；最终领取窗口、
+ 积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。\n
+ 链接: https://x.com/binancezh/status/2061676372880437539
+URL:https://x.com/binancezh/status/2061676372880437539
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-2bb2157c5241f509@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260603T090000Z
+DTEND:20260603T093000Z
+SUMMARY:测试 - BN Alpha 空投
+DESCRIPTION:测试 - Apple Calendar 提醒测试\n来源: 手动测试事
+ 件 - https://kahnchan.github.io/bn-wallet-alpha/\n规则/说明:\n- 这
+ 是用于测试 Apple Calendar 订阅事件和开始前 15 分钟提醒
+ 的手动事件。\n链接: https://kahnchan.github.io/bn-wallet-alpha/
+URL:https://kahnchan.github.io/bn-wallet-alpha/
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:测试 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-ae9651321e1ad15b@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260605T070000Z
+DTEND:20260605T073000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh - https://x.com/binancezh/status/2062770368591577206\n规则/说明
+ :\n- 请大家准备今天 15:00（UTC+8）领取币安 Alpha 空投并
+ 交易！ 持有至少 241 个币安 Alpha 积分的用户可申领代币
+ 空投。先到先得。直至空投池领取完毕或活动结束。 具
+ 体空投币种敬请关注币安官方渠道，及时获取活动最新
+ 动态。\n- 已从官方 X 解析到开放时间；最终领取窗口、
+ 积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。\n
+ 链接: https://x.com/binancezh/status/2062770368591577206
+URL:https://x.com/binancezh/status/2062770368591577206
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-67dfa3f1684e08a4@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260609T090000Z
+DTEND:20260609T093000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2064236397989679134\n规则/说明:\n- Please get ready to claim the B
+ inance Alpha airdrop and trade today at 9:00 (UTC). Users with at least 2
+ 41 Binance Alpha Points can claim the token on a first-come\, first-serve
+ d basis until the airdrop pool is fully dis…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n- 请大家准备今天 17:00（UTC+
+ 8）领取币安 Alpha 空投并交易！ 持有至少 241 个币安 Alph
+ a 积分的用户可申领代币空投。先到先得。直至空投池
+ 领取完毕或活动结束。 具体空投币种敬请关注币安官方
+ 渠道，及时获取活动最新动态。\n链接: https://x.com/Binance
+ Wallet/status/2064236397989679134
+URL:https://x.com/BinanceWallet/status/2064236397989679134
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-2806ac7ffe911d25@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260609T090000Z
+DTEND:20260609T093000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh + 官方 X 预告 @BinanceWallet - https://x.com/binancezh/status/2
+ 064240042986627142\n规则/说明:\n- 请大家准备今天 17:00（UTC+8
+ ）领取币安 Alpha 空投并交易！ 持有至少 241 个币安 Alpha
+  积分的用户可申领代币空投。先到先得。直至空投池领
+ 取完毕或活动结束。 具体空投币种敬请关注币安官方渠
+ 道，及时获取活动最新动态。\n- 已从官方 X 解析到开放
+ 时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet 
+ > Alpha > Events 为准。\n- Please get ready to claim the Binance Alpha
+  airdrop and trade today at 9:00 (UTC). Users with at least 241 Binance A
+ lpha Points can claim the token on a first-come\, first-served basis unti
+ l the airdrop pool is fully dis…\n链接: https://x.com/binancezh/statu
+ s/2064240042986627142
+URL:https://x.com/binancezh/status/2064240042986627142
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-927dd0758e6cba1c@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260610T090000Z
+DTEND:20260610T093000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2064604492449141213\n规则/说明:\n- Please get ready to claim the B
+ inance Alpha airdrop and trade today at 9:00 (UTC). This event features a
+ n updated Binance Alpha Box model\, where the airdrop pool includes token
+ s from multiple projects. Users with at lea…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n- 请大家准备今天下午 17:00
+ （UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级
+ 版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币
+ 。持有至少 245 个币安 Alpha 积分的用户，可以领取一次
+ 代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 
+ 积分。 本次空投设有三个奖励等级：普通款（占奖池的
+ 80%）、稀有款（15%）和隐藏款（5%），每个等级对应不
+ 同的Alpha盲盒价值。用户在领取时将被分配至其中一…\n
+ 链接: https://x.com/BinanceWallet/status/2064604492449141213
+URL:https://x.com/BinanceWallet/status/2064604492449141213
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-62a0e5ff6ce1f1c6@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260610T090000Z
+DTEND:20260610T093000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh - https://x.com/binancezh/status/2064605856642306284\n规则/说明
+ :\n- 请大家准备今天下午 17:00（UTC+8）领取币安 Alpha 空
+ 投并交易！ 本次活动采用升级版的“Alpha 盲盒”模式，
+ 空投奖池包含多个项目的代币。持有至少 245 个币安 Alph
+ a 积分的用户，可以领取一次代币奖励。先到先得。申
+ 领空投将消耗 15 个币安 Alpha 积分。 本次空投设有三个
+ 奖励等级：普通款（占奖池的80%）、稀有款（15%）和隐
+ 藏款（5%），每个等级对应不同的Alpha盲盒价值。用户在
+ 领取时将被分配至其中一…\n- 已从官方 X 解析到开放时
+ 间；最终领取窗口、积分门槛和数量仍以 Binance Wallet > A
+ lpha > Events 为准。\n链接: https://x.com/binancezh/status/206460585
+ 6642306284
+URL:https://x.com/binancezh/status/2064605856642306284
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-5a41e9e135c2ac6a@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART;VALUE=DATE:20260617
+DTEND;VALUE=DATE:20260618
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2066417005935423854\n只确认到日期，具体开放时间待官方
+ 活动页确认。\n规则/说明:\n- Binance Alpha will be the first pla
+ tform to feature o1 exchange (O) on June 17. Eligible users can claim the
+ ir airdrop using Binance Alpha Points on the Alpha Events page once tradi
+ ng opens. Further details will be anno…\n- 已确认日期；具体开
+ 放时间、领取门槛和领取数量以 Binance Wallet > Alpha > Event
+ s 为准。\n- 币安 Alpha 将在 6 月 17 日成为首个上线 o1 exch
+ ange (O) 的平台！ 符合条件的用户可于 Alpha 交易开放后
+ ，前往 Alpha 活动页面使用币安 Alpha 积分领取空投。具
+ 体详情将另行公布。 敬请关注币安官方渠道，及时获取
+ 活动最新动态。 https://t.co/XJE7IEzeRJ\n链接: https://x.com/Bina
+ nceWallet/status/2066417005935423854
+URL:https://x.com/BinanceWallet/status/2066417005935423854
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-7b852bc3b2327206@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260617T120000Z
+DTEND:20260617T140000Z
+SUMMARY:RE - BN Alpha 认购
+DESCRIPTION:RE - Re\n来源: 官方 X 预告 @BinanceWallet + 官方 X 
+ 预告 @binancezh - https://x.com/BinanceWallet/status/206709684710221023
+ 7\n结束时间: 2026-06-17 22:00 Asia/Shanghai\n规则/说明:\n- Join t
+ he 8th Pre-TGE Prime Sale Edition on #Binance Wallet with @re (RE) 📅 1
+ 2:00 -14:00 (UTC) on June 17\, 2026 📜Eligible users need Binance Alpha
+  Points to participate Pre-TGE details and the Event Portal will be relea
+ s…\n- 已从官方 X 解析到认购时间；最终资格、积分消
+ 耗和活动细则仍以 Binance Wallet 活动页为准。\n- 预告预
+ 告！#币安钱包 第八期 Prime Sale Pre-TGE 来了 - 上线 Re (RE)
+ ！ ⏰ 认购时间：2026 年 6 月 17 号下午 8 点到 10 点 (东
+ 八区时区) 📜 认购资格：符合资格的用户须使用币安 Al
+ pha 积分参与 Pre-TGE 详情和活动页面将通过 @BinanceWallet 
+ 的 X 账号发布，敬请关注！ https://t.co/4oFcpTWPZ4\n链接: htt
+ ps://x.com/BinanceWallet/status/2067096847102210237
+URL:https://x.com/BinanceWallet/status/2067096847102210237
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:RE - BN Alpha 认购
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-44b663443e1d96bf@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260716T110000Z
+DTEND:20260716T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh - https://x.com/binancezh/status/2077674899485929896\n规则/说明
+ :\n- 请大家准备今天 19:00（UTC+8）领取币安 Alpha 空投并
+ 交易！ 持有至少 250 个币安 Alpha 积分的用户可申领代币
+ 空投。先到先得。直至空投池领取完毕或活动结束。 具
+ 体空投币种敬请关注币安官方渠道，及时获取活动最新
+ 动态。\n- 已从官方 X 解析到开放时间；最终领取窗口、
+ 积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。\n
+ 链接: https://x.com/binancezh/status/2077674899485929896
+URL:https://x.com/binancezh/status/2077674899485929896
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-5c890a750ec6abc7@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260721T110000Z
+DTEND:20260721T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2079484283622940999\n规则/说明:\n- Please get ready to claim the B
+ inance Alpha airdrop and trade today at 11:00 (UTC). This event features 
+ an updated Binance Alpha Box model\, where the airdrop pool includes toke
+ ns from multiple projects. Users with at le…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n- 请大家准备今天下午 19:00
+ （UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级
+ 版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币
+ 。持有至少 256 个币安 Alpha 积分的用户，可以领取一次
+ 代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 
+ 积分。 本次空投设有三个奖励等级：普通款（占奖池的
+ 80%）、稀有款（15%）和隐藏款（5%），每个等级对应不
+ 同的Alpha盲盒价值。用户在领取时将被分配至其中一…\n
+ 链接: https://x.com/BinanceWallet/status/2079484283622940999
+URL:https://x.com/BinanceWallet/status/2079484283622940999
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-e5c5868da574fd70@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260721T110000Z
+DTEND:20260721T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh + 官方 X 预告 @BinanceWallet - https://x.com/binancezh/status/2
+ 079484450921173128\n规则/说明:\n- 请大家准备今天下午 19:00
+ （UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级
+ 版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币
+ 。持有至少 256 个币安 Alpha 积分的用户，可以领取一次
+ 代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 
+ 积分。 本次空投设有三个奖励等级：普通款（占奖池的
+ 80%）、稀有款（15%）和隐藏款（5%），每个等级对应不
+ 同的Alpha盲盒价值。用户在领取时将被分配至其中一…\n
+ - 已从官方 X 解析到开放时间；最终领取窗口、积分门
+ 槛和数量仍以 Binance Wallet > Alpha > Events 为准。\n- Please ge
+ t ready to claim the Binance Alpha airdrop and trade today at 11:00 (UTC)
+ . This event features an updated Binance Alpha Box model\, where the aird
+ rop pool includes tokens from multiple projects. Users with at le…\n链
+ 接: https://x.com/binancezh/status/2079484450921173128
+URL:https://x.com/binancezh/status/2079484450921173128
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-50055ad5108041b9@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260723T110000Z
+DTEND:20260723T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2080196362063454597\n规则/说明:\n- Please get ready to claim the B
+ inance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 
+ 256 Binance Alpha Points can claim the token on a first-come\, first-serv
+ ed basis until the airdrop pool is fully di…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n- 请大家准备今天 19:00（UTC+
+ 8）领取币安 Alpha 空投并交易！ 持有至少 256 个币安 Alph
+ a 积分的用户可申领代币空投。先到先得。直至空投池
+ 领取完毕或活动结束。 具体空投币种敬请关注币安官方
+ 渠道，及时获取活动最新动态。\n链接: https://x.com/Binance
+ Wallet/status/2080196362063454597
+URL:https://x.com/BinanceWallet/status/2080196362063454597
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-85648a253c24ebab@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260727T100000Z
+DTEND:20260727T103000Z
+SUMMARY:AEON - BN Alpha 预告
+DESCRIPTION:AEON - AEON\n来源: 官方 X 预告 @BinanceWallet + Binance
+  Alpha 币种接口 + 官方 X 预告 @binancezh - https://x.com/BinanceW
+ allet/status/2081650905926250852\nAlpha ID: ALPHA_1053\n链: BSC\n官方
+ 字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=4\n规则/说明:
+ \n- Binance Alpha is the first platform to feature AEON (AEON)\, with Alp
+ ha debut and trading starting on July 27\, 2026\, at 10:00 (UTC). Users w
+ ith at least 245 Binance Alpha Points can claim an airdrop of 250 AEON to
+ kens on…\n- 已从官方 X 解析到开放时间；最终领取窗口
+ 、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。\
+ n- 币安 Alpha 将在 7 月 27 日成为首个上线 AEON（AEON）的
+ 平台！ 符合条件的用户可于 Alpha 交易开放后，前往 Alph
+ a 活动页面使用币安 Alpha 积分领取空投。具体详情将另
+ 行公布。 敬请关注币安官方渠道，及时获取活动最新动
+ 态。 https://t.co/iIYZS693W1\n链接: https://x.com/BinanceWallet/statu
+ s/2081650905926250852\n合约地址: 0x277add739c6e0477616948357af9e79fe1
+ ec9b80
+URL:https://x.com/BinanceWallet/status/2081650905926250852
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:AEON - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-83c2898fa697bd73@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260730T120000Z
+DTEND:20260730T123000Z
+SUMMARY:GRVT - BN Alpha 预告
+DESCRIPTION:GRVT - Grvt\n来源: 官方 X 预告 @BinanceWallet + Binance
+  Alpha 币种接口 + 官方 X 预告 @binancezh - https://x.com/BinanceW
+ allet/status/2082727395153359215\nAlpha ID: ALPHA_1067\n链: BSC\n官方
+ 字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=4\n规则/说明:
+ \n- Binance Alpha is the first platform to feature Grvt (GRVT)\, with Alp
+ ha debut and trading starting on July 30\, 2026\, at 12:00 (UTC). Users w
+ ith at least 245 Binance Alpha Points can claim an airdrop of 100 GRVT to
+ kens on…\n- 已从官方 X 解析到开放时间；最终领取窗口
+ 、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。\
+ n- During the Promotion Period\, deposit GRVT tokens by following the cam
+ paign rules to share exclusive token rewards.\n链接: https://x.com/Bina
+ nceWallet/status/2082727395153359215\n合约地址: 0x46f2564e0fa8248d151
+ 25e7e54173cfbdef91be7
+URL:https://x.com/BinanceWallet/status/2082727395153359215
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:GRVT - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-b36ab8180d1ea265@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260730T130000Z
+DTEND:20260731T070000Z
+SUMMARY:BSC - BN Alpha 预告
+DESCRIPTION:BSC - ⏰ 2026-07-30 13:00 → 2026-08-01 13:00 (UTC) 1️⃣
+  Deposit GRVT\n来源: 官方 X 预告 @BinanceWallet - https://x.com/Bin
+ anceWallet/status/2082724696332906856\n结束时间: 2026-07-31 15:00 Asi
+ a/Shanghai\n规则/说明:\n- ⚠️ Eligibility: only GRVT community air
+ drop users who received their airdrop on BSC. ⏰ 2026-07-30 13:00 → 20
+ 26-08-01 13:00 (UTC) 1️⃣ Deposit GRVT (BSC) to Binance Wallet (Keyles
+ s) → [My Wallets] > [Binance Wallet (Keyle…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n链接: https://x.com/BinanceWallet/
+ status/2082724696332906856
+URL:https://x.com/BinanceWallet/status/2082724696332906856
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:BSC - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-fc6daedd71feb072@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260804T130000Z
+DTEND:20260804T133000Z
+SUMMARY:QUID - BN Alpha 预告
+DESCRIPTION:QUID - Squid\n来源: 官方 X 预告 @BinanceWallet + Binanc
+ e Alpha 币种接口 + 官方 X 预告 @binancezh - https://x.com/Binance
+ Wallet/status/2084550061598331040\nAlpha ID: ALPHA_1075\n链: Base\n官
+ 方字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=2\n规则/说
+ 明:\n- Binance Alpha is the first platform to feature Squid (QUID)\, wit
+ h Alpha debut and trading starting on August 4\, 2026\, at 13:00 (UTC). U
+ sers with at least 243 Binance Alpha Points can claim an airdrop of 550 Q
+ UID tokens…\n- 已从官方 X 解析到开放时间；最终领取窗
+ 口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准
+ 。\n- During the Promotion Periods\, trade Squid (QUID) in your Binance 
+ Wallet (Keyless) or via Binance Alpha to receive exclusive token rewards.
+ \n链接: https://x.com/BinanceWallet/status/2084550061598331040\n合约
+ 地址: 0x1a44233fae8d50f1aeb3a5d58dd426ff4814cb53
+URL:https://x.com/BinanceWallet/status/2084550061598331040
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:QUID - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-de8ded113c37515d@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260806T110000Z
+DTEND:20260806T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2085290227644702907\n规则/说明:\n- Please get ready to claim the B
+ inance Alpha airdrop and trade today at 11:00 (UTC). This event features 
+ an updated Binance Alpha Box model\, where the airdrop pool includes toke
+ ns from multiple projects. Users with at le…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n- 请大家准备今天下午 19:00
+ （UTC+8）领取币安 Alpha 空投并交易！ 本次活动采用升级
+ 版的“Alpha 盲盒”模式，空投奖池包含多个项目的代币
+ 。持有至少 245 个币安 Alpha 积分的用户，可以领取一次
+ 代币奖励。先到先得。申领空投将消耗 15 个币安 Alpha 
+ 积分。 本次空投设有三个奖励等级：普通款（占奖池的
+ 80%）、稀有款（15%）和隐藏款（5%），每个等级对应不
+ 同的Alpha盲盒价值。用户在领取时将被分配至其中一…\n
+ 链接: https://x.com/BinanceWallet/status/2085290227644702907
+URL:https://x.com/BinanceWallet/status/2085290227644702907
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-8ea9b28fe77a3662@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260810T090000Z
+DTEND:20260810T093000Z
+SUMMARY:DOS - BN Alpha 预告
+DESCRIPTION:DOS - DAPPOS\n来源: 官方 X 预告 @BinanceWallet + Binanc
+ e Alpha 币种接口 + 官方 X 预告 @binancezh - https://x.com/Binance
+ Wallet/status/2086694371483963450\nAlpha ID: ALPHA_1086\n链: BSC\n官方
+ 字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=4\n规则/说明:
+ \n- Binance Alpha is the first platform to feature DAPPOS (DOS)\, with Al
+ pha debut and trading starting on August 10\, 2026\, at 09:00 (UTC). User
+ s with at least 200 Binance Alpha Points can claim an airdrop of 200 DOS 
+ tokens…\n- 已从官方 X 解析到开放时间；最终领取窗口、
+ 积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准。\n- 
+ During the Promotion Periods\, trade DAPPOS (DOS) in your Binance Wallet 
+ (Keyless) or via Binance Alpha to receive exclusive token rewards.\n链
+ 接: https://x.com/BinanceWallet/status/2086694371483963450\n合约地址
+ : 0xb0f09ea9ae0515c3551080d4a745c8115aa30e37
+URL:https://x.com/BinanceWallet/status/2086694371483963450
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:DOS - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-38c90e98612c9089@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260814T130000Z
+DTEND:20260814T133000Z
+SUMMARY:KII - BN Alpha 预告
+DESCRIPTION:KII - KiiChain\n来源: 官方 X 预告 @BinanceWallet + Bina
+ nce Alpha 币种接口 + 官方 X 预告 @binancezh - https://x.com/Binan
+ ceWallet/status/2088204374933934356\nAlpha ID: ALPHA_1088\n链: BSC\n官
+ 方字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=4\n规则/说
+ 明:\n- Binance Alpha is the first platform to feature KiiChain (KII)\, w
+ ith Alpha debut and trading starting on August 14\, 2026\, at 13:00 (UTC)
+ . Users with at least 230 Binance Alpha Points can claim an airdrop of 36
+ 0 KII token…\n- 已从官方 X 解析到开放时间；最终领取窗
+ 口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准
+ 。\n- 币安 Alpha 将在 8 月 14 日成为首个上线 KiiChain（KII
+ ）的平台！ 符合条件的用户可于 Alpha 交易开放后，前
+ 往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详
+ 情将另行公布。 敬请关注币安官方渠道，及时获取活动
+ 最新动态。 https://t.co/cmF0CCoolb\n链接: https://x.com/BinanceWal
+ let/status/2088204374933934356\n合约地址: 0xeec6574eabba52bac3f0277f2
+ cd5ac7e67197886
+URL:https://x.com/BinanceWallet/status/2088204374933934356
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:KII - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-4391c7e432509161@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260819T110000Z
+DTEND:20260819T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh + 官方 X 预告 @BinanceWallet - https://x.com/binancezh/status/2
+ 090000914967154805\n规则/说明:\n- 请大家准备今天 19:00（UTC+8
+ ）领取币安 Alpha 空投并交易！ 持有至少 243 个币安 Alpha
+  积分的用户可申领代币空投。先到先得。直至空投池领
+ 取完毕或活动结束。 具体空投币种敬请关注币安官方渠
+ 道，及时获取活动最新动态。\n- 已从官方 X 解析到开放
+ 时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet 
+ > Alpha > Events 为准。\n- Please get ready to claim the Binance Alpha
+  airdrop and trade today at 11:00 (UTC). Users with at least 243 Binance 
+ Alpha Points can claim the token on a first-come\, first-served basis unt
+ il the airdrop pool is fully di…\n链接: https://x.com/binancezh/statu
+ s/2090000914967154805
+URL:https://x.com/binancezh/status/2090000914967154805
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-305b129192003a0e@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260819T110000Z
+DTEND:20260819T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2090001111122092181\n规则/说明:\n- Please get ready to claim the B
+ inance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 
+ 243 Binance Alpha Points can claim the token on a first-come\, first-serv
+ ed basis until the airdrop pool is fully di…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n- 请大家准备今天 19:00（UTC+
+ 8）领取币安 Alpha 空投并交易！ 持有至少 243 个币安 Alph
+ a 积分的用户可申领代币空投。先到先得。直至空投池
+ 领取完毕或活动结束。 具体空投币种敬请关注币安官方
+ 渠道，及时获取活动最新动态。\n链接: https://x.com/Binance
+ Wallet/status/2090001111122092181
+URL:https://x.com/BinanceWallet/status/2090001111122092181
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-d04951c1c062dbb0@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260821T110000Z
+DTEND:20260821T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2090696305727398033\n规则/说明:\n- Please get ready to claim the B
+ inance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 
+ 242 Binance Alpha Points can claim the token on a first-come\, first-serv
+ ed basis until the airdrop pool is fully di…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n- 请大家准备今天 19:00（UTC+
+ 8）领取币安 Alpha 空投并交易！ 持有至少 242 个币安 Alph
+ a 积分的用户可申领代币空投。先到先得。直至空投池
+ 领取完毕或活动结束。 具体空投币种敬请关注币安官方
+ 渠道，及时获取活动最新动态。\n链接: https://x.com/Binance
+ Wallet/status/2090696305727398033
+URL:https://x.com/BinanceWallet/status/2090696305727398033
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-a1218d3491705eca@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260825T100000Z
+DTEND:20260825T103000Z
+SUMMARY:TMX - BN Alpha 预告
+DESCRIPTION:TMX - TermMax\n来源: 官方 X 预告 @BinanceWallet + Binan
+ ce Alpha 币种接口 + 官方 X 预告 @binancezh - https://x.com/Binanc
+ eWallet/status/2092130453331525798\nAlpha ID: ALPHA_1107\n链: BSC\n官
+ 方字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=4\n规则/说
+ 明:\n- Binance Alpha is the first platform to feature TermMax (TMX)\, wi
+ th Alpha debut and trading starting on August 25\, 2026\, at 10:00 (UTC).
+  Users with at least 225 Binance Alpha Points can claim an airdrop of 200
+  TMX tokens…\n- 已从官方 X 解析到开放时间；最终领取窗
+ 口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准
+ 。\n- 币安 Alpha 将在 8 月 25 日成为首个上线 TermMax（TMX
+ ）的平台！ 符合条件的用户可于 Alpha 交易开放后，前
+ 往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详
+ 情将另行公布。 敬请关注币安官方渠道，及时获取活动
+ 最新动态。 https://t.co/d4UL1YJw9n\n链接: https://x.com/BinanceWal
+ let/status/2092130453331525798\n合约地址: 0x3c2f61f2e27c865981d2e7aaf
+ 6b2cdf823030039
+URL:https://x.com/BinanceWallet/status/2092130453331525798
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:TMX - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-7afcea4f1fbc339f@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260826T100000Z
+DTEND:20260826T103000Z
+SUMMARY:DEBIT - BN Alpha 预告
+DESCRIPTION:DEBIT - Teller\n来源: 官方 X 预告 @BinanceWallet + Bina
+ nce Alpha 币种接口 + 官方 X 预告 @binancezh - https://x.com/Binan
+ ceWallet/status/2092508309731336498\nAlpha ID: ALPHA_1108\n链: BSC\n官
+ 方字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=4\n规则/说
+ 明:\n- Binance Alpha is the first platform to feature Teller (DEBIT)\, w
+ ith Alpha debut and trading starting on August 26\, 2026\, at 10:00 (UTC)
+ . Users with at least 240 Binance Alpha Points can claim an airdrop of 50
+  DEBIT toke…\n- 已从官方 X 解析到开放时间；最终领取窗
+ 口、积分门槛和数量仍以 Binance Wallet > Alpha > Events 为准
+ 。\n- 币安 Alpha 将在 8 月 26 日成为首个上线 Teller（DEBIT
+ ）的平台！ 符合条件的用户可于 Alpha 交易开放后，前
+ 往 Alpha 活动页面使用币安 Alpha 积分领取空投。具体详
+ 情将另行公布。 敬请关注币安官方渠道，及时获取活动
+ 最新动态。 https://t.co/zHSMCq1svk\n链接: https://x.com/BinanceWal
+ let/status/2092508309731336498\n合约地址: 0x66661c7229901f568f16bd155
+ 1b3ba826f83ce49
+URL:https://x.com/BinanceWallet/status/2092508309731336498
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:DEBIT - BN Alpha 预告
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-05b6bb7706ff0add@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260901T110000Z
+DTEND:20260901T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2094704647479107860\n规则/说明:\n- Please get ready to claim the B
+ inance Alpha airdrop and trade today at 11:00 (UTC). Users with at least 
+ 250 Binance Alpha Points can claim the token on a first-come\, first-serv
+ ed basis until the airdrop pool is fully di…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n- 请大家准备今天 19:00（UTC+
+ 8）领取币安 Alpha 空投并交易！ 持有至少 250 个币安 Alph
+ a 积分的用户可申领代币空投。先到先得。直至空投池
+ 领取完毕或活动结束。 具体空投币种敬请关注币安官方
+ 渠道，及时获取活动最新动态。\n链接: https://x.com/Binance
+ Wallet/status/2094704647479107860
+URL:https://x.com/BinanceWallet/status/2094704647479107860
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-dcd6bc85e350aaf6@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260901T110000Z
+DTEND:20260901T113000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh + 官方 X 预告 @BinanceWallet - https://x.com/binancezh/status/2
+ 094724265459560542\n规则/说明:\n- 请大家准备今天 19:00（UTC+8
+ ）领取币安 Alpha 空投并交易！ 持有至少 250 个币安 Alpha
+  积分的用户可申领代币空投。先到先得。直至空投池领
+ 取完毕或活动结束。 具体空投币种敬请关注币安官方渠
+ 道，及时获取活动最新动态。\n- 已从官方 X 解析到开放
+ 时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet 
+ > Alpha > Events 为准。\n- Please get ready to claim the Binance Alpha
+  airdrop and trade today at 11:00 (UTC). Users with at least 250 Binance 
+ Alpha Points can claim the token on a first-come\, first-served basis unt
+ il the airdrop pool is fully di…\n链接: https://x.com/binancezh/statu
+ s/2094724265459560542
+URL:https://x.com/binancezh/status/2094724265459560542
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-0117ccee25ed91a1@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260904T070000Z
+DTEND:20260904T073000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @Bina
+ nceWallet + 官方 X 预告 @binancezh - https://x.com/BinanceWallet/stat
+ us/2095738732314042720\n规则/说明:\n- Please get ready to claim the B
+ inance Alpha airdrop and trade today at 7:00 (UTC). Users with at least 2
+ 35 Binance Alpha Points can claim the token on a first-come\, first-serve
+ d basis until the airdrop pool is fully dis…\n- 已从官方 X 解析
+ 到开放时间；最终领取窗口、积分门槛和数量仍以 Binanc
+ e Wallet > Alpha > Events 为准。\n- 请大家准备今天 15:00（UTC+
+ 8）领取币安 Alpha 空投并交易！ 持有至少 235 个币安 Alph
+ a 积分的用户可申领代币空投。先到先得。直至空投池
+ 领取完毕或活动结束。 具体空投币种敬请关注币安官方
+ 渠道，及时获取活动最新动态。\n链接: https://x.com/Binance
+ Wallet/status/2095738732314042720
+URL:https://x.com/BinanceWallet/status/2095738732314042720
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-9cc7d0919b3c842a@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260904T070000Z
+DTEND:20260904T073000Z
+SUMMARY:CP - BN Alpha 空投
+DESCRIPTION:CP - Cluster Protocol\n来源: Binance Alpha 币种接口 - h
+ ttps://www.binance.com/en/alpha\nAlpha ID: ALPHA_1128\n链: Base\n官方
+ 字段: onlineAirdrop=True\, onlineTge=False\, mulPoint=2\n暂未从官
+ 方公告解析到明确领取规则。请打开 Binance Wallet > Alpha >
+  Events，核验领取时间、Alpha Points 门槛和可领取内容。\n
+ 链接: https://www.binance.com/en/alpha\n合约地址: 0x001aad84c21a5cd
+ 4d696c56d44866e9703c43f77
+URL:https://www.binance.com/en/alpha
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:CP - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-ab4796aea292bc6a@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260904T070000Z
+DTEND:20260904T073000Z
+SUMMARY:待公布 - BN Alpha 空投
+DESCRIPTION:待公布 - Alpha 空投币种\n来源: 官方 X 预告 @bina
+ ncezh + 官方 X 预告 @BinanceWallet - https://x.com/binancezh/status/2
+ 095738963860537741\n规则/说明:\n- 请大家准备今天 15:00（UTC+8
+ ）领取币安 Alpha 空投并交易！ 持有至少 235 个币安 Alpha
+  积分的用户可申领代币空投。先到先得。直至空投池领
+ 取完毕或活动结束。 具体空投币种敬请关注币安官方渠
+ 道，及时获取活动最新动态。\n- 已从官方 X 解析到开放
+ 时间；最终领取窗口、积分门槛和数量仍以 Binance Wallet 
+ > Alpha > Events 为准。\n- Please get ready to claim the Binance Alpha
+  airdrop and trade today at 7:00 (UTC). Users with at least 235 Binance A
+ lpha Points can claim the token on a first-come\, first-served basis unti
+ l the airdrop pool is fully dis…\n链接: https://x.com/binancezh/statu
+ s/2095738963860537741
+URL:https://x.com/binancezh/status/2095738963860537741
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:待公布 - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-47fc5825ef83f0f5@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART:20260904T080000Z
+DTEND:20260904T083000Z
+SUMMARY:TAC - BN Alpha 空投
+DESCRIPTION:TAC - TAC\n来源: Binance Alpha 币种接口 - https://www.b
+ inance.com/en/alpha\nAlpha ID: ALPHA_1129\n链: BSC\n官方字段: online
+ Airdrop=True\, onlineTge=False\, mulPoint=4\n规则/说明:\n- During the
+  Promotion Periods\, trade XPIN Network (XPIN) in your Binance Wallet (Ke
+ yless) or via Binance Alpha to receive exclusive token rewards.\n- Any us
+ er who is eligible to trade Binance Alpha tokens is eligible to participa
+ te in this trading competition.\n- Rewards will now place greater emphasi
+ s on early trading and consistent participation during the Promotion Peri
+ od\, making reward distribution fairer\, returns clearer\, and participat
+ ion more accessible.\n链接: https://www.binance.com/en/support/announce
+ ment/binance-alpha-trading-competition-trade-xpin-network-xpin-and-share-
+ 200k-worth-of-rewards-2026-09-04-e8c1bdbae411464f9a33122691e65aa5\n合约
+ 地址: 0xb305e6954e4e0cd021c06ec355681abc8a00dbd7
+URL:https://www.binance.com/en/alpha
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:TAC - BN Alpha 空投
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bn-wallet-alpha-8de8503d0c0b25b8@codex.local
+DTSTAMP:20260906T233030Z
+DTSTART;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
+SUMMARY:CNPY - BN Alpha 预告
+DESCRIPTION:CNPY - Canopy\n来源: 官方 X 预告 @BinanceWallet + 官
+ 方 X 预告 @binancezh - https://x.com/BinanceWallet/status/209648660606
+ 0548208\n只确认到日期，具体开放时间待官方活动页确认
+ 。\n规则/说明:\n- Binance Alpha will be the first platform to featur
+ e Canopy (CNPY) on September 7. Eligible users can claim their airdrop us
+ ing Binance Alpha Points on the Alpha Events page once trading opens. Fur
+ ther details will be an…\n- 已确认日期；具体开放时间、领
+ 取门槛和领取数量以 Binance Wallet > Alpha > Events 为准。\n- 
+ 币安 Alpha 将在 9 月 7 日成为首个上线 Canopy (CNPY) 的平台
+ ！ 符合条件的用户可于 Alpha 交易开放后，前往 Alpha 活
+ 动页面使用币安 Alpha 积分领取空投。具体详情将另行公
+ 布。 敬请关注币安官方渠道，及时获取活动最新动态。
+  https://t.co/HvrMuETbiS\n链接: https://x.com/BinanceWallet/status/2096
+ 486606060548208
+URL:https://x.com/BinanceWallet/status/2096486606060548208
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:CNPY - BN Alpha 预告
+END:VALARM
+END:VEVENT
+END:VCALENDAR

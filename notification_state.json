@@ -1,0 +1,244 @@
+{
+  "generatedAt": "2026-09-06T23:30:30.723949+00:00",
+  "items": {
+    "6834941641733e44": {
+      "fingerprint": "11f25e9c72382bb4a9b351f42cb0dc9f1418ff66cc5ad69117a7ed9ed469ae2a",
+      "summary": "ZEST - BN Alpha 空投",
+      "listingTime": "2026-05-19T13:00:00+00:00",
+      "sourceUrl": "https://www.binance.com/en/alpha"
+    },
+    "ea3227ee155061bf": {
+      "fingerprint": "145727e2a19ca2ceb5140ea820380ae5518a75c91b559af40833fe25c989d5e1",
+      "summary": "NEX - BN Alpha 空投",
+      "listingTime": "2026-05-20T14:00:00+00:00",
+      "sourceUrl": "https://www.binance.com/en/alpha"
+    },
+    "5ece97ac62075319": {
+      "fingerprint": "e77457b88c97a32d5fb56e0043628baa0638bc3181ef6e7c501143637a1bacfa",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-05-21T12:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2057333894203294138"
+    },
+    "75405330de8d930a": {
+      "fingerprint": "88396f88594f3596cf0c00a745c7ab596a4d008371df8cf355974e79f196d867",
+      "summary": "SLX - BN Alpha 预告",
+      "listingTime": "2026-05-25T12:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2058805425781514588"
+    },
+    "dbb7f29c98842ebd": {
+      "fingerprint": "e4fee7d921638ad149a75ed36d812e887529b36c64b742e1d3601d3b09d07cbb",
+      "summary": "CTR - BN Alpha 预告",
+      "listingTime": "2026-05-26T13:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2059199055675462044"
+    },
+    "05cb90cb150f01ba": {
+      "fingerprint": "93e731b8c1ef0918725c950d2e4dcfb0daefe6aed8050310163924534334dab3",
+      "summary": "QAIT - BN Alpha 预告",
+      "listingTime": "2026-05-28T15:00:00+00:00",
+      "sourceUrl": "https://www.binance.com/en/alpha"
+    },
+    "54f762791d41beda": {
+      "fingerprint": "a26d2362a1e625c117c28c491506a5be0d2ec7a3022fb6629658f1343f82dd02",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-06-02T07:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2061676372880437539"
+    },
+    "2bb2157c5241f509": {
+      "fingerprint": "22cbc214ce8560f26dc7ce1b18af1698dc93a61b08aff117244e1141be48dbdf",
+      "summary": "测试 - BN Alpha 空投",
+      "listingTime": "2026-06-03T09:00:00+00:00",
+      "sourceUrl": "https://kahnchan.github.io/bn-wallet-alpha/"
+    },
+    "ae9651321e1ad15b": {
+      "fingerprint": "c1283dc48318965d19d3029c53dbbc3c624532885f8cfb59a81999b6cacc3565",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-06-05T07:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2062770368591577206"
+    },
+    "67dfa3f1684e08a4": {
+      "fingerprint": "e66d373a865bb6d1588dbb06fcb2749e37fd12b1a6b3c7854ff15844b5aeefaa",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-06-09T09:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2064236397989679134"
+    },
+    "2806ac7ffe911d25": {
+      "fingerprint": "b5d539ac0080109fe9d40724cff01b62921c6edc52cea4142274f9b268fdc79e",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-06-09T09:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2064240042986627142"
+    },
+    "927dd0758e6cba1c": {
+      "fingerprint": "8ae64321f3bc9e9fc261eec68ea3c45fdef6a1639a24e60e4b66e692bfc3aa96",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-06-10T09:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2064604492449141213"
+    },
+    "62a0e5ff6ce1f1c6": {
+      "fingerprint": "f4ec282d83644c5b1e54ba729484dc9289a43722ce9f4de2538b56debc0fca03",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-06-10T09:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2064605856642306284"
+    },
+    "5a41e9e135c2ac6a": {
+      "fingerprint": "5ee6fcff13904d3cdfb17fb5d48b9ae5c45510052807695d7cccc3bba59afa2e",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-06-17T00:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2066417005935423854"
+    },
+    "7b852bc3b2327206": {
+      "fingerprint": "93483dc36dc13c709954171aabd9fd4a80bd5893a06b5639d3157fafd8404a48",
+      "summary": "RE - BN Alpha 认购",
+      "listingTime": "2026-06-17T12:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2067096847102210237"
+    },
+    "44b663443e1d96bf": {
+      "fingerprint": "4fac7b151eec5357592c0ee313e4153e18792166298942601acd014a6f2497a1",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-07-16T11:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2077674899485929896"
+    },
+    "5c890a750ec6abc7": {
+      "fingerprint": "13835b79aa92e1864f6d25c0af363819d6321e8a0d6ce17ec87d6ae33bcdccf7",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-07-21T11:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2079484283622940999"
+    },
+    "e5c5868da574fd70": {
+      "fingerprint": "46135bb0656af904212ab04c45a81b5688f1ff8f4aad2c13a08ea1a35928e3cd",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-07-21T11:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2079484450921173128"
+    },
+    "50055ad5108041b9": {
+      "fingerprint": "69e5a74fa933eca3a77324dad9984ce9495c3883fbd3bf1b5bf12d31960102c9",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-07-23T11:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2080196362063454597"
+    },
+    "85648a253c24ebab": {
+      "fingerprint": "1954e4e70ecabe64d72afbca3e842b672571de606225801b5d532c936eb72bcf",
+      "summary": "AEON - BN Alpha 预告",
+      "listingTime": "2026-07-27T10:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2081650905926250852"
+    },
+    "83c2898fa697bd73": {
+      "fingerprint": "3e9ed62b83b5091e570d89f70e2682801bfa953af5692eb667fe73d7f7562bc6",
+      "summary": "GRVT - BN Alpha 预告",
+      "listingTime": "2026-07-30T12:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2082727395153359215"
+    },
+    "b36ab8180d1ea265": {
+      "fingerprint": "ff78e74f1a4714a25b2dd9678ae69471f512dd57744c09f642a5c376874e0da1",
+      "summary": "BSC - BN Alpha 预告",
+      "listingTime": "2026-07-30T13:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2082724696332906856"
+    },
+    "fc6daedd71feb072": {
+      "fingerprint": "c02442dd597eb8d34663568cde87573ad1d1b74b55c9959a68c3e57a62859d08",
+      "summary": "QUID - BN Alpha 预告",
+      "listingTime": "2026-08-04T13:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2084550061598331040"
+    },
+    "de8ded113c37515d": {
+      "fingerprint": "cec70ef56b162846908304d389c8bdb213374b9e2366c549d4d3f64f260254cb",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-08-06T11:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2085290227644702907"
+    },
+    "8ea9b28fe77a3662": {
+      "fingerprint": "d55c25e1093a1d44145c74f7a19caa7d38a58b72b54b3a5a4828081e626259c1",
+      "summary": "DOS - BN Alpha 预告",
+      "listingTime": "2026-08-10T09:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2086694371483963450"
+    },
+    "38c90e98612c9089": {
+      "fingerprint": "5b1a2f5bec5f4abfb0231a868244e7c522e2ad79337c52747bdb0001d7a34a2a",
+      "summary": "KII - BN Alpha 预告",
+      "listingTime": "2026-08-14T13:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2088204374933934356"
+    },
+    "4391c7e432509161": {
+      "fingerprint": "e141174c11bffb2e7582749c1e1b06345168ed53959b51eb49508134af10c2b8",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-08-19T11:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2090000914967154805"
+    },
+    "305b129192003a0e": {
+      "fingerprint": "2cf9c6b5a0c982d897d5405dc3f7a20e1781c4b4c7b4ed90558c50a035b0f234",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-08-19T11:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2090001111122092181"
+    },
+    "d04951c1c062dbb0": {
+      "fingerprint": "cf6b07a4a0d66d09f5b8455faf879f5705a8d9e703bcb3b0de43fa2399a05525",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-08-21T11:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2090696305727398033"
+    },
+    "a1218d3491705eca": {
+      "fingerprint": "27e14ec0e4fa9522a508003ff716b448a100c721524f024a25c04ca66ba1750f",
+      "summary": "TMX - BN Alpha 预告",
+      "listingTime": "2026-08-25T10:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2092130453331525798"
+    },
+    "7afcea4f1fbc339f": {
+      "fingerprint": "df55923e673714f0e6f92339f51e7eb55f57cf2074ad0a187fd283c267591eeb",
+      "summary": "DEBIT - BN Alpha 预告",
+      "listingTime": "2026-08-26T10:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2092508309731336498"
+    },
+    "05b6bb7706ff0add": {
+      "fingerprint": "9bd2cf95dd752d7f638f45843618c9c234fe389a5e175c5a58b43d5ac84bbb57",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-09-01T11:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2094704647479107860"
+    },
+    "dcd6bc85e350aaf6": {
+      "fingerprint": "4798d392c125e18a8648fac4b08a0ace32918d82becda7f8910cefa117fb162a",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-09-01T11:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2094724265459560542"
+    },
+    "0117ccee25ed91a1": {
+      "fingerprint": "e4441b68327d939898458a4f6b8a7088d3662b1f1d10fa692aa8d096ae283c9a",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-09-04T07:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2095738732314042720"
+    },
+    "9cc7d0919b3c842a": {
+      "fingerprint": "5b9ac7118d4a949fb8f1e5f631e8c6d052175bd156a9e2ef00de5b2d97598e0b",
+      "summary": "CP - BN Alpha 空投",
+      "listingTime": "2026-09-04T07:00:00+00:00",
+      "sourceUrl": "https://www.binance.com/en/alpha"
+    },
+    "ab4796aea292bc6a": {
+      "fingerprint": "d0c29a711e944623fc8e4f092926503282f8f3baa4ca0c41fc8795bcdfc0bdbf",
+      "summary": "待公布 - BN Alpha 空投",
+      "listingTime": "2026-09-04T07:00:00+00:00",
+      "sourceUrl": "https://x.com/binancezh/status/2095738963860537741"
+    },
+    "47fc5825ef83f0f5": {
+      "fingerprint": "4f8f52d2b3fb7bae67d50e262da86a7d29d9940f7565017878a38302f838b3f2",
+      "summary": "TAC - BN Alpha 空投",
+      "listingTime": "2026-09-04T08:00:00+00:00",
+      "sourceUrl": "https://www.binance.com/en/alpha"
+    },
+    "8de8503d0c0b25b8": {
+      "fingerprint": "64c309720e49bac10c95c489fd3eedaeb01d3e6b008e65700e449779e7e75864",
+      "summary": "CNPY - BN Alpha 预告",
+      "listingTime": "2026-09-07T00:00:00+00:00",
+      "sourceUrl": "https://x.com/BinanceWallet/status/2096486606060548208"
+    }
+  },
+  "reminders": {
+    "4391c7e432509161:2026-08-19T11:00:00+00:00": "2026-08-19T10:47:35.039097+00:00",
+    "305b129192003a0e:2026-08-19T11:00:00+00:00": "2026-08-19T10:47:35.039110+00:00",
+    "d04951c1c062dbb0:2026-08-21T11:00:00+00:00": "2026-08-21T10:45:36.084121+00:00",
+    "5f82ed351c854357:2026-08-25T10:00:00+00:00": "2026-08-25T09:50:27.617363+00:00",
+    "a1218d3491705eca:2026-08-25T10:00:00+00:00": "2026-08-25T10:00:41.518419+00:00",
+    "4073e591c7af176e:2026-08-26T10:00:00+00:00": "2026-08-26T09:50:27.587831+00:00",
+    "7afcea4f1fbc339f:2026-08-26T10:00:00+00:00": "2026-08-26T10:01:34.609189+00:00",
+    "05b6bb7706ff0add:2026-09-01T11:00:00+00:00": "2026-09-01T10:50:20.257210+00:00",
+    "0117ccee25ed91a1:2026-09-04T07:00:00+00:00": "2026-09-04T06:50:24.262234+00:00"
+  }
+}
