@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>BN Alpha 空投日历</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="calendar-app">
+    <aside class="sidebar" aria-label="日历侧边栏">
+      <div class="window-dots" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <section class="identity">
+        <div class="mark">α</div>
+        <div>
+          <h1>BN Alpha 空投</h1>
+          <p>约每 5 分钟刷新</p>
+        </div>
+      </section>
+
+      <section class="sidebar-section">
+        <h2>订阅</h2>
+        <a class="subscribe-link" href="./binance-alpha-airdrops.ics">Apple Calendar .ics</a>
+        <button class="copy-button" type="button" data-copy="https://kahnchan.github.io/bn-wallet-alpha/binance-alpha-airdrops.ics">复制订阅地址</button>
+        <p class="copy-result" id="copyResult" aria-live="polite"></p>
+      </section>
+
+      <section class="sidebar-section">
+        <h2>信号源</h2>
+        <ul class="source-list">
+          <li><span class="source-dot alpha"></span>Alpha 接口</li>
+          <li><span class="source-dot notice"></span>官方 X 预告</li>
+          <li><span class="source-dot unknown"></span>币种待公布</li>
+        </ul>
+      </section>
+
+      <section class="mini-month" aria-label="迷你月历">
+        <div class="mini-title" id="miniTitle">载入中</div>
+        <div class="mini-grid" id="miniGrid"></div>
+      </section>
+    </aside>
+
+    <section class="main-panel">
+      <header class="toolbar">
+        <div class="month-controls">
+          <button type="button" class="nav-button" id="prevMonth" aria-label="上个月">‹</button>
+          <button type="button" class="today-button" id="todayButton">今天</button>
+          <button type="button" class="nav-button" id="nextMonth" aria-label="下个月">›</button>
+        </div>
+        <div class="view-tabs" aria-label="视图">
+          <button type="button">日</button>
+          <button type="button">周</button>
+          <button type="button" class="active">月</button>
+          <button type="button">年</button>
+        </div>
+        <a class="repo-link" href="https://github.com/Kahnchan/bn-wallet-alpha">GitHub</a>
+      </header>
+
+      <div class="month-heading">
+        <h2 id="monthTitle">载入中</h2>
+        <p id="monthSummary">读取历史事件中</p>
+      </div>
+
+      <section class="calendar-surface" aria-label="BN Alpha 月历">
+        <div class="weekday-row" aria-hidden="true">
+          <span>周日</span>
+          <span>周一</span>
+          <span>周二</span>
+          <span>周三</span>
+          <span>周四</span>
+          <span>周五</span>
+          <span>周六</span>
+        </div>
+        <div class="month-grid" id="monthGrid"></div>
+      </section>
+    </section>
+
+    <aside class="detail-panel" aria-label="事件详情">
+      <div class="detail-header">
+        <span id="selectedDate">选择日期</span>
+        <strong id="selectedCount">0 个事件</strong>
+      </div>
+      <div class="detail-list" id="detailList">
+        <div class="empty-state">点击有颜色标记的日期查看空投详情。</div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
